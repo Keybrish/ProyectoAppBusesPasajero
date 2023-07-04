@@ -49,14 +49,6 @@ class FileActivity : AppCompatActivity() {
         })
 
         binding.btnUpload.setOnClickListener {
-//            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-//            intent.type = "image/*"
-//            startActivityForResult(Intent.createChooser(intent, "Seleccione Aplicación"), 10)
-//            val result = onActivityResult(CONTEXT_INCLUDE_CODE, RESULT_OK, intent)
-//            var data = Intent(Intent.ACTION_OPEN_DOCUMENT)
-//            data.type = "*/*"
-//            data = Intent.createChooser(data , "Elegir Aplicación")
-//            startActivityForResult(data, 10)
             loadFile.launch("*/*")
         }
     }

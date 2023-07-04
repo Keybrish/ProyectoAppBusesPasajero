@@ -28,6 +28,12 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnEditInfo.setOnClickListener {
+            val intent = Intent(this, ProfileInfoActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         val loadImage = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
             binding.imgProfile.setImageURI(it)
         })
