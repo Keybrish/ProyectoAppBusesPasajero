@@ -1,0 +1,330 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dev.android.appbuses"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:6:5-81
+12-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:6:22-78
+13
+14    <application
+14-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:8:5-149:19
+15        android:allowBackup="true"
+15-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:9:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.8.0] C:\Users\keych\.gradle\caches\transforms-3\205feb206244c8c1b4b56fcdc8d69988\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+17        android:dataExtractionRules="@xml/data_extraction_rules"
+17-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:10:9-65
+18        android:debuggable="true"
+19        android:extractNativeLibs="false"
+20        android:fullBackupContent="@xml/backup_rules"
+20-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:11:9-54
+21        android:icon="@mipmap/ic_launcher"
+21-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:12:9-43
+22        android:label="@string/app_name"
+22-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:13:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:14:9-54
+24        android:supportsRtl="true"
+24-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:15:9-35
+25        android:theme="@style/Theme.AppBuses" >
+25-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:16:9-46
+26        <activity
+26-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
+27            android:name="dev.android.appbuses.MainSkipActivity"
+27-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:19:13-45
+28            android:exported="false" >
+28-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:20:13-37
+29            <meta-data
+29-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+30                android:name="android.app.lib_name"
+30-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+31                android:value="" />
+31-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+32        </activity>
+33        <activity
+33-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
+34            android:name="dev.android.appbuses.FileActivity"
+34-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:26:13-41
+35            android:exported="false" >
+35-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:27:13-37
+36            <meta-data
+36-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+37                android:name="android.app.lib_name"
+37-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+38                android:value="" />
+38-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+39        </activity>
+40        <activity
+40-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
+41            android:name="dev.android.appbuses.SeatActivity"
+41-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:33:13-41
+42            android:exported="false" >
+42-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:34:13-37
+43            <meta-data
+43-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+44                android:name="android.app.lib_name"
+44-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+45                android:value="" />
+45-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+46        </activity>
+47        <activity
+47-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
+48            android:name="dev.android.appbuses.HistoryQRActivity"
+48-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:40:13-46
+49            android:exported="false" >
+49-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:41:13-37
+50            <meta-data
+50-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+51                android:name="android.app.lib_name"
+51-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+52                android:value="" />
+52-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+53        </activity>
+54        <activity
+54-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
+55            android:name="dev.android.appbuses.HistoryActivity"
+55-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:47:13-44
+56            android:exported="false" >
+56-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:48:13-37
+57            <meta-data
+57-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+58                android:name="android.app.lib_name"
+58-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+59                android:value="" />
+59-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+60        </activity>
+61        <activity
+61-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
+62            android:name="dev.android.appbuses.ChangePasswordActivity"
+62-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:54:13-51
+63            android:exported="false" >
+63-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:55:13-37
+64            <meta-data
+64-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+65                android:name="android.app.lib_name"
+65-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+66                android:value="" />
+66-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+67        </activity>
+68        <activity
+68-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
+69            android:name="dev.android.appbuses.ProfileInfoActivity"
+69-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:61:13-48
+70            android:exported="false" >
+70-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:62:13-37
+71            <meta-data
+71-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+72                android:name="android.app.lib_name"
+72-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+73                android:value="" />
+73-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+74        </activity>
+75        <activity
+75-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
+76            android:name="dev.android.appbuses.QRCodeActivity"
+76-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:68:13-43
+77            android:exported="false" >
+77-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:69:13-37
+78            <meta-data
+78-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+79                android:name="android.app.lib_name"
+79-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+80                android:value="" />
+80-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+81        </activity>
+82        <activity
+82-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
+83            android:name="dev.android.appbuses.PaymentSuccessfulActivity"
+83-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:75:13-54
+84            android:exported="false" >
+84-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:76:13-37
+85            <meta-data
+85-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+86                android:name="android.app.lib_name"
+86-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+87                android:value="" />
+87-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+88        </activity>
+89        <activity
+89-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
+90            android:name="dev.android.appbuses.PaymentActivity"
+90-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:82:13-44
+91            android:exported="false" >
+91-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:83:13-37
+92            <meta-data
+92-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+93                android:name="android.app.lib_name"
+93-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+94                android:value="" />
+94-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+95        </activity>
+96        <activity
+96-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
+97            android:name="dev.android.appbuses.ProfileActivity"
+97-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:89:13-44
+98            android:exported="false" >
+98-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:90:13-37
+99            <meta-data
+99-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+100                android:name="android.app.lib_name"
+100-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+101                android:value="" />
+101-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+102        </activity>
+103        <activity
+103-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
+104            android:name="dev.android.appbuses.BusDetailActivity"
+104-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:96:13-46
+105            android:exported="false"
+105-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:97:13-37
+106            android:theme="@style/PopUp" >
+106-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:98:13-41
+107            <meta-data
+107-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+108                android:name="android.app.lib_name"
+108-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+109                android:value="" />
+109-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+110        </activity>
+111        <activity
+111-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
+112            android:name="dev.android.appbuses.FilterMenuActivity"
+112-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:104:13-47
+113            android:exported="false"
+113-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:105:13-37
+114            android:theme="@style/PopUp" >
+114-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:106:13-41
+115            <meta-data
+115-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+116                android:name="android.app.lib_name"
+116-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+117                android:value="" />
+117-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+118        </activity>
+119        <activity
+119-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
+120            android:name="dev.android.appbuses.RegisterActivity"
+120-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:112:13-45
+121            android:exported="false" >
+121-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:113:13-37
+122            <meta-data
+122-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+123                android:name="android.app.lib_name"
+123-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+124                android:value="" />
+124-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+125        </activity>
+126        <activity
+126-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
+127            android:name="dev.android.appbuses.WelcomeActivity"
+127-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:119:13-44
+128            android:exported="true" >
+128-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:120:13-36
+129            <meta-data
+129-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+130                android:name="android.app.lib_name"
+130-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+131                android:value="" />
+131-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+132
+133            <intent-filter>
+133-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
+134                <action android:name="android.intent.action.MAIN" />
+134-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:126:17-69
+134-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:126:25-66
+135
+136                <category android:name="android.intent.category.LAUNCHER" />
+136-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:128:17-77
+136-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:128:27-74
+137            </intent-filter>
+138        </activity>
+139        <activity
+139-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
+140            android:name="dev.android.appbuses.LoginActivity"
+140-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:132:13-42
+141            android:exported="false" >
+141-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:133:13-37
+142            <meta-data
+142-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+143                android:name="android.app.lib_name"
+143-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+144                android:value="" />
+144-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+145        </activity>
+146        <activity
+146-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
+147            android:name="dev.android.appbuses.MainActivity"
+147-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:139:13-41
+148            android:exported="false" >
+148-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:140:13-37
+149            <meta-data
+149-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+150                android:name="android.app.lib_name"
+150-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+151                android:value="" />
+151-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+152        </activity>
+153
+154        <meta-data
+154-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
+155            android:name="preloaded_fonts"
+155-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:147:13-43
+156            android:resource="@array/preloaded_fonts" />
+156-->D:\DOCUMENTOS\DASProject\appBuses\app\src\main\AndroidManifest.xml:148:13-54
+157
+158        <uses-library
+158-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+159            android:name="androidx.window.extensions"
+159-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+160            android:required="false" />
+160-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+161        <uses-library
+161-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+162            android:name="androidx.window.sidecar"
+162-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+163            android:required="false" />
+163-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+164
+165        <provider
+165-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
+166            android:name="com.squareup.picasso.PicassoProvider"
+166-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
+167            android:authorities="dev.android.appbuses.com.squareup.picasso"
+167-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
+168            android:exported="false" />
+168-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
+169        <provider
+169-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+170            android:name="androidx.startup.InitializationProvider"
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+171            android:authorities="dev.android.appbuses.androidx-startup"
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+172            android:exported="false" >
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+173            <meta-data
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+174                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+175                android:value="androidx.startup" />
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+176            <meta-data
+176-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+177                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+177-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+178                android:value="androidx.startup" />
+178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+179        </provider>
+180    </application>
+181
+182</manifest>
