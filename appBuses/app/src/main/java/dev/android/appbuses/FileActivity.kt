@@ -32,6 +32,12 @@ class FileActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.btnNext.setOnClickListener {
+            val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         val loadFile = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
             binding.txtFile.text = it?.let { it1 -> getName(it1, applicationContext) }
         })
