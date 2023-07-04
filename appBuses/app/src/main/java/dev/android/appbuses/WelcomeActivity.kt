@@ -21,5 +21,11 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }
