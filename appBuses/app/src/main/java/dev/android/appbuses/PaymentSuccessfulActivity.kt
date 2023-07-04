@@ -14,5 +14,11 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
+
+        binding.btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
     }
 }

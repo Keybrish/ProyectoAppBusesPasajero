@@ -19,6 +19,12 @@ class SeatActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, FileActivity::class.java).apply {
             }

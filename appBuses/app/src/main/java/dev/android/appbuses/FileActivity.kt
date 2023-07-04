@@ -32,6 +32,12 @@ class FileActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
             }
