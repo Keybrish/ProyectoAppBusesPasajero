@@ -20,5 +20,11 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+
+        binding.btnBuy.setOnClickListener {
+            val intent = Intent(this, QRCodeActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
     }
 }
