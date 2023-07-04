@@ -16,6 +16,12 @@ class MainSkipActivity : AppCompatActivity() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
 
+        binding.btnFilter.setOnClickListener {
+            val intent = Intent(this, FilterMenuActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java).apply {
             }
