@@ -27,5 +27,9 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnSkip.setOnClickListener {
+            val intent = Intent(this, MainSkipActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
