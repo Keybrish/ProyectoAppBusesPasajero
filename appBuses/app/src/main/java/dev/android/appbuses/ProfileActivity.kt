@@ -40,6 +40,12 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnHistory.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         val loadImage = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
             binding.imgProfile.setImageURI(it)
         })
