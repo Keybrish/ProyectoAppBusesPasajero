@@ -8,7 +8,18 @@ import android.util.Log
 import android.view.Window
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import dev.android.appbuses.databinding.ActivityMainBinding
+import org.json.JSONArray
+import org.json.JSONException
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+import java.util.concurrent.Executors
+import java.nio.charset.StandardCharsets
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

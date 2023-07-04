@@ -32,5 +32,14 @@ class BusDetailActivity : AppCompatActivity() {
         val bundle = intent.extras
         val option = bundle?.getString("option")
 
+        binding.btnBuy.setOnClickListener {
+            var intent: Intent
+            if (option == "login") {
+                intent = Intent(this, PaymentActivity::class.java)
+            } else {
+                intent = Intent(this, LoginActivity::class.java)
+            }
+            startActivity(intent)
+        }
     }
 }
