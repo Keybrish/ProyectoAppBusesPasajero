@@ -15,5 +15,18 @@ class MainSkipActivity : AppCompatActivity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
+
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
+        binding.textView4.setOnClickListener {
+            val intent = Intent(this, BusDetailActivity::class.java).apply {
+                putExtra("option", "noLogin")
+            }
+            startActivity(intent)
+        }
     }
 }
