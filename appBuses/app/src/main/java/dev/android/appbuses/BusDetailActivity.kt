@@ -41,6 +41,5 @@ class BusDetailActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
-
     }
 }

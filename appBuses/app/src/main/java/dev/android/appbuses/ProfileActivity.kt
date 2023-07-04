@@ -34,6 +34,12 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnChangePassword.setOnClickListener {
+            val intent = Intent(this, ChangePasswordActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
         val loadImage = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
             binding.imgProfile.setImageURI(it)
         })
