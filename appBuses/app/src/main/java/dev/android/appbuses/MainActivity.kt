@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)
                 val id = jsonObject.getInt("id_frecuencia")
+                val id_cooperativa = jsonObject.getInt("id_cooperativa_pertenece")
                 val nombre_cooperativa = jsonObject.getString("nombre_cooperativa")
                 val fotografia = jsonObject.getString("fotografia")
                 val origen_frecuencia = jsonObject.getString("origen")
@@ -73,11 +74,12 @@ class MainActivity : AppCompatActivity() {
                 val fecha_viaje = jsonObject.getString("fecha_viaje")
                 val hora_salida = jsonObject.getString("hora_salida_viaje")
                 val hora_llegada = jsonObject.getString("hora_llegada_viaje")
+                val id_bus = jsonObject.getInt("id_bus")
                 val numero_bus = jsonObject.getString("numero_bus")
                 val placa_bus = jsonObject.getString("placa_bus")
                 val chasis_bus = jsonObject.getString("chasis_bus")
                 val carroceria_bus = jsonObject.getString("carroceria_bus")
-                val frecuencia = Frecuencia(id,nombre_cooperativa,fotografia, origen_frecuencia, destino_frecuencia, destino_provincia_frecuencia, duracion_frecuencia, tipo_frecuencia, estado_frecuencia, fecha_viaje, hora_salida, hora_llegada, numero_bus, placa_bus, chasis_bus, carroceria_bus, costo_frecuencia)
+                val frecuencia = Frecuencia(id,id_cooperativa,nombre_cooperativa,fotografia, origen_frecuencia, destino_frecuencia, destino_provincia_frecuencia, duracion_frecuencia, tipo_frecuencia, estado_frecuencia, fecha_viaje, hora_salida, hora_llegada, id_bus, numero_bus, placa_bus, chasis_bus, carroceria_bus, costo_frecuencia)
                 frecuencias.add(frecuencia)
             }
         } catch (e: JSONException) {
