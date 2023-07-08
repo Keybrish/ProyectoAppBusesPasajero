@@ -1,20 +1,23 @@
 package dev.android.appbuses
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import com.google.firebase.auth.FirebaseAuth
 import dev.android.appbuses.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityWelcomeBinding
+    private lateinit var binding: ActivityWelcomeBinding
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
-
+        checkSession()
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java).apply {
             }
@@ -32,4 +35,17 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    fun checkSession() {
+        auth = FirebaseAuth.getInstance()
+
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+    }
+
 }
