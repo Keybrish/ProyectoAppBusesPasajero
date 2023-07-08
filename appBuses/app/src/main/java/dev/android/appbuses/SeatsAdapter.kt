@@ -17,7 +17,6 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import dev.android.appbuses.databinding.ItemSeatBinding
-import dev.android.appbuses.models.Asiento
 import dev.android.appbuses.models.Frecuencia
 import kotlinx.android.synthetic.main.item_seat.view.*
 import org.json.JSONArray

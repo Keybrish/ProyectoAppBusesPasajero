@@ -146,6 +146,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.firebase.storage.default_bucket"
+            android:value="your-storage-bucket" />
     </application>
 
 </manifest>

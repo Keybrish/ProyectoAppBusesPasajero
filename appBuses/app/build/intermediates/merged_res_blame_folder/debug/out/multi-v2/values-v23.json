@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "dev.android.appbuses.app-mergeDebugResources-44:/values-v23/values-v23.xml",
+            "outputFile": "dev.android.appbuses.app-mergeDebugResources-49:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\35247393b79a5fe3c4f500e2adf3d76f\\transformed\\appcompat-1.5.1\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\b44205d3f162159154c5cc6e126bdb28\\transformed\\appcompat-1.5.1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\3d0b12a6a2875ebc8055ad98f7863014\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\fadd845f41da480bc8dd7a166385e1cb\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\d23a14032be95e1c0d49d848980659b4\\transformed\\material-1.9.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\d9a24c8642a159d333bd22454e667afb\\transformed\\material-1.9.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,8,13,17,20,23,26,31,34,38",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

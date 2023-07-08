@@ -27,11 +27,18 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
     <string name="app_name">appBuses</string>
+    <string name="default_web_client_id" translatable="false">55997347007-gni86bi5gae2qf0650ubrmtj7kvcfhkn.apps.googleusercontent.com</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">55997347007</string>
+    <string name="google_api_key" translatable="false">AIzaSyBfRGL0LfcSVGKpqvXcVHo8u5rGnrkyy8s</string>
+    <string name="google_app_id" translatable="false">1:55997347007:android:c540392d90c54ea8a4020a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBfRGL0LfcSVGKpqvXcVHo8u5rGnrkyy8s</string>
+    <string name="google_storage_bucket" translatable="false">appbusescomprobantes.appspot.com</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">appbusescomprobantes</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_login_driv">LoginDrivActivity</string>
     <style name="PopUp" parent="Theme.AppCompat.Light.NoActionBar">

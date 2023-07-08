@@ -15,7 +15,6 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.databinding.ActivitySeatBinding
-import dev.android.appbuses.models.Asiento
 import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
@@ -47,13 +46,17 @@ class SeatActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val bundle = intent.extras
+
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, FileActivity::class.java).apply {
+                if (bundle != null) {
+                    putExtras(bundle)
+                }
             }
             startActivity(intent)
         }
 
-        val bundle = intent.extras
         val option = bundle?.getString("amount")
 
         bundle?.let {
