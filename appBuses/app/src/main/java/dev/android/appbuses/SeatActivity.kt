@@ -15,6 +15,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.databinding.ActivitySeatBinding
+import dev.android.appbuses.models.Asiento
 import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
@@ -63,16 +64,6 @@ class SeatActivity : AppCompatActivity() {
         }
     }
 
-//    fun cargarDatos(amount: Int) {
-//        binding.rvFrequency.adapter = adapter
-//        binding.rvFrequency.layoutManager = LinearLayoutManager(this)
-//        binding.rvFrequency.setHasFixedSize(true)
-//        val seats = mutableListOf<Int>()
-//        for (i in 1..amount)
-//            seats.add(i)
-//        adapter.seats = seats
-//    }
-
     @RequiresApi(Build.VERSION_CODES.O)
     private fun parseJson(json: String): List<String> {
         val seats = mutableListOf<String>()
@@ -80,8 +71,8 @@ class SeatActivity : AppCompatActivity() {
             val jsonArray = JSONArray(json)
             for (i in 0 until jsonArray.length()) {
                 val jsonObject = jsonArray.getJSONObject(i)
-                val asiento = jsonObject.getString("descripcion_asiento")
-                seats.add(asiento)
+                val tipo = jsonObject.getString("descripcion_asiento")
+                seats.add(tipo)
             }
         } catch (e: JSONException) {
             Log.e("JSON parse error", e.toString())
@@ -91,16 +82,14 @@ class SeatActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun cargarDatos(id_bus: Int, amount: Int){
-        //val sharedPref = requireActivity().getSharedPreferences("login_data", Context.MODE_PRIVATE)
-        //val id = sharedPref.getString("id_cli", "")
         val queue = Volley.newRequestQueue(this)
         val url = "https://nilotic-quart.000webhostapp.com/listarTipoAsientosBus.php?id_bus_pertenece=$id_bus"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String> { response ->
-                val decodedResponse = String(response.toByteArray(), StandardCharsets.UTF_8)
-                val asiento = parseJson(decodedResponse)
-                adapter.seatType.add(asiento.toString())
+                Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
+                val seatsType = parseJson(response)
+                adapter.seatType.add(seatsType.get(0))
                 adapter.notifyDataSetChanged()
             },
             Response.ErrorListener { error ->

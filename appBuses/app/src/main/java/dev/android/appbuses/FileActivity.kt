@@ -1,25 +1,40 @@
 package dev.android.appbuses
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.database.Cursor
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.DocumentsContract
-import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.view.Window
+import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.AuthFailureError
+import com.android.volley.VolleyError
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import dev.android.appbuses.databinding.ActivityFileBinding
+import java.util.*
+
 
 class FileActivity : AppCompatActivity() {
     private lateinit var binding : ActivityFileBinding
+
+    private val bitmap: Bitmap? = null
+
+    private val PICK_IMAGE_REQUEST = 1
+
+    private val UPLOAD_URL = "https://serverandrofast.webcindario.com/upload.php"
+
+    private val KEY_IMAGEN = "foto"
+    private val KEY_NOMBRE = "nombre"
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

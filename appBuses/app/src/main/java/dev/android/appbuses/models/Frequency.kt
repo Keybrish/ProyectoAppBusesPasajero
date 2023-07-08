@@ -23,3 +23,16 @@ data class Frecuencia (
     val carroceria_bus: String,
     val costo_frecuencia: Float
 ): Serializable
+
+data class Venta (
+    val id_comprador: Int,
+    val id_viaje_pertenece: Int,
+    val fecha_venta: String,
+    val id_forma_pago: Int,
+    val estado_venta: Int,
+    val total_venta: Float,
+    val comprobante: String,
+    val id_asiento:Int,
+    val costo_asiento: Float,
+    val cedula_pasajero: String
+): Serializable

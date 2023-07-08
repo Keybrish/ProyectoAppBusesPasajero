@@ -41,7 +41,6 @@
             android:id="@+id/spnType"
             android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="-10dp"
             android:scrollbarSize="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView24"
             app:layout_constraintEnd_toEndOf="parent"
