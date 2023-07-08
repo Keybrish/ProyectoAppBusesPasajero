@@ -3682,10 +3682,12 @@ int id textTop 0x7f0a0215
 int id textView 0x7f0a0216
 int id textView1 0x7f0a0217
 int id textView10 0x7f0a0218
+int id textView11 0x7f0a0282
 int id textView12 0x7f0a0219
 int id textView13 0x7f0a021a
 int id textView14 0x7f0a021b
 int id textView15 0x7f0a021c
+int id textView16 0x7f0a0283
 int id textView2 0x7f0a021d
 int id textView22 0x7f0a021e
 int id textView23 0x7f0a021f
@@ -3699,8 +3701,6 @@ int id textView30 0x7f0a0226
 int id textView31 0x7f0a0227
 int id textView33 0x7f0a0228
 int id textView34 0x7f0a0229
-int id textView35 0x7f0a022a
-int id textView36 0x7f0a022b
 int id textView37 0x7f0a022c
 int id textView38 0x7f0a022d
 int id textView39 0x7f0a022e

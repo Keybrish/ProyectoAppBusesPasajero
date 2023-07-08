@@ -30,11 +30,12 @@ data class Venta (
     val id_parada_pertenece: Int,
     val fecha_venta: String,
     val id_forma_pago: Int,
-    val estado_venta: Int,
+//    val estado_venta: Int,
     val total_venta: Float,
     val codigo_qr_venta: String,
     val comprobante: String
-//    val id_asiento:Int,
-//    val costo_asiento: Float,
-//    val cedula_pasajero: String
+): Serializable
+
+data class Asiento (
+    val descripcion_asiento: String
 ): Serializable

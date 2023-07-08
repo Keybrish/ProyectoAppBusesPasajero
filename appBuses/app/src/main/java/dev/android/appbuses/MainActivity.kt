@@ -111,7 +111,8 @@ class MainActivity : AppCompatActivity() {
         binding.rvFrequency.adapter = adapter
         binding.rvFrequency.layoutManager = LinearLayoutManager(this)
         binding.rvFrequency.setHasFixedSize(true)
-        adapter.setOnclickDetail = {
+
+        adapter.setOnClickListener = {
             val bundle = Bundle().apply {
                 putSerializable(Constants.KEY_FREQUENCY, it)
             }

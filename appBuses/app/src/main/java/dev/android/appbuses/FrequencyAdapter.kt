@@ -10,15 +10,16 @@ import dev.android.appbuses.models.Frecuencia
 
 class FrequencyAdapter(var frecuencias: List<Frecuencia> = emptyList()) : RecyclerView.Adapter<FrequencyAdapter.FrequencyAdapterViewHolder>() {
     //crear el viewHolder
-    lateinit var setOnclickDetail:(Frecuencia) -> Unit
+    lateinit var setOnClickListener:(Frecuencia) -> Unit
     inner class FrequencyAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var binding: ItemFrequencyBinding = ItemFrequencyBinding.bind(itemView)
 
         fun bind(frecuencias: Frecuencia) {
             Picasso.get().load(frecuencias.fotografia).error(R.drawable.terminal_terrestre_quito).into(binding.imgBus)
             binding.txtFrequency.text = frecuencias.nombre_cooperativa + ", " + frecuencias.origen_frecuencia + " - " + frecuencias.destino_frecuencia
-            binding.btnDetail.setOnClickListener{
-                setOnclickDetail(frecuencias)
+
+            binding.root.setOnClickListener {
+                setOnClickListener(frecuencias)
             }
         }
 

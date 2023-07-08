@@ -14,11 +14,18 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.squareup.picasso.Picasso
+import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivitySeatBinding
+import dev.android.appbuses.models.Asiento
 import dev.android.appbuses.models.Frecuencia
+import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.nio.charset.StandardCharsets
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -85,22 +92,54 @@ class SeatActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun cargarDatos(id_bus: Int, amount: Int){
-        val queue = Volley.newRequestQueue(this)
-        val url = "https://nilotic-quart.000webhostapp.com/listarTipoAsientosBus.php?id_bus_pertenece=$id_bus"
-        val stringRequest = StringRequest(
-            Request.Method.GET, url,
-            Response.Listener<String> { response ->
-                Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
-                val seatsType = parseJson(response)
-                adapter.seatType.add(seatsType.get(0))
-                adapter.notifyDataSetChanged()
-            },
-            Response.ErrorListener { error ->
-                Log.e("Volley error", error.toString())
-                Toast.makeText(this, "Error al cargar las frecuencias", Toast.LENGTH_SHORT).show()
+//        val queue = Volley.newRequestQueue(this)
+//        val url = "https://nilotic-quart.000webhostapp.com/listarTipoAsientosBus.php?id_bus_pertenece=$id_bus"
+//        val stringRequest = StringRequest(
+//            Request.Method.GET, url,
+//            Response.Listener<String> { response ->
+//                Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
+//                val seatsType = parseJson(response)
+//                adapter.seatType.add(seatsType.get(0))
+//                adapter.notifyDataSetChanged()
+//            },
+//            Response.ErrorListener { error ->
+//                Log.e("Volley error", error.toString())
+//                Toast.makeText(this, "Error al cargar las frecuencias", Toast.LENGTH_SHORT).show()
+//            }
+//        )
+//        queue.add(stringRequest)
+
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getSeats(id_bus)
+        retrofit.enqueue(
+            object : Callback<List<Asiento>> {
+                override fun onFailure(call: Call<List<Asiento>> , t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+
+                }
+                override fun onResponse(call: Call<List<Asiento>> , response: retrofit2.Response<List<Asiento>> ) {
+                    if (response.isSuccessful) {
+                        val asientos = response.body()
+                        if (asientos != null) {
+                            for (asiento in asientos) {
+                                val tipo = asiento.descripcion_asiento
+                                adapter.seatType.add(tipo)
+                            }
+                            // Notificar al adaptador de cambios en los datos
+                            adapter.notifyDataSetChanged()
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@SeatActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
             }
         )
-        queue.add(stringRequest)
         binding.rvFrequency.adapter = adapter
         binding.rvFrequency.layoutManager = LinearLayoutManager(this)
         binding.rvFrequency.setHasFixedSize(true)

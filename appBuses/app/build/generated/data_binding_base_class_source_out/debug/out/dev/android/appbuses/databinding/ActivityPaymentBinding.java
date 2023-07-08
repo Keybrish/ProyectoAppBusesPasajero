@@ -123,12 +123,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
   public final TextView textView34;
 
   @NonNull
-  public final TextView textView35;
-
-  @NonNull
-  public final TextView textView36;
-
-  @NonNull
   public final TextView textView50;
 
   @NonNull
@@ -176,11 +170,10 @@ public final class ActivityPaymentBinding implements ViewBinding {
       @NonNull TextView textView24, @NonNull TextView textView25, @NonNull TextView textView26,
       @NonNull TextView textView28, @NonNull TextView textView29, @NonNull TextView textView3,
       @NonNull TextView textView30, @NonNull TextView textView31, @NonNull TextView textView33,
-      @NonNull TextView textView34, @NonNull TextView textView35, @NonNull TextView textView36,
-      @NonNull TextView textView50, @NonNull TextView textView55, @NonNull TextView textView58,
-      @NonNull TextView txtAmount, @NonNull TextView txtCooperative, @NonNull TextView txtDate,
-      @NonNull TextView txtDestination, @NonNull TextView txtOrigin, @NonNull TextView txtTime,
-      @NonNull View view2, @NonNull View view6, @NonNull View view7) {
+      @NonNull TextView textView34, @NonNull TextView textView50, @NonNull TextView textView55,
+      @NonNull TextView textView58, @NonNull TextView txtAmount, @NonNull TextView txtCooperative,
+      @NonNull TextView txtDate, @NonNull TextView txtDestination, @NonNull TextView txtOrigin,
+      @NonNull TextView txtTime, @NonNull View view2, @NonNull View view6, @NonNull View view7) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.btnLess = btnLess;
@@ -215,8 +208,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
     this.textView31 = textView31;
     this.textView33 = textView33;
     this.textView34 = textView34;
-    this.textView35 = textView35;
-    this.textView36 = textView36;
     this.textView50 = textView50;
     this.textView55 = textView55;
     this.textView58 = textView58;
@@ -456,18 +447,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView35;
-      TextView textView35 = ViewBindings.findChildViewById(rootView, id);
-      if (textView35 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView36;
-      TextView textView36 = ViewBindings.findChildViewById(rootView, id);
-      if (textView36 == null) {
-        break missingId;
-      }
-
       id = R.id.textView50;
       TextView textView50 = ViewBindings.findChildViewById(rootView, id);
       if (textView50 == null) {
@@ -545,9 +524,8 @@ public final class ActivityPaymentBinding implements ViewBinding {
           imageView15, imageView3, imageView51, imageView56, imageView59, imageView9, imgProfile,
           spnPayment, textView, textView1, textView2, textView22, textView23, textView24,
           textView25, textView26, textView28, textView29, textView3, textView30, textView31,
-          textView33, textView34, textView35, textView36, textView50, textView55, textView58,
-          txtAmount, txtCooperative, txtDate, txtDestination, txtOrigin, txtTime, view2, view6,
-          view7);
+          textView33, textView34, textView50, textView55, textView58, txtAmount, txtCooperative,
+          txtDate, txtDestination, txtOrigin, txtTime, view2, view6, view7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

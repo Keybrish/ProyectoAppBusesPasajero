@@ -39,8 +39,8 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_seat, parent, false)
 
         view.spnType.dropDownVerticalOffset
-//        val op = listOf("VIP", "Ejecutivo", "Estándar")
         val op = seatType
+        op.add(0, "Tipo de asiento")
         val sp = ArrayAdapter(parent.context, android.R.layout.simple_spinner_item, op)
         view.spnType.adapter = sp
         return SeatsAdapterViewHolder(view)

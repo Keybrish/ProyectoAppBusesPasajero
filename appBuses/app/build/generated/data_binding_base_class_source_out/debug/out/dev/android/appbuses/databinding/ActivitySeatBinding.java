@@ -51,6 +51,12 @@ public final class ActivitySeatBinding implements ViewBinding {
   public final TextView textView1;
 
   @NonNull
+  public final TextView textView11;
+
+  @NonNull
+  public final TextView textView16;
+
+  @NonNull
   public final TextView textView2;
 
   @NonNull
@@ -65,16 +71,13 @@ public final class ActivitySeatBinding implements ViewBinding {
   @NonNull
   public final View view2;
 
-  @NonNull
-  public final View view7;
-
   private ActivitySeatBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnBack,
       @NonNull Button btnNext, @NonNull CardView btnProfile,
       @NonNull ConstraintLayout constraintLayout, @NonNull ImageView imageView3,
       @NonNull ImageView imgProfile, @NonNull RecyclerView rvFrequency, @NonNull TextView textView,
-      @NonNull TextView textView1, @NonNull TextView textView2, @NonNull TextView textView22,
-      @NonNull TextView textView3, @NonNull TextView textView30, @NonNull View view2,
-      @NonNull View view7) {
+      @NonNull TextView textView1, @NonNull TextView textView11, @NonNull TextView textView16,
+      @NonNull TextView textView2, @NonNull TextView textView22, @NonNull TextView textView3,
+      @NonNull TextView textView30, @NonNull View view2) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.btnNext = btnNext;
@@ -85,12 +88,13 @@ public final class ActivitySeatBinding implements ViewBinding {
     this.rvFrequency = rvFrequency;
     this.textView = textView;
     this.textView1 = textView1;
+    this.textView11 = textView11;
+    this.textView16 = textView16;
     this.textView2 = textView2;
     this.textView22 = textView22;
     this.textView3 = textView3;
     this.textView30 = textView30;
     this.view2 = view2;
-    this.view7 = view7;
   }
 
   @Override
@@ -174,6 +178,18 @@ public final class ActivitySeatBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView11;
+      TextView textView11 = ViewBindings.findChildViewById(rootView, id);
+      if (textView11 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView16;
+      TextView textView16 = ViewBindings.findChildViewById(rootView, id);
+      if (textView16 == null) {
+        break missingId;
+      }
+
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
@@ -204,15 +220,9 @@ public final class ActivitySeatBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view7;
-      View view7 = ViewBindings.findChildViewById(rootView, id);
-      if (view7 == null) {
-        break missingId;
-      }
-
       return new ActivitySeatBinding((ConstraintLayout) rootView, btnBack, btnNext, btnProfile,
-          constraintLayout, imageView3, imgProfile, rvFrequency, textView, textView1, textView2,
-          textView22, textView3, textView30, view2, view7);
+          constraintLayout, imageView3, imgProfile, rvFrequency, textView, textView1, textView11,
+          textView16, textView2, textView22, textView3, textView30, view2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

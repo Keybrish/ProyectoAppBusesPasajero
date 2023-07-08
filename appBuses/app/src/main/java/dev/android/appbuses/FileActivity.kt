@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.util.Log
 import android.view.Window
 import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
@@ -22,10 +23,15 @@ import com.google.firebase.storage.FirebaseStorage
 import dev.android.appbuses.databinding.ActivityFileBinding
 import java.util.*
 import com.google.firebase.storage.StorageReference
+import dev.android.appbuses.database.api
 import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
 import org.json.JSONException
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class FileActivity : AppCompatActivity() {
     private lateinit var binding : ActivityFileBinding
@@ -60,7 +66,9 @@ class FileActivity : AppCompatActivity() {
             bundle?.let {
                 val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
-                image?.let { it1 -> uploadImage(it1, frequency) }
+//                image?.let { it1 -> uploadImage(it1, frequency) }
+                val sale = Venta(8, 1, 1, "2023-06-04", 1,123.50f, "12345", "")
+                addSale(sale)
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
@@ -116,7 +124,7 @@ class FileActivity : AppCompatActivity() {
             .addOnSuccessListener { taskSnapshot ->
                 taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
                     val downloadUrl = uri.toString()
-                    val sale = Venta(8, 1, 1, frequency.fecha_viaje, 1, 1,123.50f, "12345", downloadUrl)
+                    val sale = Venta(8, 1, 1, "2023-06-04", 1,123.50f, "12345", downloadUrl)
                     addSale(sale)
                 }.addOnFailureListener { exception ->
                     showToast("Error al obtener la URL de descarga")
@@ -132,38 +140,26 @@ class FileActivity : AppCompatActivity() {
         Toast.makeText(this@FileActivity, message, Toast.LENGTH_SHORT).show()
     }
 
-    fun addSale(venta: Venta) {
-        val queue = Volley.newRequestQueue(this)
-        val url = "https://nilotic-quart.000webhostapp.com/generarVenta.php"
+    private fun addSale(venta: Venta) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.insertData(8, 1, 1, "2023-06-04", 1,123.50f, "12345", "downloadUrl")
+        retrofit.enqueue(
+            object : Callback<Venta> {
+                override fun onFailure(call: Call<Venta>, t: Throwable) {
+                    Log.d("Agregar", "Error al agregar cliente")
 
-        val stringRequest = object : StringRequest(
-            Method.POST, url,
-            Response.Listener<String> { response ->
-                try {
-                    Toast.makeText(this, "Venta agregada con éxito", Toast.LENGTH_SHORT).show()
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                    Toast.makeText(this, "Error al parsear la respuesta", Toast.LENGTH_SHORT).show()
                 }
-            },
-            Response.ErrorListener { error ->
-                error.printStackTrace()
-                Toast.makeText(this, "Error de conexión", Toast.LENGTH_SHORT).show()
-            }) {
-            override fun getParams(): Map<String, String> {
-                val params = HashMap<String, String>()
-                params["id_comprador"] = venta.id_comprador.toString()
-                params["id_viaje_pertenece"] = venta.id_viaje_pertenece.toString()
-                params["id_parada_pertenece"] = venta.id_parada_pertenece.toString()
-                params["fecha_venta"] = venta.fecha_venta
-                params["id_forma_pago"] = venta.id_forma_pago.toString()
-                params["estado_venta"] = venta.id_forma_pago.toString()
-                params["total_venta"] = venta.total_venta.toString()
-                params["codigo_qr_venta"] = venta.codigo_qr_venta
-                params["comprobante_venta"] = venta.comprobante
-                return params
+
+                override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
+                    Log.d("Agregar", "Cliente agregado con éxito")
+
+                }
             }
-        }
-        queue.add(stringRequest)
+        )
     }
+
 }

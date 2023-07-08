@@ -39,7 +39,7 @@
 
         <Spinner
             android:id="@+id/spnType"
-            android:layout_width="150dp"
+            android:layout_width="175dp"
             android:layout_height="40dp"
             android:scrollbarSize="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView24"
