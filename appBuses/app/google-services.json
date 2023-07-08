@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55997347007",
+    "project_id": "appbusescomprobantes",
+    "storage_bucket": "appbusescomprobantes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55997347007:android:c540392d90c54ea8a4020a",
+        "android_client_info": {
+          "package_name": "dev.android.appbuses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55997347007-gni86bi5gae2qf0650ubrmtj7kvcfhkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfRGL0LfcSVGKpqvXcVHo8u5rGnrkyy8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55997347007-gni86bi5gae2qf0650ubrmtj7kvcfhkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
