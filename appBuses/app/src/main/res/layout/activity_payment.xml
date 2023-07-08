@@ -209,7 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/txtCooperative"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -291,7 +291,7 @@
         android:id="@+id/spnPayment"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="10dp"
         android:scrollbarSize="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView34"
         app:layout_constraintEnd_toEndOf="parent"
@@ -331,7 +331,7 @@
         android:textColor="#A6A6A6"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCooperative" />
 
     <TextView
         android:id="@+id/textView29"
@@ -386,7 +386,7 @@
                 app:srcCompat="@drawable/ic_baseline_location_city_24" />
 
             <TextView
-                android:id="@+id/textView57"
+                android:id="@+id/txtDestination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -441,7 +441,7 @@
                 app:srcCompat="@drawable/ic_baseline_directions_bus_24" />
 
             <TextView
-                android:id="@+id/textView60"
+                android:id="@+id/txtOrigin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -496,7 +496,7 @@
                 app:srcCompat="@drawable/ic_baseline_access_time_filled_244" />
 
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/txtTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -551,7 +551,7 @@
                 app:srcCompat="@drawable/ic_baseline_calendar_month_244" />
 
             <TextView
-                android:id="@+id/textView54"
+                android:id="@+id/txtDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"

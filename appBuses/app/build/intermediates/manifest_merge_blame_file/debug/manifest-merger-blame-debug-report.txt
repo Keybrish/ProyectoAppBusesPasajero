@@ -6,325 +6,325 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
+8-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
+9-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:22-78
+12-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:6:5-81
+12-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:6:22-78
 13
 14    <application
-14-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:8:5-149:19
+14-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:8:5-149:19
 15        android:allowBackup="true"
-15-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:9:9-35
+15-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.8.0] C:\Users\USER\.gradle\caches\transforms-3\205feb206244c8c1b4b56fcdc8d69988\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.8.0] C:\Users\keych\.gradle\caches\transforms-3\205feb206244c8c1b4b56fcdc8d69988\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 17        android:dataExtractionRules="@xml/data_extraction_rules"
-17-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:10:9-65
+17-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:10:9-65
 18        android:debuggable="true"
 19        android:extractNativeLibs="false"
 20        android:fullBackupContent="@xml/backup_rules"
-20-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:11:9-54
+20-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:11:9-54
 21        android:icon="@mipmap/ic_launcher"
-21-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:12:9-43
+21-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:12:9-43
 22        android:label="@string/app_name"
-22-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:13:9-41
+22-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:13:9-41
 23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:14:9-54
+23-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:14:9-54
 24        android:supportsRtl="true"
-24-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:15:9-35
+24-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:15:9-35
 25        android:testOnly="true"
 26        android:theme="@style/Theme.AppBuses" >
-26-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:16:9-46
+26-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:16:9-46
 27        <activity
-27-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
+27-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
 28            android:name="dev.android.appbuses.MainSkipActivity"
-28-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:19:13-45
+28-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:19:13-45
 29            android:exported="false" >
-29-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:20:13-37
+29-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:20:13-37
 30            <meta-data
-30-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+30-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 31                android:name="android.app.lib_name"
-31-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+31-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 32                android:value="" />
-32-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+32-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 33        </activity>
 34        <activity
-34-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
+34-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
 35            android:name="dev.android.appbuses.FileActivity"
-35-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:26:13-41
+35-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:26:13-41
 36            android:exported="false" >
-36-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:27:13-37
+36-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:27:13-37
 37            <meta-data
-37-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+37-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 38                android:name="android.app.lib_name"
-38-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+38-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 39                android:value="" />
-39-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+39-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 40        </activity>
 41        <activity
-41-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
+41-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
 42            android:name="dev.android.appbuses.SeatActivity"
-42-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:33:13-41
+42-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:33:13-41
 43            android:exported="false" >
-43-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:34:13-37
+43-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:34:13-37
 44            <meta-data
-44-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+44-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 45                android:name="android.app.lib_name"
-45-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+45-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 46                android:value="" />
-46-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+46-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 47        </activity>
 48        <activity
-48-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
+48-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
 49            android:name="dev.android.appbuses.HistoryQRActivity"
-49-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:40:13-46
+49-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:40:13-46
 50            android:exported="false" >
-50-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:41:13-37
+50-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:41:13-37
 51            <meta-data
-51-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+51-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 52                android:name="android.app.lib_name"
-52-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+52-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 53                android:value="" />
-53-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+53-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 54        </activity>
 55        <activity
-55-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
+55-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
 56            android:name="dev.android.appbuses.HistoryActivity"
-56-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:47:13-44
+56-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:47:13-44
 57            android:exported="false" >
-57-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:48:13-37
+57-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:48:13-37
 58            <meta-data
-58-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+58-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 59                android:name="android.app.lib_name"
-59-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+59-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 60                android:value="" />
-60-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+60-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 61        </activity>
 62        <activity
-62-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
+62-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
 63            android:name="dev.android.appbuses.ChangePasswordActivity"
-63-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:54:13-51
+63-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:54:13-51
 64            android:exported="false" >
-64-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:55:13-37
+64-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:55:13-37
 65            <meta-data
-65-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+65-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 66                android:name="android.app.lib_name"
-66-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+66-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 67                android:value="" />
-67-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+67-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 68        </activity>
 69        <activity
-69-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
+69-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
 70            android:name="dev.android.appbuses.ProfileInfoActivity"
-70-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:61:13-48
+70-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:61:13-48
 71            android:exported="false" >
-71-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:62:13-37
+71-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:62:13-37
 72            <meta-data
-72-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+72-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 73                android:name="android.app.lib_name"
-73-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+73-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 74                android:value="" />
-74-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+74-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 75        </activity>
 76        <activity
-76-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
+76-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
 77            android:name="dev.android.appbuses.QRCodeActivity"
-77-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:68:13-43
+77-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:68:13-43
 78            android:exported="false" >
-78-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:69:13-37
+78-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:69:13-37
 79            <meta-data
-79-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+79-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 80                android:name="android.app.lib_name"
-80-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+80-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 81                android:value="" />
-81-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+81-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 82        </activity>
 83        <activity
-83-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
+83-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
 84            android:name="dev.android.appbuses.PaymentSuccessfulActivity"
-84-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:75:13-54
+84-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:75:13-54
 85            android:exported="false" >
-85-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:76:13-37
+85-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:76:13-37
 86            <meta-data
-86-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+86-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 87                android:name="android.app.lib_name"
-87-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+87-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 88                android:value="" />
-88-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+88-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 89        </activity>
 90        <activity
-90-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
+90-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
 91            android:name="dev.android.appbuses.PaymentActivity"
-91-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:82:13-44
+91-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:82:13-44
 92            android:exported="false" >
-92-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:83:13-37
+92-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:83:13-37
 93            <meta-data
-93-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+93-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 94                android:name="android.app.lib_name"
-94-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+94-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 95                android:value="" />
-95-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+95-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 96        </activity>
 97        <activity
-97-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
+97-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
 98            android:name="dev.android.appbuses.ProfileActivity"
-98-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:89:13-44
+98-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:89:13-44
 99            android:exported="false" >
-99-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:90:13-37
+99-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:90:13-37
 100            <meta-data
-100-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+100-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 101                android:name="android.app.lib_name"
-101-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+101-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 102                android:value="" />
-102-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+102-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 103        </activity>
 104        <activity
-104-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
+104-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
 105            android:name="dev.android.appbuses.BusDetailActivity"
-105-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:96:13-46
+105-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:96:13-46
 106            android:exported="false"
-106-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:97:13-37
+106-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:97:13-37
 107            android:theme="@style/PopUp" >
-107-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:98:13-41
+107-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:98:13-41
 108            <meta-data
-108-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+108-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 109                android:name="android.app.lib_name"
-109-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+109-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 110                android:value="" />
-110-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+110-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 111        </activity>
 112        <activity
-112-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
+112-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
 113            android:name="dev.android.appbuses.FilterMenuActivity"
-113-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:104:13-47
+113-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:104:13-47
 114            android:exported="false"
-114-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:105:13-37
+114-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:105:13-37
 115            android:theme="@style/PopUp" >
-115-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:106:13-41
+115-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:106:13-41
 116            <meta-data
-116-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+116-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 117                android:name="android.app.lib_name"
-117-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+117-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 118                android:value="" />
-118-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+118-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 119        </activity>
 120        <activity
-120-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
+120-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
 121            android:name="dev.android.appbuses.RegisterActivity"
-121-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:112:13-45
+121-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:112:13-45
 122            android:exported="false" >
-122-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:113:13-37
+122-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:113:13-37
 123            <meta-data
-123-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+123-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 124                android:name="android.app.lib_name"
-124-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+124-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 125                android:value="" />
-125-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+125-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 126        </activity>
 127        <activity
-127-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
+127-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
 128            android:name="dev.android.appbuses.WelcomeActivity"
-128-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:119:13-44
+128-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:119:13-44
 129            android:exported="true" >
-129-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:120:13-36
+129-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:120:13-36
 130            <meta-data
-130-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+130-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 131                android:name="android.app.lib_name"
-131-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+131-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 132                android:value="" />
-132-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+132-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 133
 134            <intent-filter>
-134-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
+134-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
 135                <action android:name="android.intent.action.MAIN" />
-135-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:17-69
-135-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:25-66
+135-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:126:17-69
+135-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:126:25-66
 136
 137                <category android:name="android.intent.category.LAUNCHER" />
-137-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:17-77
-137-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:27-74
+137-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:128:17-77
+137-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:128:27-74
 138            </intent-filter>
 139        </activity>
 140        <activity
-140-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
+140-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
 141            android:name="dev.android.appbuses.LoginActivity"
-141-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:132:13-42
+141-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:132:13-42
 142            android:exported="false" >
-142-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:133:13-37
+142-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:133:13-37
 143            <meta-data
-143-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+143-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 144                android:name="android.app.lib_name"
-144-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+144-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 145                android:value="" />
-145-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+145-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 146        </activity>
 147        <activity
-147-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
+147-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
 148            android:name="dev.android.appbuses.MainActivity"
-148-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:139:13-41
+148-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:139:13-41
 149            android:exported="false" >
-149-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:140:13-37
+149-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:140:13-37
 150            <meta-data
-150-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+150-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 151                android:name="android.app.lib_name"
-151-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+151-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 152                android:value="" />
-152-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+152-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 153        </activity>
 154
 155        <meta-data
-155-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
+155-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
 156            android:name="preloaded_fonts"
-156-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:147:13-43
+156-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:147:13-43
 157            android:resource="@array/preloaded_fonts" />
-157-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:148:13-54
+157-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:148:13-54
 158
 159        <uses-library
-159-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+159-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
 160            android:name="androidx.window.extensions"
-160-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+160-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 161            android:required="false" />
-161-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+161-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
 162        <uses-library
-162-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+162-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
 163            android:name="androidx.window.sidecar"
-163-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+163-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
 164            android:required="false" />
-164-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+164-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 165
 166        <provider
-166-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
+166-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
 167            android:name="com.squareup.picasso.PicassoProvider"
-167-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
+167-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
 168            android:authorities="dev.android.appbuses.com.squareup.picasso"
-168-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
+168-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
 169            android:exported="false" />
-169-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
+169-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
 170        <provider
-170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 171            android:name="androidx.startup.InitializationProvider"
-171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 172            android:authorities="dev.android.appbuses.androidx-startup"
-172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 173            android:exported="false" >
-173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 174            <meta-data
-174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 175                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 176                android:value="androidx.startup" />
-176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 177            <meta-data
-177-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+177-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 178                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 179                android:value="androidx.startup" />
-179-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+179-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 180        </provider>
 181    </application>
 182
