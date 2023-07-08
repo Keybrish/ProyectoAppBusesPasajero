@@ -102,9 +102,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
   public final TextView textView26;
 
   @NonNull
-  public final TextView textView27;
-
-  @NonNull
   public final TextView textView28;
 
   @NonNull
@@ -118,9 +115,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
 
   @NonNull
   public final TextView textView31;
-
-  @NonNull
-  public final TextView textView32;
 
   @NonNull
   public final TextView textView33;
@@ -138,22 +132,28 @@ public final class ActivityPaymentBinding implements ViewBinding {
   public final TextView textView50;
 
   @NonNull
-  public final TextView textView54;
-
-  @NonNull
   public final TextView textView55;
-
-  @NonNull
-  public final TextView textView57;
 
   @NonNull
   public final TextView textView58;
 
   @NonNull
-  public final TextView textView60;
+  public final TextView txtAmount;
 
   @NonNull
-  public final TextView txtAmount;
+  public final TextView txtCooperative;
+
+  @NonNull
+  public final TextView txtDate;
+
+  @NonNull
+  public final TextView txtDestination;
+
+  @NonNull
+  public final TextView txtOrigin;
+
+  @NonNull
+  public final TextView txtTime;
 
   @NonNull
   public final View view2;
@@ -174,12 +174,12 @@ public final class ActivityPaymentBinding implements ViewBinding {
       @NonNull Spinner spnPayment, @NonNull TextView textView, @NonNull TextView textView1,
       @NonNull TextView textView2, @NonNull TextView textView22, @NonNull TextView textView23,
       @NonNull TextView textView24, @NonNull TextView textView25, @NonNull TextView textView26,
-      @NonNull TextView textView27, @NonNull TextView textView28, @NonNull TextView textView29,
-      @NonNull TextView textView3, @NonNull TextView textView30, @NonNull TextView textView31,
-      @NonNull TextView textView32, @NonNull TextView textView33, @NonNull TextView textView34,
-      @NonNull TextView textView35, @NonNull TextView textView36, @NonNull TextView textView50,
-      @NonNull TextView textView54, @NonNull TextView textView55, @NonNull TextView textView57,
-      @NonNull TextView textView58, @NonNull TextView textView60, @NonNull TextView txtAmount,
+      @NonNull TextView textView28, @NonNull TextView textView29, @NonNull TextView textView3,
+      @NonNull TextView textView30, @NonNull TextView textView31, @NonNull TextView textView33,
+      @NonNull TextView textView34, @NonNull TextView textView35, @NonNull TextView textView36,
+      @NonNull TextView textView50, @NonNull TextView textView55, @NonNull TextView textView58,
+      @NonNull TextView txtAmount, @NonNull TextView txtCooperative, @NonNull TextView txtDate,
+      @NonNull TextView txtDestination, @NonNull TextView txtOrigin, @NonNull TextView txtTime,
       @NonNull View view2, @NonNull View view6, @NonNull View view7) {
     this.rootView = rootView;
     this.btnBack = btnBack;
@@ -208,24 +208,24 @@ public final class ActivityPaymentBinding implements ViewBinding {
     this.textView24 = textView24;
     this.textView25 = textView25;
     this.textView26 = textView26;
-    this.textView27 = textView27;
     this.textView28 = textView28;
     this.textView29 = textView29;
     this.textView3 = textView3;
     this.textView30 = textView30;
     this.textView31 = textView31;
-    this.textView32 = textView32;
     this.textView33 = textView33;
     this.textView34 = textView34;
     this.textView35 = textView35;
     this.textView36 = textView36;
     this.textView50 = textView50;
-    this.textView54 = textView54;
     this.textView55 = textView55;
-    this.textView57 = textView57;
     this.textView58 = textView58;
-    this.textView60 = textView60;
     this.txtAmount = txtAmount;
+    this.txtCooperative = txtCooperative;
+    this.txtDate = txtDate;
+    this.txtDestination = txtDestination;
+    this.txtOrigin = txtOrigin;
+    this.txtTime = txtTime;
     this.view2 = view2;
     this.view6 = view6;
     this.view7 = view7;
@@ -414,12 +414,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView27;
-      TextView textView27 = ViewBindings.findChildViewById(rootView, id);
-      if (textView27 == null) {
-        break missingId;
-      }
-
       id = R.id.textView28;
       TextView textView28 = ViewBindings.findChildViewById(rootView, id);
       if (textView28 == null) {
@@ -447,12 +441,6 @@ public final class ActivityPaymentBinding implements ViewBinding {
       id = R.id.textView31;
       TextView textView31 = ViewBindings.findChildViewById(rootView, id);
       if (textView31 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView32;
-      TextView textView32 = ViewBindings.findChildViewById(rootView, id);
-      if (textView32 == null) {
         break missingId;
       }
 
@@ -486,21 +474,9 @@ public final class ActivityPaymentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView54;
-      TextView textView54 = ViewBindings.findChildViewById(rootView, id);
-      if (textView54 == null) {
-        break missingId;
-      }
-
       id = R.id.textView55;
       TextView textView55 = ViewBindings.findChildViewById(rootView, id);
       if (textView55 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView57;
-      TextView textView57 = ViewBindings.findChildViewById(rootView, id);
-      if (textView57 == null) {
         break missingId;
       }
 
@@ -510,15 +486,39 @@ public final class ActivityPaymentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView60;
-      TextView textView60 = ViewBindings.findChildViewById(rootView, id);
-      if (textView60 == null) {
-        break missingId;
-      }
-
       id = R.id.txtAmount;
       TextView txtAmount = ViewBindings.findChildViewById(rootView, id);
       if (txtAmount == null) {
+        break missingId;
+      }
+
+      id = R.id.txtCooperative;
+      TextView txtCooperative = ViewBindings.findChildViewById(rootView, id);
+      if (txtCooperative == null) {
+        break missingId;
+      }
+
+      id = R.id.txtDate;
+      TextView txtDate = ViewBindings.findChildViewById(rootView, id);
+      if (txtDate == null) {
+        break missingId;
+      }
+
+      id = R.id.txtDestination;
+      TextView txtDestination = ViewBindings.findChildViewById(rootView, id);
+      if (txtDestination == null) {
+        break missingId;
+      }
+
+      id = R.id.txtOrigin;
+      TextView txtOrigin = ViewBindings.findChildViewById(rootView, id);
+      if (txtOrigin == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTime;
+      TextView txtTime = ViewBindings.findChildViewById(rootView, id);
+      if (txtTime == null) {
         break missingId;
       }
 
@@ -544,9 +544,9 @@ public final class ActivityPaymentBinding implements ViewBinding {
           btnPlus, btnProfile, btnProfile1, btnProfile2, btnProfile3, btnProfile4, constraintLayout,
           imageView15, imageView3, imageView51, imageView56, imageView59, imageView9, imgProfile,
           spnPayment, textView, textView1, textView2, textView22, textView23, textView24,
-          textView25, textView26, textView27, textView28, textView29, textView3, textView30,
-          textView31, textView32, textView33, textView34, textView35, textView36, textView50,
-          textView54, textView55, textView57, textView58, textView60, txtAmount, view2, view6,
+          textView25, textView26, textView28, textView29, textView3, textView30, textView31,
+          textView33, textView34, textView35, textView36, textView50, textView55, textView58,
+          txtAmount, txtCooperative, txtDate, txtDestination, txtOrigin, txtTime, view2, view6,
           view7);
     }
     String missingId = rootView.getResources().getResourceName(id);

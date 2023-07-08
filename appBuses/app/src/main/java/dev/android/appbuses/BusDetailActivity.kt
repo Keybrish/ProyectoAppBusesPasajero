@@ -10,6 +10,8 @@ import android.view.Window
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.databinding.ActivityBusDetailBinding
+import dev.android.appbuses.models.Frecuencia
+import dev.android.appbuses.utils.Constants
 
 class BusDetailActivity : AppCompatActivity() {
     private lateinit var binding : ActivityBusDetailBinding
@@ -35,11 +37,29 @@ class BusDetailActivity : AppCompatActivity() {
         binding.btnBuy.setOnClickListener {
             var intent: Intent
             if (option == "login") {
-                intent = Intent(this, PaymentActivity::class.java)
+                intent = Intent(this, PaymentActivity::class.java).apply {
+                    putExtras(bundle)
+                }
             } else {
                 intent = Intent(this, LoginActivity::class.java)
             }
             startActivity(intent)
+        }
+
+        bundle?.let {
+            val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
+
+            binding.txtCooperative.text = frequency.nombre_cooperativa
+            Picasso.get().load(frequency.fotografia).error(R.drawable.terminal_terrestre_quito).into(binding.imgBus)
+            binding.txtRoute.text = frequency.destino_frecuencia + ", " + frequency.destino_provincia_frecuencia
+            binding.txtDate.text = frequency.fecha_viaje
+            binding.txtDepartureTime.text = frequency.hora_salida.substring(0,5)
+            binding.txtArrivalTime.text = frequency.hora_llegada.substring(0,5)
+            binding.txtBusNumber.text = frequency.numero_bus
+            binding.txtBusCarriage.text = frequency.placa_bus
+            binding.txtBusChassis.text = frequency.chasis_bus
+            binding.txtBusBodywork.text = frequency.carroceria_bus
+            binding.txtPrice.text = "$" + String.format("%.2f", frequency.costo_frecuencia)
         }
     }
 }

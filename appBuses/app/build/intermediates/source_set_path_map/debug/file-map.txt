@@ -39,11 +39,11 @@ dev.android.appbuses.app-lifecycle-viewmodel-2.5.1-37 C:\Users\keych\.gradle\cac
 dev.android.appbuses.app-fragment-1.5.4-38 C:\Users\keych\.gradle\caches\transforms-3\f4e8c752aa58e883914bac4502d8ce05\transformed\fragment-1.5.4\res
 dev.android.appbuses.app-navigation-fragment-ktx-2.5.3-39 C:\Users\keych\.gradle\caches\transforms-3\f892d77d61bc7728ff9aa59943d891d4\transformed\navigation-fragment-ktx-2.5.3\res
 dev.android.appbuses.app-annotation-experimental-1.1.0-40 C:\Users\keych\.gradle\caches\transforms-3\fb44608a9e1d20332c6690b5dda0b67e\transformed\annotation-experimental-1.1.0\res
-dev.android.appbuses.app-pngs-41 D:\DOCUMENTOS\DASProject\appBuses\app\build\generated\res\pngs\debug
-dev.android.appbuses.app-resValues-42 D:\DOCUMENTOS\DASProject\appBuses\app\build\generated\res\resValues\debug
-dev.android.appbuses.app-rs-43 D:\DOCUMENTOS\DASProject\appBuses\app\build\generated\res\rs\debug
-dev.android.appbuses.app-packageDebugResources-44 D:\DOCUMENTOS\DASProject\appBuses\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-dev.android.appbuses.app-packageDebugResources-45 D:\DOCUMENTOS\DASProject\appBuses\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-dev.android.appbuses.app-merged_res-46 D:\DOCUMENTOS\DASProject\appBuses\app\build\intermediates\merged_res\debug
-dev.android.appbuses.app-debug-47 D:\DOCUMENTOS\DASProject\appBuses\app\src\debug\res
-dev.android.appbuses.app-main-48 D:\DOCUMENTOS\DASProject\appBuses\app\src\main\res
+dev.android.appbuses.app-pngs-41 D:\DOCUMENTOS\My Projects\appBuses\app\build\generated\res\pngs\debug
+dev.android.appbuses.app-resValues-42 D:\DOCUMENTOS\My Projects\appBuses\app\build\generated\res\resValues\debug
+dev.android.appbuses.app-rs-43 D:\DOCUMENTOS\My Projects\appBuses\app\build\generated\res\rs\debug
+dev.android.appbuses.app-packageDebugResources-44 D:\DOCUMENTOS\My Projects\appBuses\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+dev.android.appbuses.app-packageDebugResources-45 D:\DOCUMENTOS\My Projects\appBuses\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+dev.android.appbuses.app-merged_res-46 D:\DOCUMENTOS\My Projects\appBuses\app\build\intermediates\merged_res\debug
+dev.android.appbuses.app-debug-47 D:\DOCUMENTOS\My Projects\appBuses\app\src\debug\res
+dev.android.appbuses.app-main-48 D:\DOCUMENTOS\My Projects\appBuses\app\src\main\res

@@ -4,7 +4,7 @@
             "outputFile": "dev.android.appbuses.app-mergeDebugResources-44:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

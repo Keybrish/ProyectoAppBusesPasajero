@@ -4,23 +4,6 @@
             "outputFile": "dev.android.appbuses.app-mergeDebugResources-44:/values/values.xml",
             "map": [
                 {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
-                    },
-                    "to": {
-                        "startLines": "1131",
-                        "startColumns": "4",
-                        "startOffsets": "70034",
-                        "endColumns": "41",
-                        "endOffsets": "70071"
-                    }
-                },
-                {
                     "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\a8cb8f63c3b4100f59d4dc0be3528a80\\transformed\\navigation-common-2.5.3\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,15,21,27,30",
@@ -203,6 +186,23 @@
                     }
                 },
                 {
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,4,9,10,6,7,5,2",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "16,189,404,474,319,357,253,62",
+                        "endColumns": "45,63,69,82,37,45,65,71",
+                        "endOffsets": "57,248,469,552,352,398,314,129"
+                    },
+                    "to": {
+                        "startLines": "1981,2000,2001,2002,2113,2119,2126,2130",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "132931,135221,135285,135355,151309,152149,152756,153241",
+                        "endColumns": "45,63,69,82,37,45,65,71",
+                        "endOffsets": "132972,135280,135350,135433,151342,152190,152817,153308"
+                    }
+                },
+                {
                     "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\07314dd07c6d151d1d21cf5484b5b880\\transformed\\appcompat-resources-1.5.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,18,24,34,50",
@@ -222,39 +222,22 @@
                     }
                 },
                 {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\font_certs.xml",
                     "from": {
-                        "startLines": "1,4,9,10,6,7,5,2",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "16,189,404,474,319,357,253,62",
-                        "endColumns": "45,63,69,82,37,45,65,71",
-                        "endOffsets": "57,248,469,552,352,398,314,129"
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "57,263,1993",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "257,1987,3582"
                     },
                     "to": {
-                        "startLines": "1981,2000,2001,2002,2113,2119,2126,2130",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "132931,135221,135285,135355,151309,152149,152756,153241",
-                        "endColumns": "45,63,69,82,37,45,65,71",
-                        "endOffsets": "132972,135280,135350,135433,151342,152190,152817,153308"
-                    }
-                },
-                {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "16,2,29,24,31",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "803,100,1346,1189,1444",
-                        "endLines": "22,14,29,27,31",
-                        "endColumns": "12,12,96,12,86",
-                        "endOffsets": "1183,797,1438,1340,1526"
-                    },
-                    "to": {
-                        "startLines": "5755,6304,6317,6318,6322",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "406364,442319,442900,442996,443152",
-                        "endLines": "5761,6316,6317,6321,6322",
-                        "endColumns": "12,12,95,12,85",
-                        "endOffsets": "406744,442895,442991,443147,443233"
+                        "startLines": "2,6,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "150,352,2077",
+                        "endLines": "5,10,15",
+                        "endColumns": "12,19,19",
+                        "endOffsets": "347,2072,3662"
                     }
                 },
                 {
@@ -277,6 +260,23 @@
                     }
                 },
                 {
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
+                    },
+                    "to": {
+                        "startLines": "1131",
+                        "startColumns": "4",
+                        "startOffsets": "70034",
+                        "endColumns": "41",
+                        "endOffsets": "70071"
+                    }
+                },
+                {
                     "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\f4e8c752aa58e883914bac4502d8ce05\\transformed\\fragment-1.5.4\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -293,23 +293,6 @@
                         "endLines": "1806,1843,1880,11340,11344",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "122298,124227,126141,714735,714884"
-                    }
-                },
-                {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "286,55,102,149,196,241,328",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "323,97,144,191,236,281,365"
-                    },
-                    "to": {
-                        "startLines": "664,969,970,971,982,983,986",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "36662,59391,59438,59485,60229,60274,60440",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "36699,59433,59480,59527,60269,60314,60477"
                     }
                 },
                 {
@@ -332,6 +315,25 @@
                     }
                 },
                 {
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "16,2,29,24,31",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "803,100,1346,1189,1444",
+                        "endLines": "22,14,29,27,31",
+                        "endColumns": "12,12,96,12,86",
+                        "endOffsets": "1183,797,1438,1340,1526"
+                    },
+                    "to": {
+                        "startLines": "5755,6304,6317,6318,6322",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "406364,442319,442900,442996,443152",
+                        "endLines": "5761,6316,6317,6321,6322",
+                        "endColumns": "12,12,95,12,85",
+                        "endOffsets": "406744,442895,442991,443147,443233"
+                    }
+                },
+                {
                     "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\f2489d9065f4dca5ca4b308de42fbf04\\transformed\\lifecycle-viewmodel-2.5.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -346,25 +348,6 @@
                         "startOffsets": "126032",
                         "endColumns": "49",
                         "endOffsets": "126077"
-                    }
-                },
-                {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\font_certs.xml",
-                    "from": {
-                        "startLines": "2,6,11",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "57,263,1993",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "257,1987,3582"
-                    },
-                    "to": {
-                        "startLines": "2,6,11",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "150,352,2077",
-                        "endLines": "5,10,15",
-                        "endColumns": "12,19,19",
-                        "endOffsets": "347,2072,3662"
                     }
                 },
                 {
@@ -404,6 +387,23 @@
                     }
                 },
                 {
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "286,55,102,149,196,241,328",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "323,97,144,191,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "664,969,970,971,982,983,986",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "36662,59391,59438,59485,60229,60274,60440",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "36699,59433,59480,59527,60269,60314,60477"
+                    }
+                },
+                {
                     "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\e2ead5f317d22088c48cad1a61f8b969\\transformed\\viewpager2-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -420,25 +420,6 @@
                         "endLines": "13527",
                         "endColumns": "24",
                         "endOffsets": "795922"
-                    }
-                },
-                {
-                    "source": "D:\\DOCUMENTOS\\DASProject\\appBuses\\app\\src\\main\\res\\values\\preloaded_fonts.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "205"
-                    },
-                    "to": {
-                        "startLines": "16",
-                        "startColumns": "4",
-                        "startOffsets": "3667",
-                        "endLines": "19",
-                        "endColumns": "12",
-                        "endOffsets": "3812"
                     }
                 },
                 {
@@ -511,6 +492,25 @@
                         "startOffsets": "122303,122343,123643,123825,123880,125484,125538,125590,125639,125700",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "122338,122385,123681,123875,123922,125533,125585,125634,125695,125745"
+                    }
+                },
+                {
+                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values\\preloaded_fonts.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "205"
+                    },
+                    "to": {
+                        "startLines": "16",
+                        "startColumns": "4",
+                        "startOffsets": "3667",
+                        "endLines": "19",
+                        "endColumns": "12",
+                        "endOffsets": "3812"
                     }
                 },
                 {

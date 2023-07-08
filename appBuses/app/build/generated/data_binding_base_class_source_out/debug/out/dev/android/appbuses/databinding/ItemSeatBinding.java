@@ -28,18 +28,18 @@ public final class ItemSeatBinding implements ViewBinding {
   public final Spinner spnType;
 
   @NonNull
-  public final TextView textView23;
-
-  @NonNull
   public final TextView textView24;
 
+  @NonNull
+  public final TextView txtSeatNumber;
+
   private ItemSeatBinding(@NonNull CardView rootView, @NonNull EditText editTextTextPersonName,
-      @NonNull Spinner spnType, @NonNull TextView textView23, @NonNull TextView textView24) {
+      @NonNull Spinner spnType, @NonNull TextView textView24, @NonNull TextView txtSeatNumber) {
     this.rootView = rootView;
     this.editTextTextPersonName = editTextTextPersonName;
     this.spnType = spnType;
-    this.textView23 = textView23;
     this.textView24 = textView24;
+    this.txtSeatNumber = txtSeatNumber;
   }
 
   @Override
@@ -81,20 +81,20 @@ public final class ItemSeatBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView23;
-      TextView textView23 = ViewBindings.findChildViewById(rootView, id);
-      if (textView23 == null) {
-        break missingId;
-      }
-
       id = R.id.textView24;
       TextView textView24 = ViewBindings.findChildViewById(rootView, id);
       if (textView24 == null) {
         break missingId;
       }
 
-      return new ItemSeatBinding((CardView) rootView, editTextTextPersonName, spnType, textView23,
-          textView24);
+      id = R.id.txtSeatNumber;
+      TextView txtSeatNumber = ViewBindings.findChildViewById(rootView, id);
+      if (txtSeatNumber == null) {
+        break missingId;
+      }
+
+      return new ItemSeatBinding((CardView) rootView, editTextTextPersonName, spnType, textView24,
+          txtSeatNumber);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
