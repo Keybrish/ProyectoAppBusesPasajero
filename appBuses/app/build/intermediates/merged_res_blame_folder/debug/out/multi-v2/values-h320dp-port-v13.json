@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "dev.android.appbuses.app-mergeDebugResources-44:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "dev.android.appbuses.app-mergeDebugResources-3:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\d23a14032be95e1c0d49d848980659b4\\transformed\\material-1.9.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\d23a14032be95e1c0d49d848980659b4\\transformed\\material-1.9.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
