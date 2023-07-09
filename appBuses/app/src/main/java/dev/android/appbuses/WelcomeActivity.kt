@@ -3,6 +3,7 @@ package dev.android.appbuses
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import dev.android.appbuses.databinding.ActivityWelcomeBinding
 
@@ -32,4 +33,23 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    fun checkSession() {
+        auth = FirebaseAuth.getInstance()
+
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            currentUser.email?.let { Log.d("Email", it) }
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("email", currentUser.email.toString())
+            }
+            startActivity(intent)
+            finish()
+            return
+        }
+    }
+
+>>>>>>> Stashed changes
 }
