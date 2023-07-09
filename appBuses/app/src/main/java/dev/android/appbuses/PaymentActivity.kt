@@ -36,16 +36,10 @@ class PaymentActivity : AppCompatActivity() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
 
-//        binding.spnPayment.dropDownVerticalOffset
-//        val op = listOf("Paypal", "Deposito", "Transferencia")
-//        val sp = ArrayAdapter(this, R.layout.simple_spinner_item, op)
-//        binding.spnPayment.adapter = sp
-
         cargarDatos()
         bundle = intent.extras!!
         val email = bundle?.getString("email")
         Toast.makeText(this@PaymentActivity, email.toString(), Toast.LENGTH_SHORT).show()
-        //user = Usuario(8, "", "", "", "", "", "", "")
         if (email != null) {
             getUser(email)
         }
@@ -181,7 +175,6 @@ class PaymentActivity : AppCompatActivity() {
                         // Manejar el caso de respuesta no exitosa
                         Toast.makeText(this@PaymentActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
                     }
-
                 }
             }
         )
