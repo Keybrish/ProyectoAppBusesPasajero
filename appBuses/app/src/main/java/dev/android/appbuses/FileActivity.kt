@@ -69,21 +69,11 @@ class FileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val payment = bundle?.getInt("payment")
-        val total = bundle?.getFloat("total")
-
         binding.btnNext.setOnClickListener {
             bundle?.let {
                 val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
                 image?.let { it1 -> uploadImage(it1, frequency) }
-//                val sale = payment?.let { it1 ->
-//                    Venta(8, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
-//                        it1,total, "12345", "")
-//                }
-//                if (sale != null) {
-//                    addSale(sale)
-//                }
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {

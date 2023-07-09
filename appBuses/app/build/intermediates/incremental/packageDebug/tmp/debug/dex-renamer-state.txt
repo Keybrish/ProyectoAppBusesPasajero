@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-#Sat Jul 08 01:11:51 COT 2023
-=======
-#Sat Jul 08 14:20:34 COT 2023
->>>>>>> Stashed changes
-=======
-#Sat Jul 08 11:41:53 COT 2023
->>>>>>> PD-132-ServicioLogin
-path.4=5/classes.dex
-=======
-=======
-<<<<<<< Updated upstream
->>>>>>> PD-55-Integracion-Servicios-Compras
-#Sat Jul 08 21:13:18 COT 2023
-=======
-#Sat Jul 08 23:18:10 COT 2023
->>>>>>> Stashed changes
+#Sat Jul 08 23:42:45 COT 2023
 path.4=4/classes.dex
->>>>>>> PD-55-Integracion-Servicios-Compras
 path.3=3/classes.dex
 path.2=15/classes.dex
 path.1=0/classes.dex
@@ -27,27 +7,11 @@ path.7=classes2.dex
 path.6=6/classes.dex
 path.5=5/classes.dex
 path.0=classes.dex
-<<<<<<< HEAD
-<<<<<<< HEAD
-base.4=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.3=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.2=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.1=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-=======
-base.4=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.3=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.2=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.1=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
->>>>>>> PD-132-ServicioLogin
-=======
 base.4=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.3=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.2=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 base.1=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.0=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
->>>>>>> PD-55-Integracion-Servicios-Compras
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
@@ -56,18 +20,6 @@ renamed.7=classes8.dex
 renamed.6=classes7.dex
 base.7=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 renamed.5=classes6.dex
-<<<<<<< HEAD
-<<<<<<< HEAD
-base.6=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-renamed.4=classes5.dex
-base.5=D\:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-=======
-base.6=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-renamed.4=classes5.dex
-base.5=C\:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
->>>>>>> PD-132-ServicioLogin
-=======
 base.6=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 renamed.4=classes5.dex
 base.5=C\:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
->>>>>>> PD-55-Integracion-Servicios-Compras
