@@ -30,7 +30,7 @@ public interface api {
 
     @FormUrlEncoded
     @POST("editarPerfilPasajero.php")
-    Call<Usuario> updateUser(@Query("id_usuario") Integer id_usuario,
+    Call<Usuario> updateUser(@Field("id_usuario") Integer id_usuario,
                              @Field("email_usuario") String email_usuario,
                              @Field("nombre_usuario") String nombre_usuario,
                              @Field("apellido_usuario") String apellido_usuario,

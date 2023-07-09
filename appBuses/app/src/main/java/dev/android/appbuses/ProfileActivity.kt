@@ -1,8 +1,6 @@
 package dev.android.appbuses
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
+import android.content.*
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -28,6 +26,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     private lateinit var user: Usuario
     private lateinit var bundle: Bundle
+    private var email = ""
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +37,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         bundle = intent.extras!!
-        val email = bundle?.getString("email")
+        email = bundle?.getString("email").toString()
         Toast.makeText(this@ProfileActivity, email.toString(), Toast.LENGTH_SHORT).show()
         if (email != null) {
             getUser(email)
@@ -64,6 +63,7 @@ class ProfileActivity : AppCompatActivity() {
                 putExtras(bundle)
             }
             startActivity(intent)
+            finish()
         }
 
         binding.btnChangePassword.setOnClickListener {
@@ -140,5 +140,11 @@ class ProfileActivity : AppCompatActivity() {
                 }
             }
         )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
     }
 }
