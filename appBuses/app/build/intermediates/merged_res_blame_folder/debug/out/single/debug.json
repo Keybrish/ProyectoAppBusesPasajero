@@ -36,12 +36,12 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\font\\roboto_bold.xml"
     },
     {
-        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_welcome.xml.flat",
-        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_welcome.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_profile_info.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_profile_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_welcome.xml.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_welcome.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_baseline_directions_bus_24.xml.flat",
@@ -114,10 +114,6 @@
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\font_roboto_regular.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\font\\roboto_regular.xml"
-    },
-    {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_payment.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_payment.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_launcher_background.xml.flat",
@@ -246,6 +242,10 @@
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_bus_detail.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_bus_detail.xml"
+    },
+    {
+        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_profile_info.xml.flat",
+        "source": "dev.android.appbuses.app-main-53:/layout/activity_profile_info.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\font_roboto.xml.flat",

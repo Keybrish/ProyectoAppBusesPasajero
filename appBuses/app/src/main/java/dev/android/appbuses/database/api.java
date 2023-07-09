@@ -12,6 +12,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public interface api {
@@ -26,6 +27,14 @@ public interface api {
 
     @GET("obtenerDatosUsuariosEmail.php")
     Call<Usuario> getUser(@Query("email_usuario")String email_usuario);
+
+    @PUT("editarPerfilPasajero.php")
+    Call<Usuario> updateUser(@Query("id_usuario") Integer id_usuario,
+                             @Field("nombre_usuario") String nombre_usuario,
+                             @Field("apellido_usuario") String apellido_usuario,
+                             @Field("email_usuario") String email_usuario,
+                             @Field("telefono_usuario") String telefono_usuario,
+                             @Field("foto_usuario") String foto_usuario);
 
     @FormUrlEncoded
     @POST("generarVenta.php")

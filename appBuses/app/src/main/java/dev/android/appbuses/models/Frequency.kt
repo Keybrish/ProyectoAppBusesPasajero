@@ -55,5 +55,6 @@ data class Usuario (
     val clave_usuario: String,
     val nombre_usuario: String,
     val apellido_usuario: String,
-    val telefono_usuario: String
+    val telefono_usuario: String,
+    val foto_usuario: String
 ): Serializable

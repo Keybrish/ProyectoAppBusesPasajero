@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private val adapter: FrequencyAdapter by lazy{
         FrequencyAdapter()
     }
+    private lateinit var bund: Bundle
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cargarDatos()
+        val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
+        email = sharedPreferences.getString("email", "").toString()
 
         binding.btnFilter.setOnClickListener {
                 val intent = Intent(this, FilterMenuActivity::class.java).apply {
@@ -55,11 +58,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtra("email", email)
             }
             startActivity(intent)
         }
-        val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
-        email = sharedPreferences.getString("email", "").toString()
         Toast.makeText(this, email, Toast.LENGTH_SHORT).show()
     }
 
@@ -98,7 +100,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvFrequency.layoutManager = LinearLayoutManager(this)
         binding.rvFrequency.setHasFixedSize(true)
 
-        val bund = intent.extras!!
+        bund = intent.extras!!
         val email = bund?.getString("email")
 
         adapter.setOnClickListener = {
