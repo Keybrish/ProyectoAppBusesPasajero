@@ -1,0 +1,11 @@
+# Android Studio
+/.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/gradle.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+
+# Build output
+/app/build/
