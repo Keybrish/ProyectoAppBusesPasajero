@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "dev.android.appbuses.app-mergeDebugResources-4:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\d9a24c8642a159d333bd22454e667afb\\transformed\\material-1.9.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+=======
+            "outputFile": "dev.android.appbuses.app-mergeDebugResources-49:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\keych\\.gradle\\caches\\transforms-3\\d9a24c8642a159d333bd22454e667afb\\transformed\\material-1.9.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+>>>>>>> PD-55-Integracion-Servicios-Compras
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -46,3 +46,14 @@ data class FormaPago (
     val id_forma_pago: Int,
     val forma_pago: String
 ): Serializable
+
+data class Usuario (
+    val id_usuario: Int,
+    val cedula_usuario: String,
+    val tipo_usuario: String,
+    val email_usuario: String,
+    val clave_usuario: String,
+    val nombre_usuario: String,
+    val apellido_usuario: String,
+    val telefono_usuario: String
+): Serializable

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 #Sat Jul 08 01:11:51 COT 2023
 =======
@@ -10,7 +11,13 @@
 >>>>>>> PD-132-ServicioLogin
 path.4=5/classes.dex
 =======
+=======
+<<<<<<< Updated upstream
+>>>>>>> PD-55-Integracion-Servicios-Compras
 #Sat Jul 08 21:13:18 COT 2023
+=======
+#Sat Jul 08 23:18:10 COT 2023
+>>>>>>> Stashed changes
 path.4=4/classes.dex
 >>>>>>> PD-55-Integracion-Servicios-Compras
 path.3=3/classes.dex

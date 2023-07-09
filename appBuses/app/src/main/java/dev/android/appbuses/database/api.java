@@ -5,6 +5,7 @@ import java.util.List;
 import dev.android.appbuses.models.Asiento;
 import dev.android.appbuses.models.FormaPago;
 import dev.android.appbuses.models.Frecuencia;
+import dev.android.appbuses.models.Usuario;
 import dev.android.appbuses.models.Venta;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -22,6 +23,9 @@ public interface api {
 
     @GET("listarFormasPago.php")
     Call<List<FormaPago>> getPayments();
+
+    @GET("obtenerDatosUsuariosEmail.php")
+    Call<Usuario> getUser(@Query("email_usuario")String email_usuario);
 
     @FormUrlEncoded
     @POST("generarVenta.php")

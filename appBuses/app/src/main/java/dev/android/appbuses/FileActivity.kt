@@ -20,8 +20,10 @@ import com.google.firebase.storage.FirebaseStorage
 import dev.android.appbuses.databinding.ActivityFileBinding
 import java.util.*
 import com.google.firebase.storage.StorageReference
+import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.models.Frecuencia
+import dev.android.appbuses.models.Usuario
 import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
 import retrofit2.Call
@@ -36,6 +38,8 @@ class FileActivity : AppCompatActivity() {
     var image: Uri? = null
     private var photo = "pago"
     private val progressDialog: ProgressDialog? = null
+    private lateinit var bundle: Bundle
+    private lateinit var user: Usuario
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +50,14 @@ class FileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         storageReference = FirebaseStorage.getInstance().reference
-        val bundle = intent.extras
+        bundle = intent.extras!!
+
+        val email = bundle?.getString("email")
+        Toast.makeText(this@FileActivity, email.toString(), Toast.LENGTH_SHORT).show()
+        //user = Usuario(8, "", "", "", "", "", "", "")
+        if (email != null) {
+            getUser(email)
+        }
 
         binding.btnBack.setOnClickListener {
             finish()
@@ -65,14 +76,14 @@ class FileActivity : AppCompatActivity() {
             bundle?.let {
                 val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
-//                image?.let { it1 -> uploadImage(it1, frequency) }
-                val sale = payment?.let { it1 ->
-                    Venta(8, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
-                        it1,total, "12345", "")
-                }
-                if (sale != null) {
-                    addSale(sale)
-                }
+                image?.let { it1 -> uploadImage(it1, frequency) }
+//                val sale = payment?.let { it1 ->
+//                    Venta(8, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
+//                        it1,total, "12345", "")
+//                }
+//                if (sale != null) {
+//                    addSale(sale)
+//                }
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
@@ -128,8 +139,15 @@ class FileActivity : AppCompatActivity() {
             .addOnSuccessListener { taskSnapshot ->
                 taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
                     val downloadUrl = uri.toString()
-                    val sale = Venta(8, 1, 1, "2023-06-04", 1,123.50f, "12345", downloadUrl)
-                    addSale(sale)
+                    val payment = bundle?.getInt("payment")
+                    val total = bundle?.getFloat("total")
+                    val sale = payment?.let {
+                        Venta(user.id_usuario, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
+                            it,total, "12345", downloadUrl)
+                    }
+                    if (sale != null) {
+                        addSale(sale)
+                    }
                 }.addOnFailureListener { exception ->
                     showToast("Error al obtener la URL de descarga")
                     progressDialog?.dismiss()
@@ -150,7 +168,7 @@ class FileActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.insertData(8, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,venta.total_venta, "123455555", "downloadUrl")
+        val retrofit = retrofitBuilder.insertData(venta.id_comprador, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,venta.total_venta, "123455555", venta.comprobante)
         retrofit.enqueue(
             object : Callback<Venta> {
                 override fun onFailure(call: Call<Venta>, t: Throwable) {
@@ -159,6 +177,36 @@ class FileActivity : AppCompatActivity() {
 
                 override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
                     Log.d("Agregar", "Cliente agregado con éxito")
+                }
+            }
+        )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getUser(email_usuario: String){
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getUser(email_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Usuario>, response: retrofit2.Response<Usuario> ) {
+                    if (response.isSuccessful) {
+                        val usuario = response.body()
+                        Log.d("Respuesta", usuario.toString())
+                        if (usuario != null) {
+                            user = usuario
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@FileActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
                 }
             }
         )
