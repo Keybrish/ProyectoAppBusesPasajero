@@ -1,5 +1,6 @@
 package dev.android.appbuses
 
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,7 @@ import java.nio.charset.StandardCharsets
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
+    private lateinit var email: String
     private val adapter: FrequencyAdapter by lazy{
         FrequencyAdapter()
     }
@@ -50,7 +52,9 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
-
+        val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
+        email = sharedPreferences.getString("email", "").toString()
+        Toast.makeText(this, email, Toast.LENGTH_SHORT).show()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

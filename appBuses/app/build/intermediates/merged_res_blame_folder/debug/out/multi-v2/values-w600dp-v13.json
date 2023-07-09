@@ -1,16 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "dev.android.appbuses.app-mergeDebugResources-49:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "dev.android.appbuses.app-mergeDebugResources-4:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "D:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+=======
+                    "source": "C:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+>>>>>>> PD-132-ServicioLogin
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "16",
+                        "startOffsets": "17",
                         "endColumns": "41",
-                        "endOffsets": "53"
+                        "endOffsets": "54"
                     },
                     "to": {
                         "startLines": "2",
