@@ -53,4 +53,11 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'org.apache.commons:commons-text:1.9'
+
+    //para paypal
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+
+    //para QR
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.2.0'
 }

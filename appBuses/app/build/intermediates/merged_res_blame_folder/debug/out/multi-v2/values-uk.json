@@ -4,6 +4,23 @@
             "outputFile": "dev.android.appbuses.app-mergeDebugResources-3:/values-uk/values-uk.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\20043eeab334aa95b03749955c9c48ee\\transformed\\zxing-android-embedded-4.2.0\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,117,164,306",
+                        "endColumns": "61,46,141,121",
+                        "endOffsets": "112,159,301,423"
+                    },
+                    "to": {
+                        "startLines": "101,102,103,104",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "8486,8548,8595,8737",
+                        "endColumns": "61,46,141,121",
+                        "endOffsets": "8543,8590,8732,8854"
+                    }
+                },
+                {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-3\\205feb206244c8c1b4b56fcdc8d69988\\transformed\\core-1.8.0\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2",

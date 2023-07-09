@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "dev.android.appbuses.app-mergeDebugResources-44:/values-w1240dp-v13/values-w1240dp-v13.xml",
+            "outputFile": "dev.android.appbuses.app-mergeDebugResources-3:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\DOCUMENTOS\\My Projects\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\RepoDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "16",
+                        "startOffsets": "17",
                         "endColumns": "42",
-                        "endOffsets": "54"
+                        "endOffsets": "55"
                     },
                     "to": {
                         "startLines": "2",

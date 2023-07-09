@@ -6,326 +6,434 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml
+8-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml
+9-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:5:5-67
-11-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:6:5-81
-12-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:6:22-78
-13
-14    <application
-14-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:8:5-149:19
-15        android:allowBackup="true"
-15-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:9:9-35
-16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.8.0] C:\Users\keych\.gradle\caches\transforms-3\205feb206244c8c1b4b56fcdc8d69988\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
-17        android:dataExtractionRules="@xml/data_extraction_rules"
-17-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:10:9-65
-18        android:debuggable="true"
-19        android:extractNativeLibs="false"
-20        android:fullBackupContent="@xml/backup_rules"
-20-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:11:9-54
-21        android:icon="@mipmap/ic_launcher"
-21-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:12:9-43
-22        android:label="@string/app_name"
-22-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:13:9-41
-23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:14:9-54
-24        android:supportsRtl="true"
-24-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:15:9-35
-25        android:testOnly="true"
-26        android:theme="@style/Theme.AppBuses" >
-26-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:16:9-46
-27        <activity
-27-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
-28            android:name="dev.android.appbuses.MainSkipActivity"
-28-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:19:13-45
-29            android:exported="false" >
-29-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:20:13-37
-30            <meta-data
-30-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-31                android:name="android.app.lib_name"
-31-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-32                android:value="" />
-32-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-33        </activity>
-34        <activity
-34-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
-35            android:name="dev.android.appbuses.FileActivity"
-35-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:26:13-41
-36            android:exported="false" >
-36-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:27:13-37
-37            <meta-data
-37-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-38                android:name="android.app.lib_name"
-38-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-39                android:value="" />
-39-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-40        </activity>
-41        <activity
-41-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
-42            android:name="dev.android.appbuses.SeatActivity"
-42-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:33:13-41
-43            android:exported="false" >
-43-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:34:13-37
-44            <meta-data
-44-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-45                android:name="android.app.lib_name"
-45-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-46                android:value="" />
-46-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-47        </activity>
-48        <activity
-48-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
-49            android:name="dev.android.appbuses.HistoryQRActivity"
-49-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:40:13-46
-50            android:exported="false" >
-50-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:41:13-37
-51            <meta-data
-51-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-52                android:name="android.app.lib_name"
-52-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-53                android:value="" />
-53-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-54        </activity>
-55        <activity
-55-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
-56            android:name="dev.android.appbuses.HistoryActivity"
-56-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:47:13-44
-57            android:exported="false" >
-57-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:48:13-37
-58            <meta-data
-58-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-59                android:name="android.app.lib_name"
-59-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-60                android:value="" />
-60-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-61        </activity>
-62        <activity
-62-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
-63            android:name="dev.android.appbuses.ChangePasswordActivity"
-63-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:54:13-51
-64            android:exported="false" >
-64-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:55:13-37
-65            <meta-data
-65-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-66                android:name="android.app.lib_name"
-66-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-67                android:value="" />
-67-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-68        </activity>
-69        <activity
-69-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
-70            android:name="dev.android.appbuses.ProfileInfoActivity"
-70-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:61:13-48
-71            android:exported="false" >
-71-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:62:13-37
-72            <meta-data
-72-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-73                android:name="android.app.lib_name"
-73-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-74                android:value="" />
-74-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-75        </activity>
-76        <activity
-76-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
-77            android:name="dev.android.appbuses.QRCodeActivity"
-77-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:68:13-43
-78            android:exported="false" >
-78-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:69:13-37
-79            <meta-data
-79-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-80                android:name="android.app.lib_name"
-80-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-81                android:value="" />
-81-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-82        </activity>
-83        <activity
-83-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
-84            android:name="dev.android.appbuses.PaymentSuccessfulActivity"
-84-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:75:13-54
-85            android:exported="false" >
-85-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:76:13-37
-86            <meta-data
-86-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-87                android:name="android.app.lib_name"
-87-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-88                android:value="" />
-88-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-89        </activity>
-90        <activity
-90-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
-91            android:name="dev.android.appbuses.PaymentActivity"
-91-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:82:13-44
-92            android:exported="false" >
-92-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:83:13-37
-93            <meta-data
-93-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-94                android:name="android.app.lib_name"
-94-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-95                android:value="" />
-95-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-96        </activity>
-97        <activity
-97-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
-98            android:name="dev.android.appbuses.ProfileActivity"
-98-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:89:13-44
-99            android:exported="false" >
-99-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:90:13-37
-100            <meta-data
-100-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-101                android:name="android.app.lib_name"
-101-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-102                android:value="" />
-102-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-103        </activity>
-104        <activity
-104-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
-105            android:name="dev.android.appbuses.BusDetailActivity"
-105-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:96:13-46
-106            android:exported="false"
-106-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:97:13-37
-107            android:theme="@style/PopUp" >
-107-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:98:13-41
-108            <meta-data
-108-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-109                android:name="android.app.lib_name"
-109-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-110                android:value="" />
-110-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-111        </activity>
-112        <activity
-112-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
-113            android:name="dev.android.appbuses.FilterMenuActivity"
-113-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:104:13-47
-114            android:exported="false"
-114-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:105:13-37
-115            android:theme="@style/PopUp" >
-115-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:106:13-41
+12-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+13-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:5-65
+13-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:22-62
+14    <uses-feature
+14-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:25:5-27:36
+15        android:name="android.hardware.camera"
+15-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:26:9-47
+16        android:required="false" />
+16-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:27:9-33
+17    <uses-feature
+17-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:28:5-30:36
+18        android:name="android.hardware.camera.front"
+18-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:29:9-53
+19        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+19-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:30:9-33
+20    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+21    <uses-feature
+21-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:33:5-35:36
+22        android:name="android.hardware.camera.autofocus"
+22-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:34:9-57
+23        android:required="false" />
+23-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:35:9-33
+24    <uses-feature
+24-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:36:5-38:36
+25        android:name="android.hardware.camera.flash"
+25-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:37:9-53
+26        android:required="false" />
+26-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:38:9-33
+27    <uses-feature
+27-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:39:5-41:36
+28        android:name="android.hardware.screen.landscape"
+28-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:40:9-57
+29        android:required="false" />
+29-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:41:9-33
+30    <uses-feature
+30-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:42:5-44:36
+31        android:name="android.hardware.wifi"
+31-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:43:9-45
+32        android:required="false" />
+32-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:44:9-33
+33
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:9:5-79
+34-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:9:22-76
+35    <uses-permission android:name="android.permission.VIBRATE" />
+35-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:10:5-66
+35-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:10:22-63
+36
+37    <application
+37-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:8:5-149:19
+38        android:allowBackup="true"
+38-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:9:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.8.0] C:\Users\USER\.gradle\caches\transforms-3\205feb206244c8c1b4b56fcdc8d69988\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+40        android:dataExtractionRules="@xml/data_extraction_rules"
+40-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:10:9-65
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:fullBackupContent="@xml/backup_rules"
+43-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:11:9-54
+44        android:icon="@mipmap/ic_launcher"
+44-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:12:9-43
+45        android:label="@string/app_name"
+45-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:13:9-41
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:14:9-54
+47        android:supportsRtl="true"
+47-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:15:9-35
+48        android:testOnly="true"
+49        android:theme="@style/Theme.AppBuses" >
+49-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:16:9-46
+50        <activity
+50-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
+51            android:name="dev.android.appbuses.MainSkipActivity"
+51-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:19:13-45
+52            android:exported="false" >
+52-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:20:13-37
+53            <meta-data
+53-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+54                android:name="android.app.lib_name"
+54-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+55                android:value="" />
+55-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+56        </activity>
+57        <activity
+57-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
+58            android:name="dev.android.appbuses.FileActivity"
+58-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:26:13-41
+59            android:exported="false" >
+59-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:27:13-37
+60            <meta-data
+60-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+61                android:name="android.app.lib_name"
+61-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+62                android:value="" />
+62-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+63        </activity>
+64        <activity
+64-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
+65            android:name="dev.android.appbuses.SeatActivity"
+65-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:33:13-41
+66            android:exported="false" >
+66-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:34:13-37
+67            <meta-data
+67-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+68                android:name="android.app.lib_name"
+68-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+69                android:value="" />
+69-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+70        </activity>
+71        <activity
+71-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
+72            android:name="dev.android.appbuses.HistoryQRActivity"
+72-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:40:13-46
+73            android:exported="false" >
+73-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:41:13-37
+74            <meta-data
+74-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+75                android:name="android.app.lib_name"
+75-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+76                android:value="" />
+76-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+77        </activity>
+78        <activity
+78-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
+79            android:name="dev.android.appbuses.HistoryActivity"
+79-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:47:13-44
+80            android:exported="false" >
+80-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:48:13-37
+81            <meta-data
+81-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+82                android:name="android.app.lib_name"
+82-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+83                android:value="" />
+83-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+84        </activity>
+85        <activity
+85-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
+86            android:name="dev.android.appbuses.ChangePasswordActivity"
+86-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:54:13-51
+87            android:exported="false" >
+87-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:55:13-37
+88            <meta-data
+88-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+89                android:name="android.app.lib_name"
+89-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+90                android:value="" />
+90-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+91        </activity>
+92        <activity
+92-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
+93            android:name="dev.android.appbuses.ProfileInfoActivity"
+93-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:61:13-48
+94            android:exported="false" >
+94-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:62:13-37
+95            <meta-data
+95-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+96                android:name="android.app.lib_name"
+96-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+97                android:value="" />
+97-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+98        </activity>
+99        <activity
+99-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
+100            android:name="dev.android.appbuses.QRCodeActivity"
+100-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:68:13-43
+101            android:exported="false" >
+101-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:69:13-37
+102            <meta-data
+102-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+103                android:name="android.app.lib_name"
+103-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+104                android:value="" />
+104-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+105        </activity>
+106        <activity
+106-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
+107            android:name="dev.android.appbuses.PaymentSuccessfulActivity"
+107-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:75:13-54
+108            android:exported="false" >
+108-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:76:13-37
+109            <meta-data
+109-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+110                android:name="android.app.lib_name"
+110-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+111                android:value="" />
+111-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+112        </activity>
+113        <activity
+113-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
+114            android:name="dev.android.appbuses.PaymentActivity"
+114-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:82:13-44
+115            android:exported="false" >
+115-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:83:13-37
 116            <meta-data
-116-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+116-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 117                android:name="android.app.lib_name"
-117-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+117-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 118                android:value="" />
-118-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+118-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 119        </activity>
 120        <activity
-120-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
-121            android:name="dev.android.appbuses.RegisterActivity"
-121-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:112:13-45
+120-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
+121            android:name="dev.android.appbuses.ProfileActivity"
+121-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:89:13-44
 122            android:exported="false" >
-122-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:113:13-37
+122-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:90:13-37
 123            <meta-data
-123-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+123-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
 124                android:name="android.app.lib_name"
-124-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+124-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
 125                android:value="" />
-125-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+125-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
 126        </activity>
 127        <activity
-127-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
-128            android:name="dev.android.appbuses.WelcomeActivity"
-128-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:119:13-44
-129            android:exported="true" >
-129-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:120:13-36
-130            <meta-data
-130-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-131                android:name="android.app.lib_name"
-131-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-132                android:value="" />
-132-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-133
-134            <intent-filter>
-134-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
-135                <action android:name="android.intent.action.MAIN" />
-135-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:126:17-69
-135-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:126:25-66
-136
-137                <category android:name="android.intent.category.LAUNCHER" />
-137-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:128:17-77
-137-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:128:27-74
-138            </intent-filter>
-139        </activity>
-140        <activity
-140-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
-141            android:name="dev.android.appbuses.LoginActivity"
-141-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:132:13-42
-142            android:exported="false" >
-142-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:133:13-37
-143            <meta-data
-143-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-144                android:name="android.app.lib_name"
-144-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-145                android:value="" />
-145-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-146        </activity>
-147        <activity
-147-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
-148            android:name="dev.android.appbuses.MainActivity"
-148-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:139:13-41
-149            android:exported="false" >
-149-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:140:13-37
-150            <meta-data
-150-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
-151                android:name="android.app.lib_name"
-151-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:22:17-52
-152                android:value="" />
-152-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:23:17-33
-153        </activity>
-154
-155        <meta-data
-155-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
-156            android:name="preloaded_fonts"
-156-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:147:13-43
-157            android:resource="@array/preloaded_fonts" />
-157-->D:\DOCUMENTOS\My Projects\appBuses\app\src\main\AndroidManifest.xml:148:13-54
-158
-159        <uses-library
-159-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-160            android:name="androidx.window.extensions"
-160-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-161            android:required="false" />
-161-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-162        <uses-library
-162-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-163            android:name="androidx.window.sidecar"
-163-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-164            android:required="false" />
-164-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-165
-166        <provider
-166-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
-167            android:name="com.squareup.picasso.PicassoProvider"
-167-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
-168            android:authorities="dev.android.appbuses.com.squareup.picasso"
-168-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
-169            android:exported="false" />
-169-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
-170        <provider
-170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-171            android:name="androidx.startup.InitializationProvider"
-171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-172            android:authorities="dev.android.appbuses.androidx-startup"
-172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-173            android:exported="false" >
-173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-174            <meta-data
-174-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-175                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-175-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-176                android:value="androidx.startup" />
-176-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-177            <meta-data
-177-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-178                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-178-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-179                android:value="androidx.startup" />
-179-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-180        </provider>
-181    </application>
-182
-183</manifest>
+127-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
+128            android:name="dev.android.appbuses.BusDetailActivity"
+128-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:96:13-46
+129            android:exported="false"
+129-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:97:13-37
+130            android:theme="@style/PopUp" >
+130-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:98:13-41
+131            <meta-data
+131-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+132                android:name="android.app.lib_name"
+132-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+133                android:value="" />
+133-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+134        </activity>
+135        <activity
+135-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
+136            android:name="dev.android.appbuses.FilterMenuActivity"
+136-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:104:13-47
+137            android:exported="false"
+137-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:105:13-37
+138            android:theme="@style/PopUp" >
+138-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:106:13-41
+139            <meta-data
+139-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+140                android:name="android.app.lib_name"
+140-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+141                android:value="" />
+141-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+142        </activity>
+143        <activity
+143-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
+144            android:name="dev.android.appbuses.RegisterActivity"
+144-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:112:13-45
+145            android:exported="false" >
+145-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:113:13-37
+146            <meta-data
+146-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+147                android:name="android.app.lib_name"
+147-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+148                android:value="" />
+148-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+149        </activity>
+150        <activity
+150-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
+151            android:name="dev.android.appbuses.WelcomeActivity"
+151-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:119:13-44
+152            android:exported="true" >
+152-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:120:13-36
+153            <meta-data
+153-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+154                android:name="android.app.lib_name"
+154-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+155                android:value="" />
+155-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+156
+157            <intent-filter>
+157-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
+158                <action android:name="android.intent.action.MAIN" />
+158-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:17-69
+158-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:25-66
+159
+160                <category android:name="android.intent.category.LAUNCHER" />
+160-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:17-77
+160-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:27-74
+161            </intent-filter>
+162        </activity>
+163        <activity
+163-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
+164            android:name="dev.android.appbuses.LoginActivity"
+164-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:132:13-42
+165            android:exported="false" >
+165-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:133:13-37
+166            <meta-data
+166-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+167                android:name="android.app.lib_name"
+167-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+168                android:value="" />
+168-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+169        </activity>
+170        <activity
+170-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
+171            android:name="dev.android.appbuses.MainActivity"
+171-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:139:13-41
+172            android:exported="false" >
+172-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:140:13-37
+173            <meta-data
+173-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+174                android:name="android.app.lib_name"
+174-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+175                android:value="" />
+175-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+176        </activity>
+177
+178        <meta-data
+178-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
+179            android:name="preloaded_fonts"
+179-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:147:13-43
+180            android:resource="@array/preloaded_fonts" />
+180-->C:\RepoDAS\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:148:13-54
+181
+182        <activity
+182-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:47:9-53:63
+183            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+183-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:48:13-74
+184            android:clearTaskOnLaunch="true"
+184-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:49:13-45
+185            android:screenOrientation="sensorLandscape"
+185-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:50:13-56
+186            android:stateNotNeeded="true"
+186-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:51:13-42
+187            android:theme="@style/zxing_CaptureTheme"
+187-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:52:13-54
+188            android:windowSoftInputMode="stateAlwaysHidden" />
+188-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\USER\.gradle\caches\transforms-3\20043eeab334aa95b03749955c9c48ee\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:53:13-60
+189
+190        <uses-library
+190-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+191            android:name="androidx.window.extensions"
+191-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+192            android:required="false" />
+192-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+193        <uses-library
+193-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+194            android:name="androidx.window.sidecar"
+194-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+195            android:required="false" />
+195-->[androidx.window:window:1.0.0] C:\Users\USER\.gradle\caches\transforms-3\e65b8465f5bac02dec998c398cfe1021\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+196
+197        <provider
+197-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
+198            android:name="com.squareup.picasso.PicassoProvider"
+198-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
+199            android:authorities="dev.android.appbuses.com.squareup.picasso"
+199-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
+200            android:exported="false" />
+200-->[com.squareup.picasso:picasso:2.8] C:\Users\USER\.gradle\caches\transforms-3\5a1c4b97a85ec170b891604c93406514\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
+201
+202        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+202-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
+202-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
+203        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+203-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
+203-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
+204        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+204-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
+204-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
+205        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+205-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
+205-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
+206        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+206-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
+206-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
+207        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+207-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
+207-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
+208        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+208-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
+208-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
+209        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+209-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
+209-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
+210        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+210-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
+210-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
+211
+212        <service
+212-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:23:9-25:40
+213            android:name="com.paypal.android.sdk.payments.PayPalService"
+213-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:24:13-73
+214            android:exported="false" />
+214-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\USER\.gradle\caches\transforms-3\9b673909153b6ee6a3c8cdeeee61b9e7\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:25:13-37
+215
+216        <provider
+216-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+217            android:name="androidx.startup.InitializationProvider"
+217-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+218            android:authorities="dev.android.appbuses.androidx-startup"
+218-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+219            android:exported="false" >
+219-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+220            <meta-data
+220-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+221                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+221-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+222                android:value="androidx.startup" />
+222-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\412372332f980a5c4ef0364c55a99af0\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+223            <meta-data
+223-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+224                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+224-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+225                android:value="androidx.startup" />
+225-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\a8199b6bb025d711471524267dd78014\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+226        </provider>
+227
+228        <activity
+228-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
+229            android:name="io.card.payment.CardIOActivity"
+229-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:21:13-58
+230            android:configChanges="keyboardHidden|orientation" />
+230-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:22:13-63
+231        <activity android:name="io.card.payment.DataEntryActivity" />
+231-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:9-70
+231-->[io.card:android-sdk:5.5.1] C:\Users\USER\.gradle\caches\transforms-3\683f7a872da958ba08aca316a0811364\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:19-67
+232    </application>
+233
+234</manifest>
