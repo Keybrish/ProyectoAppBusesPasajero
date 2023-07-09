@@ -100,7 +100,7 @@ class PaymentActivity : AppCompatActivity() {
                     putExtras(bundle)
                 }
                 putExtra("amount", amount)
-                putExtra("payment", payment)
+                putExtra("payment", binding.spnPayment.selectedItem.toString())
             }
             startActivity(intent)
         }
