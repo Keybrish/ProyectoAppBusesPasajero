@@ -73,7 +73,7 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
     }
 
     fun getAllSelectedOptions(): List<Int> {
-        Toast.makeText(context, selectedOptions.toString(), Toast.LENGTH_SHORT).show()
+//        Toast.makeText(context, selectedOptions.toString(), Toast.LENGTH_SHORT).show()
         return selectedOptions
     }
 }
