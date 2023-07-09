@@ -16,9 +16,6 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
 import com.google.firebase.storage.FirebaseStorage
 import dev.android.appbuses.databinding.ActivityFileBinding
 import java.util.*
@@ -27,7 +24,6 @@ import dev.android.appbuses.database.api
 import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
-import org.json.JSONException
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Retrofit
@@ -62,13 +58,21 @@ class FileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val payment = bundle?.getInt("payment")
+        val total = bundle?.getFloat("total")
+
         binding.btnNext.setOnClickListener {
             bundle?.let {
                 val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
 //                image?.let { it1 -> uploadImage(it1, frequency) }
-                val sale = Venta(8, 1, 1, "2023-06-04", 1,123.50f, "12345", "")
-                addSale(sale)
+                val sale = payment?.let { it1 ->
+                    Venta(8, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
+                        it1,total, "12345", "")
+                }
+                if (sale != null) {
+                    addSale(sale)
+                }
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
@@ -146,17 +150,15 @@ class FileActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.insertData(8, 1, 1, "2023-06-04", 1,123.50f, "12345", "downloadUrl")
+        val retrofit = retrofitBuilder.insertData(8, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,venta.total_venta, "123455555", "downloadUrl")
         retrofit.enqueue(
             object : Callback<Venta> {
                 override fun onFailure(call: Call<Venta>, t: Throwable) {
                     Log.d("Agregar", "Error al agregar cliente")
-
                 }
 
                 override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
                     Log.d("Agregar", "Cliente agregado con éxito")
-
                 }
             }
         )

@@ -5,10 +5,14 @@
             "map": [
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "source": "D:\\DOCUMENTOS\\DASProject\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
 =======
                     "source": "C:\\APPSMOVILESDAS\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
 >>>>>>> PD-132-ServicioLogin
+=======
+                    "source": "C:\\Users\\keych\\OneDrive\\Documents\\GitHub\\ProyectoAppBusesPasajero\\appBuses\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+>>>>>>> PD-55-Integracion-Servicios-Compras
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

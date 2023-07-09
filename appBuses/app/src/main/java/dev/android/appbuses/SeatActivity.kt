@@ -9,14 +9,10 @@ import android.view.Window
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivitySeatBinding
 import dev.android.appbuses.models.Asiento
+import dev.android.appbuses.models.FormaPago
 import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
@@ -35,6 +31,8 @@ class SeatActivity : AppCompatActivity() {
     private val adapter: SeatsAdapter by lazy{
         SeatsAdapter()
     }
+    var total = 0f
+    private var seatsPrices = mutableListOf<Asiento>()
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +57,7 @@ class SeatActivity : AppCompatActivity() {
             val intent = Intent(this, FileActivity::class.java).apply {
                 if (bundle != null) {
                     putExtras(bundle)
+                    putExtra("total", total)
                 }
             }
             startActivity(intent)
@@ -69,66 +68,34 @@ class SeatActivity : AppCompatActivity() {
         bundle?.let {
             val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
             if (option != null) {
-                cargarDatos(frequency.id_bus, option.toInt())
+                cargarDatos(frequency.id_bus, frequency.id_viaje, option.toInt())
             }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun parseJson(json: String): List<String> {
-        val seats = mutableListOf<String>()
-        try {
-            val jsonArray = JSONArray(json)
-            for (i in 0 until jsonArray.length()) {
-                val jsonObject = jsonArray.getJSONObject(i)
-                val tipo = jsonObject.getString("descripcion_asiento")
-                seats.add(tipo)
-            }
-        } catch (e: JSONException) {
-            Log.e("JSON parse error", e.toString())
-        }
-        return seats
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun cargarDatos(id_bus: Int, amount: Int){
-//        val queue = Volley.newRequestQueue(this)
-//        val url = "https://nilotic-quart.000webhostapp.com/listarTipoAsientosBus.php?id_bus_pertenece=$id_bus"
-//        val stringRequest = StringRequest(
-//            Request.Method.GET, url,
-//            Response.Listener<String> { response ->
-//                Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
-//                val seatsType = parseJson(response)
-//                adapter.seatType.add(seatsType.get(0))
-//                adapter.notifyDataSetChanged()
-//            },
-//            Response.ErrorListener { error ->
-//                Log.e("Volley error", error.toString())
-//                Toast.makeText(this, "Error al cargar las frecuencias", Toast.LENGTH_SHORT).show()
-//            }
-//        )
-//        queue.add(stringRequest)
-
+    fun cargarDatos(id_bus: Int, id_viaje: Int,  amount: Int){
+        adapter.context = this@SeatActivity
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://nilotic-quart.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.getSeats(id_bus)
+        val retrofit = retrofitBuilder.getSeats(id_bus, id_viaje)
         retrofit.enqueue(
             object : Callback<List<Asiento>> {
                 override fun onFailure(call: Call<List<Asiento>> , t: Throwable) {
                     Log.d("Agregar", t.message.toString())
-
                 }
                 override fun onResponse(call: Call<List<Asiento>> , response: retrofit2.Response<List<Asiento>> ) {
+                    Log.d("Agregar", response.message().toString())
                     if (response.isSuccessful) {
                         val asientos = response.body()
+                        seatsPrices = asientos as MutableList<Asiento>
                         if (asientos != null) {
-                            for (asiento in asientos) {
-                                val tipo = asiento.descripcion_asiento
-                                adapter.seatType.add(tipo)
-                            }
+                            val op = mutableListOf<String>()
+                            adapter.seatType = asientos
+                            Toast.makeText(this@SeatActivity, adapter.seatType.size.toString(), Toast.LENGTH_SHORT).show()
                             // Notificar al adaptador de cambios en los datos
                             adapter.notifyDataSetChanged()
                         }
@@ -136,7 +103,6 @@ class SeatActivity : AppCompatActivity() {
                         // Manejar el caso de respuesta no exitosa
                         Toast.makeText(this@SeatActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
                     }
-
                 }
             }
         )
@@ -147,5 +113,25 @@ class SeatActivity : AppCompatActivity() {
         for (i in 1..amount)
             seats.add(i)
         adapter.seats = seats
+
+        var prices = mutableListOf<Int>()
+        for (i in 0 until amount){
+            prices.add(0)
+        }
+
+        adapter.getSpinnerOption = {
+            prices = adapter.getAllSelectedOptions() as MutableList<Int>
+            if(prices.size != 0){
+                total = seatsPrices[0].costo_parada * seats.size
+                for (i in 0 until seats.size){
+                    for (j in 0 until seatsPrices.size){
+                        if (prices[i] == seatsPrices.size - j){
+                            total += seatsPrices[j].costo_adicional
+                        }
+                    }
+                }
+            }
+            binding.txtTotal.text = "$" + String.format("%.2f", total)
+        }
     }
 }
