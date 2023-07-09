@@ -28,11 +28,12 @@ public interface api {
     @GET("obtenerDatosUsuariosEmail.php")
     Call<Usuario> getUser(@Query("email_usuario")String email_usuario);
 
-    @PUT("editarPerfilPasajero.php")
+    @FormUrlEncoded
+    @POST("editarPerfilPasajero.php")
     Call<Usuario> updateUser(@Query("id_usuario") Integer id_usuario,
+                             @Field("email_usuario") String email_usuario,
                              @Field("nombre_usuario") String nombre_usuario,
                              @Field("apellido_usuario") String apellido_usuario,
-                             @Field("email_usuario") String email_usuario,
                              @Field("telefono_usuario") String telefono_usuario,
                              @Field("foto_usuario") String foto_usuario);
 

@@ -11,8 +11,10 @@ import androidx.annotation.RequiresApi
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivityProfileInfoBinding
 import dev.android.appbuses.models.Usuario
+import kotlinx.android.synthetic.main.activity_profile_info.*
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -33,9 +35,9 @@ class ProfileInfoActivity : AppCompatActivity() {
         }
 
         binding.btnSave.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java).apply {
-            }
-            startActivity(intent)
+            val usser = Usuario(user.id_usuario, edtID.text.toString(), user.email_usuario, edtName.text.toString(), edtLastName.text.toString(), edtPhone.text.toString(), user.foto_usuario)
+            updateUser(usser)
+            finish()
         }
 
         bundle = intent.extras!!
@@ -77,6 +79,26 @@ class ProfileInfoActivity : AppCompatActivity() {
                         Toast.makeText(this@ProfileInfoActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
                     }
 
+                }
+            }
+        )
+    }
+
+    private fun updateUser(user: Usuario) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.updateUser(user.id_usuario, user.email_usuario, user.nombre_usuario, user.apellido_usuario, user.telefono_usuario, user.foto_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                @RequiresApi(Build.VERSION_CODES.O)
+                override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
+                    Log.d("Agregar", response.message().toString())
                 }
             }
         )
