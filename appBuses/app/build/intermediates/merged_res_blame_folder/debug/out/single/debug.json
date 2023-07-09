@@ -184,12 +184,17 @@
         "source": "dev.android.appbuses.app-main-8:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
+<<<<<<< HEAD
         "merged": "dev.android.appbuses.app-merged_res-6:/drawable_ic_baseline_directions_bus_244.xml.flat",
         "source": "dev.android.appbuses.app-main-8:/drawable/ic_baseline_directions_bus_244.xml"
     },
     {
         "merged": "dev.android.appbuses.app-merged_res-6:/drawable_ic_baseline_check_circle_24.xml.flat",
         "source": "dev.android.appbuses.app-main-8:/drawable/ic_baseline_check_circle_24.xml"
+=======
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_history.xml"
+>>>>>>> PD-60-Integracion-Servicios-Viajes
     },
     {
         "merged": "dev.android.appbuses.app-merged_res-6:/drawable_terminal_terrestre_quito.jpeg.flat",
@@ -292,8 +297,17 @@
         "source": "dev.android.appbuses.app-main-8:/drawable/ic_baseline_location_city_24.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "dev.android.appbuses.app-merged_res-6:/drawable_ic_baseline_camera_alt_24.xml.flat",
         "source": "dev.android.appbuses.app-main-8:/drawable/ic_baseline_camera_alt_24.xml"
+=======
+        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_main.xml.flat",
+        "source": "dev.android.appbuses.app-main-53:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\navigation\\nav_graph.xml"
+>>>>>>> PD-60-Integracion-Servicios-Viajes
     },
     {
         "merged": "dev.android.appbuses.app-merged_res-6:/drawable_ic_baseline_arrow_back_ios_new_24.xml.flat",

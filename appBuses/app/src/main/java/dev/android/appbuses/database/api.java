@@ -34,7 +34,25 @@ public interface api {
     Call<Contrasenia> getPassword(@Query("email_usuario")String email_usuario);
 
     @GET("listarCompras.php")
-    Call<List<Compra>> getPurchases(@Query("id_comprador") Integer id_comprador);
+    Call<List<Compra>> getPurchases(@Query("id_comprado")Integer id_comprado);
+
+    @GET("buscarVCoop.php")
+    Call<List<Frecuencia>> getFrequenciesCooperative(@Query("origen") String origen, @Query("destino") String destino, @Query("cooperativa") String cooperativa);
+
+    @GET("buscarVAsiento.php")
+    Call<List<Frecuencia>> getFrequenciesSeat(@Query("origen") String origen, @Query("destino") String destino, @Query("asiento") String asiento);
+
+    @GET("buscarVChasis.php")
+    Call<List<Frecuencia>> getFrequenciesChassis(@Query("origen") String origen, @Query("destino") String destino, @Query("chasis") String chasis);
+
+    @GET("buscarVCarroceria.php")
+    Call<List<Frecuencia>> getFrequenciesBodywork(@Query("origen") String origen, @Query("destino") String destino, @Query("carroceria") String carroceria);
+
+    @GET("buscarVTipo.php")
+    Call<List<Frecuencia>> getFrequenciesType(@Query("origen") String origen, @Query("destino") String destino, @Query("tipo_viaje") Integer tipo_viaje);
+
+    @GET("buscarViaje.php")
+    Call<List<Frecuencia>> getFrequenciesOD(@Query("origen") String origen, @Query("destino") String destino);
 
     @FormUrlEncoded
     @POST("editarPerfilPasajero.php")

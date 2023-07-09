@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/activity_payment_successful.xml",
         "source": "dev.android.appbuses.app-main-8:/layout/activity_payment_successful.xml"
     },
@@ -14,6 +15,26 @@
     {
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/activity_welcome.xml",
         "source": "dev.android.appbuses.app-main-8:/layout/activity_welcome.xml"
+=======
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-50:\\layout\\activity_filter_menu.xml",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_filter_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-50:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-50:\\layout\\activity_history.xml",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_history.xml"
+    },
+    {
+        "merged": "dev.android.appbuses.app-mergeDebugResources-50:/layout/activity_main.xml",
+        "source": "dev.android.appbuses.app-main-53:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-50:\\layout\\activity_payment.xml",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_payment.xml"
+>>>>>>> PD-60-Integracion-Servicios-Viajes
     },
     {
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/activity_bus_detail.xml",
@@ -68,12 +89,17 @@
         "source": "dev.android.appbuses.app-main-8:/layout/item_frequency.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/activity_qrcode.xml",
         "source": "dev.android.appbuses.app-main-8:/layout/activity_qrcode.xml"
     },
     {
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/activity_profile.xml",
         "source": "dev.android.appbuses.app-main-8:/layout/activity_profile.xml"
+=======
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-50:\\layout\\activity_payment_successful.xml",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_payment_successful.xml"
+>>>>>>> PD-60-Integracion-Servicios-Viajes
     },
     {
         "merged": "dev.android.appbuses.app-mergeDebugResources-5:/layout/item_history.xml",
