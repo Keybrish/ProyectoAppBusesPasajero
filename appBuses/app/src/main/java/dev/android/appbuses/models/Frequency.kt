@@ -56,3 +56,7 @@ data class Usuario (
     val telefono_usuario: String,
     val foto_usuario: String
 ): Serializable
+
+data class Contrasenia (
+    val clave_usuario: String
+): Serializable

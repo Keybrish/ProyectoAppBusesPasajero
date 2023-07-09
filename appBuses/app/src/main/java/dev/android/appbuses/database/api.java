@@ -3,6 +3,7 @@ package dev.android.appbuses.database;
 import java.util.List;
 
 import dev.android.appbuses.models.Asiento;
+import dev.android.appbuses.models.Contrasenia;
 import dev.android.appbuses.models.FormaPago;
 import dev.android.appbuses.models.Frecuencia;
 import dev.android.appbuses.models.Usuario;
@@ -27,6 +28,9 @@ public interface api {
 
     @GET("obtenerDatosUsuariosEmail.php")
     Call<Usuario> getUser(@Query("email_usuario")String email_usuario);
+
+    @GET("obtenerClavePasajero.php")
+    Call<Contrasenia> getPassword(@Query("email_usuario")String email_usuario);
 
     @FormUrlEncoded
     @POST("editarPerfilPasajero.php")
