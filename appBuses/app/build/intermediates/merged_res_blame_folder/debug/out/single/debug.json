@@ -24,10 +24,6 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\texto_blanco.xml"
     },
     {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_payment_successful.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_payment_successful.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
@@ -36,20 +32,16 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\ic_baseline_keyboard_arrow_right_24.xml"
     },
     {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_qrcode.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_qrcode.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\font_roboto_bold.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\font\\roboto_bold.xml"
     },
     {
-        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_profile_info.xml.flat",
-        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_profile_info.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_welcome.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_profile_info.xml.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_profile_info.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_baseline_directions_bus_24.xml.flat",
@@ -92,10 +84,6 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\ic_baseline_phone_24.xml"
     },
     {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_seat.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_seat.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_baseline_location_on_24.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\ic_baseline_location_on_24.xml"
     },
@@ -120,16 +108,16 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_change_password.xml.flat",
+        "source": "dev.android.appbuses.app-main-53:/layout/activity_change_password.xml"
+    },
+    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_file.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_file.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\font_roboto_regular.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\font\\roboto_regular.xml"
-    },
-    {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_payment.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_payment.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_launcher_background.xml.flat",
@@ -174,10 +162,6 @@
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_profile.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_ic_baseline_directions_bus_244.xml.flat",
@@ -288,6 +272,10 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\ic_baseline_check_circle_24.xml"
     },
     {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable-v24_avatar.png.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable-v24\\avatar.png"
+    },
+    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_item_history.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\item_history.xml"
     },
@@ -304,18 +292,6 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "dev.android.appbuses.app-merged_res-51:/drawable-v24_avatar.png.flat",
-        "source": "dev.android.appbuses.app-main-53:/drawable-v24/avatar.png"
-    },
-    {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_file.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_file.xml"
-    },
-    {
-        "merged": "dev.android.appbuses.app-merged_res-51:/layout_activity_main.xml.flat",
-        "source": "dev.android.appbuses.app-main-53:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\navigation\\nav_graph.xml"
     },
@@ -328,12 +304,12 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\plus1.png"
     },
     {
-        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_igg.png.flat",
-        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\igg.png"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_seat.xml.flat",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\layout\\activity_seat.xml"
+    },
+    {
+        "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\drawable_igg.png.flat",
+        "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-53:\\drawable\\igg.png"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-merged_res-51:\\layout_activity_register.xml.flat",

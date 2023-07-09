@@ -68,6 +68,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnChangePassword.setOnClickListener {
             val intent = Intent(this, ChangePasswordActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }

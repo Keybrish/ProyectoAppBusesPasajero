@@ -47,5 +47,10 @@ public interface api {
                            @Field("total_venta")Float total_venta,
                            @Field("codigo_qr_venta")String codigo_qr_venta,
                            @Field("comprobante_venta")String comprobante_venta);
+
+    @FormUrlEncoded
+    @POST("editarClaveUsuario.php")
+    Call<Usuario> updateUserPassword(@Field("id_usuario") Integer id_usuario,
+                             @Field("clave_usuario") String clave_usuario);
 }
 
