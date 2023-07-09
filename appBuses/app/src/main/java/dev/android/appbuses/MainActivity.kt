@@ -14,10 +14,12 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivityMainBinding
 import dev.android.appbuses.models.Asiento
 import dev.android.appbuses.models.Frecuencia
+import dev.android.appbuses.models.Usuario
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     private val adapter: FrequencyAdapter by lazy{
         FrequencyAdapter()
     }
+    private lateinit var user: Usuario
     private lateinit var bund: Bundle
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +50,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cargarDatos()
+
+        bund = intent.extras!!
+
         val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
         email = sharedPreferences.getString("email", "").toString()
+
+        Toast.makeText(this@MainActivity, email.toString(), Toast.LENGTH_SHORT).show()
+        //user = Usuario(8, "", "", "", "", "", "", "")
+        if (email != null) {
+            getUser(email)
+        }
 
         binding.btnFilter.setOnClickListener {
                 val intent = Intent(this, FilterMenuActivity::class.java).apply {
@@ -114,5 +126,38 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getUser(email_usuario: String){
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getUser(email_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Usuario>, response: retrofit2.Response<Usuario> ) {
+                    if (response.isSuccessful) {
+                        val usuario = response.body()
+                        Log.d("Respuesta", usuario.toString())
+                        if (usuario != null) {
+                            user = usuario
+                            Picasso.get().load(usuario.foto_usuario)
+                                .error(R.drawable.avatar)
+                                .into(binding.imgProfile)
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@MainActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+            }
+        )
     }
 }

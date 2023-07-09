@@ -125,7 +125,7 @@ class ProfileActivity : AppCompatActivity() {
                             binding.txtName.text = user.nombre_usuario + " " + user.apellido_usuario
                             binding.txtID.text = user.cedula_usuario
                             Picasso.get().load(usuario.foto_usuario)
-                                .error(R.drawable.purple_aesthetic_woman_portrait_7h0yo10dvp884ons)
+                                .error(R.drawable.avatar)
                                 .into(binding.imgProfile)
                         }
                     } else {
