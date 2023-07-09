@@ -75,6 +75,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnHistory.setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -123,8 +124,10 @@ class ProfileActivity : AppCompatActivity() {
                         Log.d("Respuesta", usuario.toString())
                         if (usuario != null) {
                             user = usuario
-                            binding.txtName.text = user.nombre_usuario + " " + user.apellido_usuario
-                            binding.txtID.text = user.cedula_usuario
+                            val name = user.nombre_usuario.split(" ")
+                            val lastName = user.apellido_usuario.split(" ")
+                            binding.txtName.text = name[0] + " " + lastName[0]
+                            binding.txtFullName.text = user.nombre_usuario + " " + usuario.apellido_usuario
                             Picasso.get().load(usuario.foto_usuario)
                                 .error(R.drawable.avatar)
                                 .into(binding.imgProfile)
