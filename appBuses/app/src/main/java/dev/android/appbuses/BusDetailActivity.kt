@@ -25,7 +25,6 @@ class BusDetailActivity : AppCompatActivity() {
         val window = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(window)
         val width = window.widthPixels
-        val height = window.heightPixels
 
         getWindow().setLayout(((width * 1)), 1400)
         getWindow().decorView.setBackgroundResource(android.R.color.transparent)
@@ -51,15 +50,15 @@ class BusDetailActivity : AppCompatActivity() {
 
             binding.txtCooperative.text = frequency.nombre_cooperativa
             Picasso.get().load(frequency.fotografia).error(R.drawable.terminal_terrestre_quito).into(binding.imgBus)
-            binding.txtRoute.text = frequency.destino_frecuencia + ", " + frequency.destino_provincia_frecuencia
+            binding.txtRoute.text = frequency.destino + ", " + frequency.destinoProvincia
             binding.txtDate.text = frequency.fecha_viaje
-            binding.txtDepartureTime.text = frequency.hora_salida.substring(0,5)
-            binding.txtArrivalTime.text = frequency.hora_llegada.substring(0,5)
+            binding.txtDepartureTime.text = frequency.hora_salida_viaje.substring(0,5)
+            binding.txtArrivalTime.text = frequency.hora_llegada_viaje.substring(0,5)
             binding.txtBusNumber.text = frequency.numero_bus
             binding.txtBusCarriage.text = frequency.placa_bus
             binding.txtBusChassis.text = frequency.chasis_bus
             binding.txtBusBodywork.text = frequency.carroceria_bus
-            binding.txtPrice.text = "$" + String.format("%.2f", frequency.costo_frecuencia)
+            binding.txtPrice.text = "$" + String.format("%.2f", frequency.costo_parada)
         }
     }
 }

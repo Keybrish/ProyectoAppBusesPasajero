@@ -3,6 +3,8 @@ package dev.android.appbuses.database;
 import java.util.List;
 
 import dev.android.appbuses.models.Asiento;
+import dev.android.appbuses.models.FormaPago;
+import dev.android.appbuses.models.Frecuencia;
 import dev.android.appbuses.models.Venta;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -13,7 +15,13 @@ import retrofit2.http.Query;
 
 public interface api {
     @GET("listarTipoAsientosBus.php")
-    Call<List<Asiento>> getSeats(@Query("id_bus_pertenece")Integer id_bus_pertenece);
+    Call<List<Asiento>> getSeats(@Query("id_bus")Integer id_bus, @Query("id_viaje")Integer id_viaje);
+
+    @GET("listarViajesDiarios.php")
+    Call<List<Frecuencia>> getFrequencies();
+
+    @GET("listarFormasPago.php")
+    Call<List<FormaPago>> getPayments();
 
     @FormUrlEncoded
     @POST("generarVenta.php")

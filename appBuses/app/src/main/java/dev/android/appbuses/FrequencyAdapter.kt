@@ -16,7 +16,7 @@ class FrequencyAdapter(var frecuencias: List<Frecuencia> = emptyList()) : Recycl
 
         fun bind(frecuencias: Frecuencia) {
             Picasso.get().load(frecuencias.fotografia).error(R.drawable.terminal_terrestre_quito).into(binding.imgBus)
-            binding.txtFrequency.text = frecuencias.nombre_cooperativa + ", " + frecuencias.origen_frecuencia + " - " + frecuencias.destino_frecuencia
+            binding.txtFrequency.text = frecuencias.nombre_cooperativa + ", " + frecuencias.origen + " - " + frecuencias.destino
 
             binding.root.setOnClickListener {
                 setOnClickListener(frecuencias)
