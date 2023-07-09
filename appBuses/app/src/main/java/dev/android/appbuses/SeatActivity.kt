@@ -9,12 +9,10 @@ import android.view.Window
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivitySeatBinding
-import dev.android.appbuses.models.Asiento
-import dev.android.appbuses.models.FormaPago
-import dev.android.appbuses.models.Frecuencia
-import dev.android.appbuses.models.Venta
+import dev.android.appbuses.models.*
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
@@ -33,6 +31,8 @@ class SeatActivity : AppCompatActivity() {
     }
     var total = 0f
     private var seatsPrices = mutableListOf<Asiento>()
+    private lateinit var bundle: Bundle
+    private lateinit var user: Usuario
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +47,17 @@ class SeatActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
 
         val bundle = intent.extras
+        val email = bundle?.getString("email")
+
+        if (email != null) {
+            getUser(email)
+        }
 
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, FileActivity::class.java).apply {
@@ -133,5 +139,38 @@ class SeatActivity : AppCompatActivity() {
             }
             binding.txtTotal.text = "$" + String.format("%.2f", total)
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getUser(email_usuario: String){
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getUser(email_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Usuario>, response: retrofit2.Response<Usuario> ) {
+                    if (response.isSuccessful) {
+                        val usuario = response.body()
+                        Log.d("Respuesta", usuario.toString())
+                        if (usuario != null) {
+                            user = usuario
+                            Picasso.get().load(usuario.foto_usuario)
+                                .error(R.drawable.avatar)
+                                .into(binding.imgProfile)
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@SeatActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+            }
+        )
     }
 }

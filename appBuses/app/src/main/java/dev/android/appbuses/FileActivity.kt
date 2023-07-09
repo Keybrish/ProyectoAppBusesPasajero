@@ -65,6 +65,7 @@ class FileActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -77,6 +78,7 @@ class FileActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -191,6 +193,9 @@ class FileActivity : AppCompatActivity() {
                         Log.d("Respuesta", usuario.toString())
                         if (usuario != null) {
                             user = usuario
+                            Picasso.get().load(usuario.foto_usuario)
+                                .error(R.drawable.avatar)
+                                .into(binding.imgProfile)
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa

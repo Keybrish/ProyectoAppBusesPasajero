@@ -89,7 +89,6 @@ class LoginActivity : AppCompatActivity() {
                     putExtra("email", email)
                 }
             startActivity(intent)
-
         }
 
         @RequiresApi(Build.VERSION_CODES.O)

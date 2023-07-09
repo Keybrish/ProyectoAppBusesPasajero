@@ -115,7 +115,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/purple_aesthetic_woman_portrait_7h0yo10dvp884ons" />
+                app:srcCompat="@drawable/avatar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
