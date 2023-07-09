@@ -60,3 +60,29 @@ data class Usuario (
 data class Contrasenia (
     val clave_usuario: String
 ): Serializable
+
+data class Compra (
+    val id_venta: Int,
+    val id_comprador: Int,
+    val id_viaje_pertenece: Int,
+    val id_parada_pertenece: Int,
+    val fecha_venta: String,
+    val id_forma_pago: Int,
+    val estado_venta: Int,
+    val total_venta: Float,
+    val codigo_qr_venta: String,
+    val comprobante_venta: String,
+    val id_viaje: Int,
+    val id_asignacion_pertenece: Int,
+    val id_bus_viaje: Int,
+    val fecha_viaje: String,
+    val hora_salida_viaje: String,
+    val hora_llegada_viaje: String,
+    val id_parada: Int,
+    val costo_parada: Float,
+    val duracion_parada: String,
+    val origen_parada: Int,
+    val destino_parada: Int,
+    val origen: String,
+    val destino: String
+): Serializable
