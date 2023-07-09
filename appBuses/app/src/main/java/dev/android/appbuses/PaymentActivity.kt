@@ -16,6 +16,7 @@ import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivityPaymentBinding
 import dev.android.appbuses.models.FormaPago
 import dev.android.appbuses.models.Frecuencia
+import dev.android.appbuses.models.Usuario
 import dev.android.appbuses.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +26,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding : ActivityPaymentBinding
     private var payments = mutableListOf<FormaPago>()
+    private lateinit var bundle: Bundle
+    private lateinit var user: Usuario
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +42,13 @@ class PaymentActivity : AppCompatActivity() {
 //        binding.spnPayment.adapter = sp
 
         cargarDatos()
+        bundle = intent.extras!!
+        val email = bundle?.getString("email")
+        Toast.makeText(this@PaymentActivity, email.toString(), Toast.LENGTH_SHORT).show()
+        //user = Usuario(8, "", "", "", "", "", "", "")
+        if (email != null) {
+            getUser(email)
+        }
 
         var isDefaultOptionSelected = true
         var payment = 1
@@ -134,6 +144,38 @@ class PaymentActivity : AppCompatActivity() {
                             }
                             val sp = ArrayAdapter(this@PaymentActivity, R.layout.simple_spinner_item, op)
                             binding.spnPayment.adapter = sp
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@PaymentActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+            }
+        )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getUser(email_usuario: String){
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getUser(email_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Usuario>, response: retrofit2.Response<Usuario> ) {
+                    if (response.isSuccessful) {
+                        val usuario = response.body()
+                        Log.d("Respuesta", usuario.toString())
+                        if (usuario != null) {
+                            user = usuario
+                            binding.txtName.text = user.nombre_usuario + " " + user.apellido_usuario
+                            binding.txtID.text = user.cedula_usuario
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa
