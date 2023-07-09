@@ -46,6 +46,7 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
 
         binding.btnBuy.setOnClickListener {
             val intent = Intent(this, QRCodeActivity::class.java).apply {
+
                 putExtras(bundle)
             }
             startActivity(intent)
