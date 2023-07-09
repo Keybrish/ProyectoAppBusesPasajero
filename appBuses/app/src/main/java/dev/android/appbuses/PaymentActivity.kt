@@ -12,6 +12,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivityPaymentBinding
 import dev.android.appbuses.models.FormaPago
@@ -79,6 +80,9 @@ class PaymentActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                if (bundle != null) {
+                    putExtras(bundle)
+                }
             }
             startActivity(intent)
         }
@@ -170,6 +174,9 @@ class PaymentActivity : AppCompatActivity() {
                             user = usuario
                             binding.txtName.text = user.nombre_usuario + " " + user.apellido_usuario
                             binding.txtID.text = user.cedula_usuario
+                            Picasso.get().load(usuario.foto_usuario)
+                                .error(dev.android.appbuses.R.drawable.avatar)
+                                .into(binding.imgProfile)
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa
