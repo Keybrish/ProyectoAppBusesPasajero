@@ -123,12 +123,12 @@
 
         <Button
             android:id="@+id/btnBuy"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/degradado_stroke"
             android:fontFamily="@font/roboto_bold"
-            android:text="View my QR Code!"
+            android:text="Go to my QR Code History!"
             android:textAllCaps="false"
             android:textColor="#0D2184"
             app:backgroundTint="@null"

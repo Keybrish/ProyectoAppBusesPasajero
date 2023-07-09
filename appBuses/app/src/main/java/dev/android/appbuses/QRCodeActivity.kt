@@ -1,6 +1,5 @@
 package dev.android.appbuses
 
-import android.R
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle

@@ -54,7 +54,7 @@ data class Usuario (
     val nombre_usuario: String,
     val apellido_usuario: String,
     val telefono_usuario: String,
-    val foto_usuario: String
+    var foto_usuario: String
 ): Serializable
 
 data class Contrasenia (

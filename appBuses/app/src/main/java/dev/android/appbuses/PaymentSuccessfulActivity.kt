@@ -21,6 +21,7 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
     private lateinit var binding : ActivityPaymentSuccessfulBinding
     private lateinit var bundle: Bundle
     private lateinit var user: Usuario
+    private var email = ""
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
 
         bundle = intent.extras!!
 
-        val email = bundle.getString("email")
+        email = bundle.getString("email").toString()
 
         if (email != null) {
             getUser(email)
@@ -45,7 +46,7 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
         }
 
         binding.btnBuy.setOnClickListener {
-            val intent = Intent(this, QRCodeActivity::class.java).apply {
+            val intent = Intent(this, HistoryActivity::class.java).apply {
                 putExtras(bundle)
             }
             startActivity(intent)
@@ -84,4 +85,10 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
                 }
             )
         }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
+    }
 }

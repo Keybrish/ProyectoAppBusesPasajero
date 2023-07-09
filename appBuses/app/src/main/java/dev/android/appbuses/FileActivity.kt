@@ -40,6 +40,7 @@ class FileActivity : AppCompatActivity() {
     private val progressDialog: ProgressDialog? = null
     private lateinit var bundle: Bundle
     private lateinit var user: Usuario
+    private var email = ""
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +53,7 @@ class FileActivity : AppCompatActivity() {
         storageReference = FirebaseStorage.getInstance().reference
         bundle = intent.extras!!
 
-        val email = bundle?.getString("email")
+        email = bundle?.getString("email").toString()
         Toast.makeText(this@FileActivity, email.toString(), Toast.LENGTH_SHORT).show()
         //user = Usuario(8, "", "", "", "", "", "", "")
         if (email != null) {
@@ -205,6 +206,12 @@ class FileActivity : AppCompatActivity() {
                 }
             }
         )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
     }
 
 }

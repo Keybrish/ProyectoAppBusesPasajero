@@ -17,10 +17,6 @@ import com.paypal.android.sdk.payments.PaymentActivity.*
 import com.paypal.android.sdk.payments.PaymentConfirmation
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivitySeatBinding
-import dev.android.appbuses.models.Asiento
-import dev.android.appbuses.models.FormaPago
-import dev.android.appbuses.models.Frecuencia
-import dev.android.appbuses.models.Venta
 import dev.android.appbuses.utils.Constants
 import org.json.JSONArray
 import org.json.JSONException
@@ -30,6 +26,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.math.BigDecimal
 import com.paypal.android.sdk.payments.PaymentActivity
+import com.squareup.picasso.Picasso
+import dev.android.appbuses.models.*
 import java.nio.charset.StandardCharsets
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -42,9 +40,10 @@ class SeatActivity : AppCompatActivity() {
     private var clienteId :String = "ASPCGNASkHrOhgxreJB8Ok0d-8e6FILUG1CFDfqeEf6bp67Uyk_MLt7RcbLXDCba5KilKzGl8exigsuF" //con el de eliana
     private var PAYPAL_REQUEST_CODE:Int = 1
     private lateinit var configuration : PayPalConfiguration
-
     var total = 0f
     private var seatsPrices = mutableListOf<Asiento>()
+    private lateinit var user: Usuario
+    private var email = ""
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +65,12 @@ class SeatActivity : AppCompatActivity() {
         val bundle = intent.extras
         val option = bundle?.getString("amount")
         val payment = bundle?.getString("payment")
+        if (bundle != null) {
+            email = bundle.getString("email").toString()
+            getUser(email)
+        }
+
+
         configuration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(this.clienteId)
         Toast.makeText(this@SeatActivity, payment.toString(), Toast.LENGTH_SHORT).show()
         binding.btnNext.setOnClickListener {
@@ -194,6 +199,45 @@ class SeatActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getUser(email_usuario: String){
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getUser(email_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Usuario>, response: retrofit2.Response<Usuario> ) {
+                    if (response.isSuccessful) {
+                        val usuario = response.body()
+                        Log.d("Respuesta", usuario.toString())
+                        if (usuario != null) {
+                            user = usuario
+                            Picasso.get().load(usuario.foto_usuario)
+                                .error(R.drawable.avatar)
+                                .into(binding.imgProfile)
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@SeatActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+            }
+        )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
     }
 
 }

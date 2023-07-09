@@ -41,14 +41,13 @@ import java.nio.charset.StandardCharsets
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
-    private lateinit var email: String
+    private var email = ""
     private val adapter: FrequencyAdapter by lazy{
         FrequencyAdapter()
     }
     private lateinit var user: Usuario
     private lateinit var bund: Bundle
     private var filtro: String? = null
-    private var list: MutableList<Frecuencia> = ArrayList()
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -270,8 +269,10 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onRestart() {
         super.onRestart()
+        getUser(email)
         filtro = bund.getString("filtro")
         if (filtro != null){
             Toast.makeText(this@MainActivity, filtro, Toast.LENGTH_SHORT).show()

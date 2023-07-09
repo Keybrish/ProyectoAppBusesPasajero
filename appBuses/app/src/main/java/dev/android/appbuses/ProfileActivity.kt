@@ -1,6 +1,9 @@
 package dev.android.appbuses
 
+import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.*
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -11,13 +14,17 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivityProfileBinding
+import dev.android.appbuses.models.Frecuencia
 import dev.android.appbuses.models.Usuario
 import dev.android.appbuses.models.Venta
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -27,6 +34,10 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var user: Usuario
     private lateinit var bundle: Bundle
     private var email = ""
+    private val progressDialog: ProgressDialog? = null
+    private lateinit var storageReference: StorageReference
+    private val storage_path = "comprobantes/*"
+    private var photo = "pago"
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +48,8 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         bundle = intent.extras!!
+        storageReference = FirebaseStorage.getInstance().reference
+
         email = bundle?.getString("email").toString()
         Toast.makeText(this@ProfileActivity, email.toString(), Toast.LENGTH_SHORT).show()
         if (email != null) {
@@ -83,6 +96,9 @@ class ProfileActivity : AppCompatActivity() {
         val loadImage =
             registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
                 binding.imgProfile.setImageURI(it)
+                if (it != null) {
+                    uploadImage(it)
+                }
             })
 
         binding.btnCamera.setOnClickListener {
@@ -146,9 +162,53 @@ class ProfileActivity : AppCompatActivity() {
         )
     }
 
+    @SuppressLint("SuspiciousIndentation")
     @RequiresApi(Build.VERSION_CODES.O)
-    override fun onRestart() {
-        super.onRestart()
-        getUser(email)
+    private fun uploadImage(imageUrl: Uri) {
+        progressDialog?.setMessage("Actualizando foto")
+        progressDialog?.show()
+
+        val storagePath = "$storage_path $photo${System.currentTimeMillis()}"
+        val reference: StorageReference = storageReference.child(storagePath)
+
+        reference.putFile(imageUrl)
+            .addOnSuccessListener { taskSnapshot ->
+                taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
+                    val downloadUrl = uri.toString()
+                        val usser = user
+                        usser.foto_usuario = downloadUrl
+                        updateUser(usser)
+                }.addOnFailureListener { exception ->
+                    showToast("Error al obtener la URL de descarga")
+                    progressDialog?.dismiss()
+                }
+            }
+            .addOnFailureListener { exception ->
+                showToast("Error al cargar foto")
+            }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this@ProfileActivity, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun updateUser(user: Usuario) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.updateUser(user.id_usuario, user.email_usuario, user.nombre_usuario, user.apellido_usuario, user.telefono_usuario, user.foto_usuario)
+        retrofit.enqueue(
+            object : Callback<Usuario> {
+                override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                @RequiresApi(Build.VERSION_CODES.O)
+                override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
+                    Log.d("Agregar", response.message().toString())
+                }
+            }
+        )
     }
 }

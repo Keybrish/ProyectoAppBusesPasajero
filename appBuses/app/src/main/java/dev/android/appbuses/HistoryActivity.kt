@@ -27,6 +27,7 @@ class HistoryActivity : AppCompatActivity() {
     }
     private lateinit var user: Usuario
     private lateinit var bundle: Bundle
+    private var email = ""
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,7 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         bundle = intent.extras!!
-        val email = bundle.getString("email")
+        email = bundle.getString("email").toString()
         if (email != null) {
             getUser(email)
         }
@@ -136,5 +137,11 @@ class HistoryActivity : AppCompatActivity() {
                 }
             }
         )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
     }
 }

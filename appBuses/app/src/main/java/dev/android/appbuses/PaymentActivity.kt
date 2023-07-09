@@ -29,6 +29,7 @@ class PaymentActivity : AppCompatActivity() {
     private var payments = mutableListOf<FormaPago>()
     private lateinit var bundle: Bundle
     private lateinit var user: Usuario
+    private var email = ""
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class PaymentActivity : AppCompatActivity() {
 
         cargarDatos()
         bundle = intent.extras!!
-        val email = bundle?.getString("email")
+        email = bundle?.getString("email").toString()
         Toast.makeText(this@PaymentActivity, email.toString(), Toast.LENGTH_SHORT).show()
         if (email != null) {
             getUser(email)
@@ -185,5 +186,11 @@ class PaymentActivity : AppCompatActivity() {
                 }
             }
         )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        getUser(email)
     }
 }
