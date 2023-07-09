@@ -1,5 +1,6 @@
 package dev.android.appbuses
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,11 @@ import android.view.Window
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.paypal.android.sdk.payments.PayPalConfiguration
+import com.paypal.android.sdk.payments.PayPalPayment
+import com.paypal.android.sdk.payments.PayPalService
+import com.paypal.android.sdk.payments.PaymentActivity.*
+import com.paypal.android.sdk.payments.PaymentConfirmation
 import dev.android.appbuses.database.api
 import dev.android.appbuses.databinding.ActivitySeatBinding
 import dev.android.appbuses.models.Asiento
@@ -22,6 +28,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.math.BigDecimal
+import com.paypal.android.sdk.payments.PaymentActivity
 import java.nio.charset.StandardCharsets
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -31,6 +39,10 @@ class SeatActivity : AppCompatActivity() {
     private val adapter: SeatsAdapter by lazy{
         SeatsAdapter()
     }
+    private var clienteId :String = "ASPCGNASkHrOhgxreJB8Ok0d-8e6FILUG1CFDfqeEf6bp67Uyk_MLt7RcbLXDCba5KilKzGl8exigsuF" //con el de eliana
+    private var PAYPAL_REQUEST_CODE:Int = 1
+    private lateinit var configuration : PayPalConfiguration
+
     var total = 0f
     private var seatsPrices = mutableListOf<Asiento>()
     @RequiresApi(Build.VERSION_CODES.O)
@@ -52,18 +64,23 @@ class SeatActivity : AppCompatActivity() {
         }
 
         val bundle = intent.extras
-
-        binding.btnNext.setOnClickListener {
-            val intent = Intent(this, FileActivity::class.java).apply {
-                if (bundle != null) {
-                    putExtras(bundle)
-                    putExtra("total", total)
-                }
-            }
-            startActivity(intent)
-        }
-
         val option = bundle?.getString("amount")
+        val payment = bundle?.getString("payment")
+        configuration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(this.clienteId)
+        Toast.makeText(this@SeatActivity, payment.toString(), Toast.LENGTH_SHORT).show()
+        binding.btnNext.setOnClickListener {
+            if(payment == "PayPal"){
+                getPayment(total.toString())
+            }else{
+                val intent = Intent(this, FileActivity::class.java).apply {
+                    if (bundle != null) {
+                        putExtras(bundle)
+                        putExtra("total", total)
+                    }
+                }
+                startActivity(intent)
+            }
+        }
 
         bundle?.let {
             val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
@@ -95,7 +112,7 @@ class SeatActivity : AppCompatActivity() {
                         if (asientos != null) {
                             val op = mutableListOf<String>()
                             adapter.seatType = asientos
-                            Toast.makeText(this@SeatActivity, adapter.seatType.size.toString(), Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(this@SeatActivity, adapter.seatType.size.toString(), Toast.LENGTH_SHORT).show()
                             // Notificar al adaptador de cambios en los datos
                             adapter.notifyDataSetChanged()
                         }
@@ -134,4 +151,49 @@ class SeatActivity : AppCompatActivity() {
             binding.txtTotal.text = "$" + String.format("%.2f", total)
         }
     }
+
+    fun getPayment(amount: String){
+        //val amount = binding.txtAmount.text.toString()
+        var payment = PayPalPayment(BigDecimal(amount), "USD", "Payment Description", PayPalPayment.PAYMENT_INTENT_SALE)
+        var intent = Intent(this, PaymentActivity::class.java)
+        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, configuration)
+        intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payment)
+
+        startActivityForResult(intent, PAYPAL_REQUEST_CODE)
+    }
+
+    override fun onDestroy() {
+        stopService(Intent(this, PayPalService::class.java))
+        super.onDestroy()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == PAYPAL_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                val confirm: PaymentConfirmation? = data?.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION)
+                if (confirm != null) {
+                    try {
+                        val paymentDetails = confirm.toJSONObject().toString()
+                        // Procesar los detalles del pago
+                        // Iniciar la actividad PaymentSuccessfulActivity
+                        val intent = Intent(this, PaymentSuccessfulActivity::class.java)
+                        startActivity(intent)
+                        // Finalizar la actividad actual
+                        finish()
+                    } catch (e: Exception) {
+                        // Manejar cualquier excepción ocurrida al procesar los detalles del pago
+                    }
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                // El usuario canceló el pago
+                finish()
+            } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
+                // Datos inválidos proporcionados al realizar el pago
+                Toast.makeText(this@SeatActivity, "Datos inválidos al realizar el pago", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        }
+    }
+
 }
