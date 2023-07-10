@@ -2,6 +2,8 @@ package dev.android.appbuses
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +13,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import dev.android.appbuses.databinding.ItemSeatBinding
 import dev.android.appbuses.models.Asiento
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_seat.view.*
 
 class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<SeatsAdapter.SeatsAdapterViewHolder>() {
@@ -19,6 +22,7 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
     lateinit var context: Context
     lateinit var getSpinnerOption:(Any) -> Unit
     var selectedOptions = mutableListOf<Int>()
+    var passengersID = mutableListOf<String>()
 
     inner class SeatsAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var binding: ItemSeatBinding = ItemSeatBinding.bind(itemView)
@@ -34,6 +38,14 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
             val sp = ArrayAdapter(context, android.R.layout.simple_spinner_item, type)
             binding.spnType.adapter = sp
 
+            binding.edtID.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    passengersID[adapterPosition] = binding.edtID.text.toString()
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+            })
             binding.spnType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                     selectedOptions[adapterPosition] = position // Almacenar el valor seleccionado en la posición correspondiente
@@ -52,6 +64,7 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_seat, parent, false)
         for (i in seats.indices){
             selectedOptions.add(0)
+            passengersID.add("")
         }
         return SeatsAdapterViewHolder(view)
     }
@@ -75,5 +88,9 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
     fun getAllSelectedOptions(): List<Int> {
 //        Toast.makeText(context, selectedOptions.toString(), Toast.LENGTH_SHORT).show()
         return selectedOptions
+    }
+
+    fun getAllPassengers(): List<String> {
+        return passengersID
     }
 }

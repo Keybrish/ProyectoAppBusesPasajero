@@ -47,7 +47,7 @@
             app:layout_constraintTop_toTopOf="@+id/txtSeatNumber" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtID"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

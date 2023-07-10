@@ -86,3 +86,16 @@ data class Compra (
     val origen: String,
     val destino: String
 ): Serializable
+
+data class Compra_Detalle (
+    val id_venta: Int,
+    val id_comprador: Int,
+    val id_viaje_pertenece: Int,
+    val id_parada_pertenece: Int,
+    val fecha_venta: String,
+    val id_forma_pago: Int,
+    val estado_venta: Int,
+    val total_venta: Float,
+    val codigo_qr_venta: String,
+    val comprobante_venta: String
+): Serializable

@@ -22,9 +22,7 @@ import java.util.*
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
-import dev.android.appbuses.models.Frecuencia
-import dev.android.appbuses.models.Usuario
-import dev.android.appbuses.models.Venta
+import dev.android.appbuses.models.*
 import dev.android.appbuses.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -54,8 +52,6 @@ class FileActivity : AppCompatActivity() {
         bundle = intent.extras!!
 
         email = bundle?.getString("email").toString()
-        Toast.makeText(this@FileActivity, email.toString(), Toast.LENGTH_SHORT).show()
-        //user = Usuario(8, "", "", "", "", "", "", "")
         if (email != null) {
             getUser(email)
         }
@@ -167,7 +163,6 @@ class FileActivity : AppCompatActivity() {
                 override fun onFailure(call: Call<Venta>, t: Throwable) {
                     Log.d("Agregar", "Error al agregar cliente")
                 }
-
                 override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
                     Log.d("Agregar", "Cliente agregado con éxito")
                 }

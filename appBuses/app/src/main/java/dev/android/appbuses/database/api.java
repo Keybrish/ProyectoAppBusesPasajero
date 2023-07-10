@@ -4,6 +4,7 @@ import java.util.List;
 
 import dev.android.appbuses.models.Asiento;
 import dev.android.appbuses.models.Compra;
+import dev.android.appbuses.models.Compra_Detalle;
 import dev.android.appbuses.models.Contrasenia;
 import dev.android.appbuses.models.FormaPago;
 import dev.android.appbuses.models.Frecuencia;
@@ -34,7 +35,7 @@ public interface api {
     Call<Contrasenia> getPassword(@Query("email_usuario")String email_usuario);
 
     @GET("listarCompras.php")
-    Call<List<Compra>> getPurchases(@Query("id_comprado")Integer id_comprado);
+    Call<List<Compra>> getPurchases(@Query("id_comprador")Integer id_comprador);
 
     @GET("buscarVCoop.php")
     Call<List<Frecuencia>> getFrequenciesCooperative(@Query("origen") String origen, @Query("destino") String destino, @Query("cooperativa") String cooperativa);
@@ -53,6 +54,9 @@ public interface api {
 
     @GET("buscarViaje.php")
     Call<List<Frecuencia>> getFrequenciesOD(@Query("origen") String origen, @Query("destino") String destino);
+
+    @GET("obtenerUltimaCompra.php")
+    Call<Compra> getLastPurchase(@Query("id_comprador") Integer id_comprador);
 
     @FormUrlEncoded
     @POST("editarPerfilPasajero.php")
@@ -78,5 +82,13 @@ public interface api {
     @POST("editarClaveUsuario.php")
     Call<Usuario> updateUserPassword(@Field("id_usuario") Integer id_usuario,
                              @Field("clave_usuario") String clave_usuario);
+
+    @FormUrlEncoded
+    @POST("ingresarDetalleVenta.php")
+    Call<Compra_Detalle> insertDataDetail(@Field("id_venta_pertenece") Integer id_venta_pertenece,
+                                          @Field("id_asiento") Integer id_asiento,
+                                          @Field("costo_asiento") Float costo_asiento,
+                                          @Field("costo_parada") Float costo_parada,
+                                          @Field("cedula_pasajero") String cedula_pasajero);
 }
 
