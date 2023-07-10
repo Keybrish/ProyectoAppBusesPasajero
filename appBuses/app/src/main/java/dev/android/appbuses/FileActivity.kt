@@ -39,6 +39,7 @@ class FileActivity : AppCompatActivity() {
     private lateinit var bundle: Bundle
     private lateinit var user: Usuario
     private var email = ""
+    private lateinit var freq: Frecuencia
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,17 +68,24 @@ class FileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        bundle?.let {
+            freq = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
+        }
+
         binding.btnNext.setOnClickListener {
             bundle?.let {
                 val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
-                image?.let { it1 -> uploadImage(it1, frequency) }
+                if (image == null) {
+                    Toast.makeText(this@FileActivity, "Agregue comprobante", Toast.LENGTH_SHORT).show()
+                } else {
+                    image?.let { it1 -> uploadImage(it1) }
+                    val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
+                        putExtras(bundle)
+                    }
+                    startActivity(intent)
+                }
             }
-
-            val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
-                putExtras(bundle)
-            }
-            startActivity(intent)
         }
 
         val loadFile = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
@@ -117,7 +125,7 @@ class FileActivity : AppCompatActivity() {
 
     @SuppressLint("SuspiciousIndentation")
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun uploadImage(imageUrl: Uri, frequency: Frecuencia) {
+    private fun uploadImage(imageUrl: Uri) {
         progressDialog?.setMessage("Actualizando foto")
         progressDialog?.show()
 
@@ -130,14 +138,18 @@ class FileActivity : AppCompatActivity() {
                     val downloadUrl = uri.toString()
                     val payment = bundle?.getInt("payment")
                     val total = bundle?.getFloat("total")
+
                     val sale = payment?.let {
-                        Venta(user.id_usuario, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
+                        Venta(user.id_usuario, freq.id_viaje, freq.id_parada, freq.fecha_viaje,
                             it,total, "12345", downloadUrl)
                     }
+                    Toast.makeText(applicationContext, sale.toString(), Toast.LENGTH_SHORT).show()
+                    Log.d("sale", sale.toString())
+
                     if (sale != null) {
                         addSale(sale)
                     }
-                }.addOnFailureListener { exception ->
+                }.addOnFailureListener {
                     showToast("Error al obtener la URL de descarga")
                     progressDialog?.dismiss()
                 }
@@ -157,14 +169,18 @@ class FileActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.insertData(venta.id_comprador, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,venta.total_venta, "123455555", venta.comprobante)
+        Log.d("venta", venta.toString())
+        val retrofit = retrofitBuilder.insertData(user.id_usuario, freq.id_viaje, freq.id_parada, freq.fecha_viaje, venta.id_forma_pago, 0,
+            venta.total_venta, "", "ee")
         retrofit.enqueue(
             object : Callback<Venta> {
+                @RequiresApi(Build.VERSION_CODES.O)
                 override fun onFailure(call: Call<Venta>, t: Throwable) {
                     Log.d("Agregar", "Error al agregar cliente")
                 }
                 override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
                     Log.d("Agregar", "Cliente agregado con éxito")
+
                 }
             }
         )

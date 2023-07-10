@@ -141,7 +141,6 @@ class PaymentSuccessfulActivity : AppCompatActivity() {
                                 Picasso.get().load(usuario.foto_usuario)
                                     .error(R.drawable.avatar)
                                     .into(binding.imgProfile)
-
                                 getPurchase(user.id_usuario)
                             }
                         } else {

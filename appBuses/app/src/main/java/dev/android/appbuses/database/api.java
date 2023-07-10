@@ -69,11 +69,12 @@ public interface api {
 
     @FormUrlEncoded
     @POST("generarVenta.php")
-    Call<Venta> insertData(@Field("id_comprador")Integer id_comprador,
+    Call<Venta> insertData(@Field("id_comprador") Integer id_comprador,
                            @Field("id_viaje_pertenece")Integer id_viaje_pertenece,
                            @Field("id_parada_pertenece")Integer id_parada_pertenece,
                            @Field("fecha_venta")String fecha_venta,
                            @Field("id_forma_pago")Integer id_forma_pago,
+                           @Field("estado_venta") Integer estado_venta,
                            @Field("total_venta")Float total_venta,
                            @Field("codigo_qr_venta")String codigo_qr_venta,
                            @Field("comprobante_venta")String comprobante_venta);

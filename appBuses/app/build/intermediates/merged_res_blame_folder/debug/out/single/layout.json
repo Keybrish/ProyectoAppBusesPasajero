@@ -56,10 +56,6 @@
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-56:\\layout\\activity_bus_detail.xml"
     },
     {
-        "merged": "dev.android.appbuses.app-mergeDebugResources-53:/layout/item_seat.xml",
-        "source": "dev.android.appbuses.app-main-56:/layout/item_seat.xml"
-    },
-    {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-53:\\layout\\activity_change_password.xml",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-56:\\layout\\activity_change_password.xml"
     },
@@ -70,6 +66,10 @@
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-53:\\layout\\activity_profile.xml",
         "source": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-main-56:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "dev.android.appbuses.app-mergeDebugResources-53:/layout/activity_register.xml",
+        "source": "dev.android.appbuses.app-main-56:/layout/activity_register.xml"
     },
     {
         "merged": "C:\\Users\\keych\\.gradle\\daemon\\7.4\\dev.android.appbuses.app-mergeDebugResources-53:\\layout\\activity_seat.xml",
