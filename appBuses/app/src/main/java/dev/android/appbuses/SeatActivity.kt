@@ -52,12 +52,49 @@ class SeatActivity : AppCompatActivity() {
         }
 
         val bundle = intent.extras
+<<<<<<< Updated upstream
 
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, FileActivity::class.java).apply {
                 if (bundle != null) {
                     putExtras(bundle)
                     putExtra("total", total)
+=======
+        val option = bundle?.getString("amount")
+        val payment = bundle?.getInt("payment")
+        if (bundle != null) {
+            email = bundle.getString("email").toString()
+            getUser(email)
+        }
+
+
+        configuration = PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX).clientId(this.clienteId)
+        Toast.makeText(this@SeatActivity, payment.toString(), Toast.LENGTH_SHORT).show()
+
+        binding.btnNext.setOnClickListener {
+            if(payment == 3){
+                getPayment(total.toString())
+            }else{
+                val passengers = adapter.getAllPassengers()
+                var pass = true
+                for (i in 0 until adapter.itemCount){
+                    if (passengers[i] == "") {
+                        pass = false
+                        Toast.makeText(this@SeatActivity, "Llene todos los asientos", Toast.LENGTH_SHORT).show()
+                        break
+                    }
+                }
+                if (pass) {
+                    val intent = Intent(this, FileActivity::class.java).apply {
+                        if (bundle != null) {
+                            putExtras(bundle)
+                            putExtra("total", total)
+                            putStringArrayListExtra("listaExtra", ArrayList(passengers))
+                            putExtra("cantidad", adapter.seats.size)
+                        }
+                    }
+                    startActivity(intent)
+>>>>>>> Stashed changes
                 }
             }
             startActivity(intent)

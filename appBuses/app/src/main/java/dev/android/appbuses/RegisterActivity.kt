@@ -26,4 +26,22 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+<<<<<<< Updated upstream
+=======
+    private fun registerUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Registro exitoso
+                    Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, WelcomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // Error en el registro
+                    Toast.makeText(this, "Error en el registro: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+>>>>>>> Stashed changes
 }

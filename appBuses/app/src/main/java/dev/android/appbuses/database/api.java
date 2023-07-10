@@ -37,5 +37,26 @@ public interface api {
                            @Field("total_venta")Float total_venta,
                            @Field("codigo_qr_venta")String codigo_qr_venta,
                            @Field("comprobante_venta")String comprobante_venta);
+<<<<<<< Updated upstream
+=======
+
+    @FormUrlEncoded
+    @POST("editarClaveUsuario.php")
+    Call<Usuario> updateUserPassword(@Field("id_usuario") Integer id_usuario,
+                             @Field("clave_usuario") String clave_usuario);
+
+    @FormUrlEncoded
+    @POST("ingresarDetalleVenta.php")
+    Call<Compra_Detalle> insertDataDetail(@Field("id_venta_pertenece") Integer id_venta_pertenece,
+                                          @Field("id_asiento") Integer id_asiento,
+                                          @Field("costo_asiento") Float costo_asiento,
+                                          @Field("costo_parada") Float costo_parada,
+                                          @Field("cedula_pasajero") String cedula_pasajero);
+
+    @FormUrlEncoded
+    @POST("editarCompra.php")
+    Call<Venta> updatePurchase(@Field("id_venta") Integer id_venta,
+                               @Field("codigo_qr_venta") String codigo_qr_venta);
+>>>>>>> Stashed changes
 }
 

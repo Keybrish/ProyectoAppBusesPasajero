@@ -92,7 +92,11 @@ class PaymentActivity : AppCompatActivity() {
                     putExtras(bundle)
                 }
                 putExtra("amount", amount)
+<<<<<<< Updated upstream
                 putExtra("payment", payment)
+=======
+                putExtra("payment", binding.spnPayment.selectedItemPosition + 1)
+>>>>>>> Stashed changes
             }
             startActivity(intent)
         }
@@ -130,7 +134,8 @@ class PaymentActivity : AppCompatActivity() {
                             binding.spnPayment.dropDownVerticalOffset
                             val op = mutableListOf<String>()
                             for (element in formasPago){
-                                op.add(element.forma_pago)
+                                if(element.forma_pago != "Efectivo")
+                                    op.add(element.forma_pago)
                             }
                             val sp = ArrayAdapter(this@PaymentActivity, R.layout.simple_spinner_item, op)
                             binding.spnPayment.adapter = sp
