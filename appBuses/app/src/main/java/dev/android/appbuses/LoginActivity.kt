@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         } else {
-            Toast.makeText(this@LoginActivity, "Usuario no registrado", Toast.LENGTH_SHORT).show()
+            showAlert()
         }
     }
 
