@@ -93,7 +93,7 @@
             android:background="@drawable/texto"
             android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="10dp"
-            android:hint="Email or nickname"
+            android:hint="Email"
             android:padding="15dp"
             android:textSize="16sp"
             app:backgroundTint="@null"

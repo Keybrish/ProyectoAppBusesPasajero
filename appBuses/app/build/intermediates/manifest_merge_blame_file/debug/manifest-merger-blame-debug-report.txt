@@ -85,12 +85,12 @@
 45        android:extractNativeLibs="false"
 46        android:fullBackupContent="@xml/backup_rules"
 46-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:11:9-54
-47        android:icon="@mipmap/ic_launcher"
-47-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:12:9-43
+47        android:icon="@drawable/pasajero"
+47-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:12:9-42
 48        android:label="@string/app_name"
 48-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:13:9-41
-49        android:roundIcon="@mipmap/ic_launcher_round"
-49-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:14:9-54
+49        android:roundIcon="@drawable/pasajero"
+49-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:14:9-47
 50        android:supportsRtl="true"
 50-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:15:9-35
 51        android:testOnly="true"

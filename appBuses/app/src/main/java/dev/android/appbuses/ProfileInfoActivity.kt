@@ -35,7 +35,7 @@ class ProfileInfoActivity : AppCompatActivity() {
         }
 
         binding.btnSave.setOnClickListener {
-            val usser = Usuario(user.id_usuario, edtID.text.toString(), user.email_usuario, edtName.text.toString(), edtLastName.text.toString(), edtPhone.text.toString(), user.foto_usuario)
+            val usser = Usuario(user.id_usuario, edtID.text.toString(), "pasajero", user.email_usuario, edtName.text.toString(), edtLastName.text.toString(), edtPhone.text.toString(), user.foto_usuario)
             updateUser(usser)
             val intent = Intent(this, ProfileActivity::class.java).apply {
                 putExtra("email", usser.email_usuario)

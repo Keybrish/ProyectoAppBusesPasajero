@@ -62,6 +62,7 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnLogout.setOnClickListener {
             cerrarSesion()
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
 
         binding.btnEditInfo.setOnClickListener {
@@ -113,8 +114,8 @@ class ProfileActivity : AppCompatActivity() {
         preferencias.apply()
         FirebaseAuth.getInstance().signOut()
         val intent = Intent(this, WelcomeActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
+        finishAffinity()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
