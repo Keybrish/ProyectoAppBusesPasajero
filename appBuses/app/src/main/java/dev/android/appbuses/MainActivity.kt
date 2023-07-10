@@ -112,10 +112,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, "Llene primero el origen y destino", Toast.LENGTH_SHORT).show()
                 }
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
-
     }
 
 
