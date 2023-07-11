@@ -23,6 +23,7 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
     lateinit var getSpinnerOption:(Any) -> Unit
     var selectedOptions = mutableListOf<Int>()
     var passengersID = mutableListOf<String>()
+    var passengersSeatType = mutableListOf<String>()
 
     inner class SeatsAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var binding: ItemSeatBinding = ItemSeatBinding.bind(itemView)
@@ -49,13 +50,16 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
             binding.spnType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                     selectedOptions[adapterPosition] = position // Almacenar el valor seleccionado en la posición correspondiente
+                    passengersSeatType[adapterPosition] = binding.spnType.selectedItem.toString()
                     getSpinnerOption(getAllSelectedOptions())
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {
                     // Manejar el caso en que no se haya seleccionado nada
+                    passengersSeatType[adapterPosition] = seatType[0].toString()
                 }
             }
+
         }
     }
 
@@ -65,6 +69,7 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
         for (i in seats.indices){
             selectedOptions.add(0)
             passengersID.add("")
+            passengersSeatType.add("")
         }
         return SeatsAdapterViewHolder(view)
     }
@@ -92,5 +97,9 @@ class SeatsAdapter(var seats: List<Int> = emptyList()) : RecyclerView.Adapter<Se
 
     fun getAllPassengers(): List<String> {
         return passengersID
+    }
+
+    fun getAllPassengersSeats(): List<String> {
+        return passengersSeatType
     }
 }

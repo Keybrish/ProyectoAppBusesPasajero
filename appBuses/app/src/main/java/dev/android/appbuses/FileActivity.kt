@@ -41,6 +41,7 @@ class FileActivity : AppCompatActivity() {
     private var email = ""
     private lateinit var freq: Frecuencia
     private lateinit var purchase: Compra
+    private var seatNumber = 0
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,6 +67,7 @@ class FileActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -188,13 +190,13 @@ class FileActivity : AppCompatActivity() {
         )
     }
 
-    private fun addSaleDatail(idNumber: String) {
+    private fun addSaleDetail(idNumber: String, idSeat: Int) {
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://nilotic-quart.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.insertDataDetail(purchase.id_venta, 1, 0f, 0f, idNumber)
+        val retrofit = retrofitBuilder.insertDataDetail(purchase.id_venta, idSeat, 0f, 0f, idNumber)
         retrofit.enqueue(
             object : Callback<Compra_Detalle> {
                 @RequiresApi(Build.VERSION_CODES.O)
@@ -202,7 +204,46 @@ class FileActivity : AppCompatActivity() {
                     Log.d("Agregar", "Error al agregar cliente")
                 }
                 override fun onResponse(call: Call<Compra_Detalle>, response: retrofit2.Response<Compra_Detalle>) {
-                    Log.d("Añadido", "Cliente agregado con éxito")
+                    Log.d("id_bus", "$idNumber, $idSeat")
+
+                }
+            }
+        )
+    }
+
+    private fun addSaleSeat(idNumber: Int, type: String, position: Int) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getSeat(idNumber,type)
+        retrofit.enqueue(
+            object : Callback<Asiento_Numero> {
+                @RequiresApi(Build.VERSION_CODES.O)
+                override fun onFailure(call: Call<Asiento_Numero>, t: Throwable) {
+                    Log.d("id_bus", "$idNumber, $type")
+                    Toast.makeText(applicationContext, "No hay asientos disponibles", Toast.LENGTH_SHORT).show()
+                }
+                override fun onResponse(call: Call<Asiento_Numero>, response: retrofit2.Response<Asiento_Numero>) {
+                    Log.d("id_bus", "$idNumber, $type")
+                    if (response.isSuccessful) {
+                        val asientoNumero = response.body()
+                        Log.d("Resp", asientoNumero.toString())
+                            if (asientoNumero != null) {
+                                seatNumber = asientoNumero.id_asiento
+                                val listaExtra = bundle?.getStringArrayList("listaExtra")
+                                val listaExtraAsientos = bundle?.getStringArrayList("listaExtraAsientos")
+                                Toast.makeText(applicationContext, listaExtraAsientos.toString(), Toast.LENGTH_SHORT).show()
+                                Log.d("Size", listaExtra.toString())
+                                addSaleDetail(listaExtra!![position].toString(), seatNumber)
+                            } else {
+                                Toast.makeText(applicationContext, "No hay asientos", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@FileActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         )
@@ -228,12 +269,17 @@ class FileActivity : AppCompatActivity() {
                             purchase = compra
 
                             val listaExtra = bundle?.getStringArrayList("listaExtra")
+                            val listaExtraAsientos = bundle?.getStringArrayList("listaExtraAsientos")
                             val passAmount = bundle.getInt("cantidad")
+                            Toast.makeText(applicationContext, listaExtraAsientos.toString(), Toast.LENGTH_SHORT).show()
                             Log.d("Size", listaExtra.toString())
-                            for (i in 0 until passAmount){
-                                addSaleDatail(listaExtra!![i].toString())
+                            bundle?.let {
+                                val freq = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
+                                for (i in 0 until passAmount){
+                                    addSaleSeat(freq.id_bus, listaExtraAsientos!![i].toString(), i)
+                                }
+                                updatePurchase(purchase.id_venta)
                             }
-                            updatePurchase(purchase.id_venta)
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa

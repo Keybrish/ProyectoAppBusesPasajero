@@ -100,3 +100,7 @@ data class Compra_Detalle (
     val codigo_qr_venta: String,
     val comprobante_venta: String
 ): Serializable
+
+data class Asiento_Numero(
+    val id_asiento: Int
+): Serializable

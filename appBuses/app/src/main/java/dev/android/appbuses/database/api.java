@@ -3,6 +3,7 @@ package dev.android.appbuses.database;
 import java.util.List;
 
 import dev.android.appbuses.models.Asiento;
+import dev.android.appbuses.models.Asiento_Numero;
 import dev.android.appbuses.models.Compra;
 import dev.android.appbuses.models.Compra_Detalle;
 import dev.android.appbuses.models.Contrasenia;
@@ -97,4 +98,9 @@ public interface api {
     @POST("editarCompra.php")
     Call<Venta> updatePurchase(@Field("id_venta") Integer id_venta,
                                @Field("codigo_qr_venta") String codigo_qr_venta);
+
+    @FormUrlEncoded
+    @POST("listarAsientosDisponibles.php")
+    Call<Asiento_Numero> getSeat(@Field("id_bus_pertenece") Integer id_bus_pertenece,
+                                 @Field("descripcion_asiento") String descripcion_asiento);
 }

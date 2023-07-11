@@ -44,6 +44,7 @@ class SeatActivity : AppCompatActivity() {
     private var seatsPrices = mutableListOf<Asiento>()
     private lateinit var user: Usuario
     private var email = ""
+    private lateinit var bundle: Bundle
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,8 +57,11 @@ class SeatActivity : AppCompatActivity() {
             finish()
         }
 
+        bundle = intent.extras!!
+
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -79,6 +83,7 @@ class SeatActivity : AppCompatActivity() {
                 getPayment(total.toString())
             }else{
                 val passengers = adapter.getAllPassengers()
+                val passengersSeats = adapter.getAllPassengersSeats()
                 var pass = true
                 for (i in 0 until adapter.itemCount){
                     if (passengers[i] == "") {
@@ -93,6 +98,7 @@ class SeatActivity : AppCompatActivity() {
                             putExtras(bundle)
                             putExtra("total", total)
                             putStringArrayListExtra("listaExtra", ArrayList(passengers))
+                            putStringArrayListExtra("listaExtraAsientos", ArrayList(passengersSeats))
                             putExtra("cantidad", adapter.seats.size)
                         }
                     }

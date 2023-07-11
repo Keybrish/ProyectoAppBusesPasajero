@@ -81,9 +81,7 @@ class PaymentActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java).apply {
-                if (bundle != null) {
-                    putExtras(bundle)
-                }
+                putExtras(bundle)
             }
             startActivity(intent)
         }
