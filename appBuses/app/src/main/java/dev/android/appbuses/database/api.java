@@ -92,5 +92,9 @@ public interface api {
                                           @Field("costo_asiento") Float costo_asiento,
                                           @Field("costo_parada") Float costo_parada,
                                           @Field("cedula_pasajero") String cedula_pasajero);
-}
 
+    @FormUrlEncoded
+    @POST("editarCompra.php")
+    Call<Venta> updatePurchase(@Field("id_venta") Integer id_venta,
+                               @Field("codigo_qr_venta") String codigo_qr_venta);
+}

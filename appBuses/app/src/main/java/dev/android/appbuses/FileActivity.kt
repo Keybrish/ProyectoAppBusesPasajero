@@ -22,9 +22,7 @@ import java.util.*
 import com.google.firebase.storage.StorageReference
 import com.squareup.picasso.Picasso
 import dev.android.appbuses.database.api
-import dev.android.appbuses.models.Frecuencia
-import dev.android.appbuses.models.Usuario
-import dev.android.appbuses.models.Venta
+import dev.android.appbuses.models.*
 import dev.android.appbuses.utils.Constants
 import retrofit2.Call
 import retrofit2.Callback
@@ -90,6 +88,7 @@ class FileActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
+                putExtras(bundle)
             }
             startActivity(intent)
         }
@@ -171,10 +170,10 @@ class FileActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.insertData(venta.id_comprador, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,venta.total_venta, "123455555", venta.comprobante)
+        val retrofit = retrofitBuilder.insertData(venta.id_comprador, venta.id_viaje_pertenece, venta.id_parada_pertenece, venta.fecha_venta, venta.id_forma_pago,0,venta.total_venta, "123455555", venta.comprobante)
         Log.d("venta", venta.toString())
-        val retrofit = retrofitBuilder.insertData(user.id_usuario, freq.id_viaje, freq.id_parada, freq.fecha_viaje, venta.id_forma_pago, 0,
-            venta.total_venta, "", venta.comprobante)
+//        val retrofit = retrofitBuilder.insertData(user.id_usuario, freq.id_viaje, freq.id_parada, freq.fecha_viaje, venta.id_forma_pago, 0,
+//            venta.total_venta, "", venta.comprobante)
         retrofit.enqueue(
             object : Callback<Venta> {
                 override fun onFailure(call: Call<Venta>, t: Throwable) {

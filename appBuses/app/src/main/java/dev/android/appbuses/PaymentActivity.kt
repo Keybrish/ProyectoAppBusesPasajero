@@ -101,7 +101,7 @@ class PaymentActivity : AppCompatActivity() {
                     putExtras(bundle)
                 }
                 putExtra("amount", amount)
-                putExtra("payment", binding.spnPayment.selectedItem.toString())
+                putExtra("payment", binding.spnPayment.selectedItemPosition + 2)
             }
             startActivity(intent)
         }
@@ -139,7 +139,9 @@ class PaymentActivity : AppCompatActivity() {
                             binding.spnPayment.dropDownVerticalOffset
                             val op = mutableListOf<String>()
                             for (element in formasPago){
-                                op.add(element.forma_pago)
+                                if (element.forma_pago != "Efectivo"){
+                                    op.add(element.forma_pago)
+                                }
                             }
                             val sp = ArrayAdapter(this@PaymentActivity, R.layout.simple_spinner_item, op)
                             binding.spnPayment.adapter = sp

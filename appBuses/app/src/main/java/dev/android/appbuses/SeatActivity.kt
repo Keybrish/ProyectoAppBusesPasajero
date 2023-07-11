@@ -64,7 +64,7 @@ class SeatActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         val option = bundle?.getString("amount")
-        val payment = bundle?.getString("payment")
+        val payment = bundle?.getInt("payment")
         if (bundle != null) {
             email = bundle.getString("email").toString()
             getUser(email)
@@ -75,7 +75,7 @@ class SeatActivity : AppCompatActivity() {
         Toast.makeText(this@SeatActivity, payment.toString(), Toast.LENGTH_SHORT).show()
 
         binding.btnNext.setOnClickListener {
-            if(payment == "PayPal"){
+            if(payment == 4){
                 getPayment(total.toString())
             }else{
                 val passengers = adapter.getAllPassengers()
