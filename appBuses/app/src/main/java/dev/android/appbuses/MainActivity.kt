@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         bund = intent.extras!!
 
         val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
-        email = sharedPreferences.getString("email", "").toString()
+        email = sharedPreferences.getString("email", email).toString()
 
 //        Toast.makeText(this@MainActivity, email.toString(), Toast.LENGTH_SHORT).show()
         //user = Usuario(8, "", "", "", "", "", "", "")

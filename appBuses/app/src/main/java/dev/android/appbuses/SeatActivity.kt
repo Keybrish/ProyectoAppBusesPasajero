@@ -94,6 +94,8 @@ class SeatActivity : AppCompatActivity() {
                         pass = false
                         Toast.makeText(this@SeatActivity, "Llene todos los asientos", Toast.LENGTH_SHORT).show()
                         break
+                    } else {
+                        pass = true
                     }
                 }
                 for (i in 0 until typeSize){
@@ -102,8 +104,8 @@ class SeatActivity : AppCompatActivity() {
                         if (passengersSeats [j] == adapter.seatType[i].descripcion_asiento){
                             cant++
                         }
-                        getAmountSeats(frequency.id_bus,adapter.seatType[i].descripcion_asiento, cant)
                     }
+                    getAmountSeats(frequency.id_bus,adapter.seatType[i].descripcion_asiento, cant)
                 }
                 if (pass) {
                     val intent = Intent(this, FileActivity::class.java).apply {
@@ -253,6 +255,7 @@ class SeatActivity : AppCompatActivity() {
                         Log.d("Respuesta", cantidad.toString())
                         if (cantidad != null) {
                             if (amount > cantidad.cantidad) {
+                                Toast.makeText(this@SeatActivity, amount.toString() + " / " + cantidad.cantidad.toString(), Toast.LENGTH_SHORT).show()
                                 val builder = AlertDialog.Builder(this@SeatActivity)
                                 builder.setTitle("Advertencia")
                                 builder.setMessage("No hay asientos sufienctes.")

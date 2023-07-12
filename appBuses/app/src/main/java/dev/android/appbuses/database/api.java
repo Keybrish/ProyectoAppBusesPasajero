@@ -11,6 +11,7 @@ import dev.android.appbuses.models.Disponibilidad;
 import dev.android.appbuses.models.FormaPago;
 import dev.android.appbuses.models.Frecuencia;
 import dev.android.appbuses.models.Usuario;
+import dev.android.appbuses.models.Usuario_Registro;
 import dev.android.appbuses.models.Venta;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -112,8 +113,16 @@ public interface api {
     Call<Asiento_Numero> updateStateSeat(@Field("id_asiento") Integer id_asiento,
                                          @Field("estado") Integer estado);
 
+    @GET("cantidadAsientosDisponibles.php")
+    Call<Disponibilidad> getAmountSeats(@Query("id_bus") Integer id_bus,
+                                        @Query("tipo_asiento") String tipo_asiento);
+
     @FormUrlEncoded
-    @POST("cantidadAsientosDisponibles.php")
-    Call<Disponibilidad> getAmountSeats(@Field("id_bus") Integer id_bus,
-                                        @Field("tipo_asiento") String tipo_asiento);
+    @POST("registroPasajero.php")
+    Call<Usuario_Registro> createUser(@Field("cedula_usuario") String cedula_usuario,
+                                      @Field("email_usuario") String email_usuario,
+                                      @Field("clave_usuario") String clave_usuario,
+                                      @Field("nombre_usuario") String nombre_usuario,
+                                      @Field("apellido_usuario") String apellido_usuario,
+                                      @Field("telefono_usuario") String telefono_usuario);
 }

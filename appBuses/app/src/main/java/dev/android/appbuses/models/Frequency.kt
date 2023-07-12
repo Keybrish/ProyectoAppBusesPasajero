@@ -108,3 +108,12 @@ data class Asiento_Numero(
 data class Disponibilidad (
     val cantidad: Int
 ): Serializable
+
+data class Usuario_Registro (
+    val cedula_usuario :String,
+    val email_usuario :String,
+    val clave_usuario :String,
+    val nombre_usuario :String,
+    val apellido_usuario :String,
+    val telefono_usuario :String
+): Serializable
