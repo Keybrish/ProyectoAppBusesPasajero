@@ -110,20 +110,20 @@ class SeatActivity : AppCompatActivity() {
         bundle?.let {
             val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
             if (option != null) {
-                cargarDatos(frequency.id_bus, frequency.id_viaje, option.toInt())
+                cargarDatos(frequency.id_bus, frequency.id_viaje, option.toInt(), frequency.id_parada)
             }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun cargarDatos(id_bus: Int, id_viaje: Int,  amount: Int){
+    fun cargarDatos(id_bus: Int, id_viaje: Int,  amount: Int, id_parada: Int){
         adapter.context = this@SeatActivity
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://nilotic-quart.000webhostapp.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(api::class.java)
-        val retrofit = retrofitBuilder.getSeats(id_bus, id_viaje)
+        val retrofit = retrofitBuilder.getSeats(id_bus, id_viaje, id_parada)
         retrofit.enqueue(
             object : Callback<List<Asiento>> {
                 override fun onFailure(call: Call<List<Asiento>> , t: Throwable) {
@@ -135,7 +135,7 @@ class SeatActivity : AppCompatActivity() {
                         val asientos = response.body()
                         seatsPrices = asientos as MutableList<Asiento>
                         if (asientos != null) {
-                            val op = mutableListOf<String>()
+//                            val op = mutableListOf<String>()
                             adapter.seatType = asientos
                             //Toast.makeText(this@SeatActivity, adapter.seatType.size.toString(), Toast.LENGTH_SHORT).show()
                             // Notificar al adaptador de cambios en los datos

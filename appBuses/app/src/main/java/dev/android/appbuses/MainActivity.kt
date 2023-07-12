@@ -13,6 +13,7 @@ import android.view.View
 import android.view.Window
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
@@ -56,14 +57,15 @@ class MainActivity : AppCompatActivity() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
 
-        cargarDatos()
+        binding.btnActive.setColorFilter(ContextCompat.getColor(this, android.R.color.holo_red_dark))
+//        cargarDatos()
 
         bund = intent.extras!!
 
         val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
         email = sharedPreferences.getString("email", "").toString()
 
-        Toast.makeText(this@MainActivity, email.toString(), Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this@MainActivity, email.toString(), Toast.LENGTH_SHORT).show()
         //user = Usuario(8, "", "", "", "", "", "", "")
         if (email != null) {
             getUser(email)
@@ -108,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         binding.edtSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (edtOrigin.text.isEmpty() && edtDestination.text.isEmpty()) {
+                if (edtOrigin.text.isEmpty() || edtDestination.text.isEmpty()) {
                     Toast.makeText(this@MainActivity, "Llene primero el origen y destino", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -139,6 +141,7 @@ class MainActivity : AppCompatActivity() {
                             adapter.frecuencias = frecuencias
                             // Notificar al adaptador de cambios en los datos
                             adapter.notifyDataSetChanged()
+                            binding.btnActive.setColorFilter(ContextCompat.getColor(this@MainActivity, android.R.color.holo_green_light))
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa
@@ -257,6 +260,7 @@ class MainActivity : AppCompatActivity() {
                             Picasso.get().load(usuario.foto_usuario)
                                 .error(R.drawable.avatar)
                                 .into(binding.imgProfile)
+                            cargarDatos()
                         }
                     } else {
                         // Manejar el caso de respuesta no exitosa

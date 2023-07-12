@@ -20,7 +20,7 @@ class FilterMenuActivity : AppCompatActivity() {
         val width = window.widthPixels
         val height = window.heightPixels
 
-        getWindow().setLayout(((width * 0.85).toInt()), ((height * 0.38).toInt()))
+        getWindow().setLayout(((width * 0.85).toInt()), ((height * 0.36).toInt()))
         getWindow().decorView.setBackgroundResource(android.R.color.transparent)
 
         binding.txtCooperative.setOnClickListener {

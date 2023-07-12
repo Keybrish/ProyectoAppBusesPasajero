@@ -21,7 +21,9 @@ import retrofit2.http.Query;
 
 public interface api {
     @GET("listarTipoAsientosBus.php")
-    Call<List<Asiento>> getSeats(@Query("id_bus")Integer id_bus, @Query("id_viaje")Integer id_viaje);
+    Call<List<Asiento>> getSeats(@Query("id_bus")Integer id_bus,
+                                 @Query("id_viaje")Integer id_viaje,
+                                 @Query("id_parada")Integer id_parada);
 
     @GET("listarViajesDiarios.php")
     Call<List<Frecuencia>> getFrequencies();
