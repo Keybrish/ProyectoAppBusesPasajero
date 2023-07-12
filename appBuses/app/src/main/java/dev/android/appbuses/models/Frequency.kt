@@ -104,3 +104,7 @@ data class Compra_Detalle (
 data class Asiento_Numero(
     val id_asiento: Int
 ): Serializable
+
+data class Disponibilidad (
+    val cantidad: Int
+): Serializable

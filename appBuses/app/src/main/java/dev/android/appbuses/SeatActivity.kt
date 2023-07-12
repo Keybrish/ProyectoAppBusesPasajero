@@ -1,6 +1,7 @@
 package dev.android.appbuses
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -45,6 +46,7 @@ class SeatActivity : AppCompatActivity() {
     private lateinit var user: Usuario
     private var email = ""
     private lateinit var bundle: Bundle
+    private var pass = true
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,12 +86,23 @@ class SeatActivity : AppCompatActivity() {
             }else{
                 val passengers = adapter.getAllPassengers()
                 val passengersSeats = adapter.getAllPassengersSeats()
-                var pass = true
+                val typeSize = adapter.seatType.size
+                val frequency = bundle?.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
+
                 for (i in 0 until adapter.itemCount){
                     if (passengers[i] == "") {
                         pass = false
                         Toast.makeText(this@SeatActivity, "Llene todos los asientos", Toast.LENGTH_SHORT).show()
                         break
+                    }
+                }
+                for (i in 0 until typeSize){
+                    var cant = 0
+                    for (j in 0 until adapter.itemCount){
+                        if (passengersSeats [j] == adapter.seatType[i].descripcion_asiento){
+                            cant++
+                        }
+                        getAmountSeats(frequency.id_bus,adapter.seatType[i].descripcion_asiento, cant)
                     }
                 }
                 if (pass) {
@@ -219,6 +232,44 @@ class SeatActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun getAmountSeats(id_bus: Int, type: String, amount: Int) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.getAmountSeats(id_bus, type)
+        retrofit.enqueue(
+            object : Callback<Disponibilidad> {
+                override fun onFailure(call: Call<Disponibilidad>, t: Throwable) {
+                    Log.d("Agregar", t.message.toString())
+                }
+                override fun onResponse(call: Call<Disponibilidad>, response: retrofit2.Response<Disponibilidad> ) {
+                    if (response.isSuccessful) {
+                        val cantidad = response.body()
+                        Log.d("Respuesta", cantidad.toString())
+                        if (cantidad != null) {
+                            if (amount > cantidad.cantidad) {
+                                val builder = AlertDialog.Builder(this@SeatActivity)
+                                builder.setTitle("Advertencia")
+                                builder.setMessage("No hay asientos sufienctes.")
+                                builder.setPositiveButton("Aceptar", null)
+                                val dialog: AlertDialog = builder.create()
+                                dialog.show()
+                                pass = false
+                            }
+                        }
+                    } else {
+                        // Manejar el caso de respuesta no exitosa
+                        Toast.makeText(this@SeatActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+            }
+        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

@@ -7,6 +7,7 @@ import dev.android.appbuses.models.Asiento_Numero;
 import dev.android.appbuses.models.Compra;
 import dev.android.appbuses.models.Compra_Detalle;
 import dev.android.appbuses.models.Contrasenia;
+import dev.android.appbuses.models.Disponibilidad;
 import dev.android.appbuses.models.FormaPago;
 import dev.android.appbuses.models.Frecuencia;
 import dev.android.appbuses.models.Usuario;
@@ -110,4 +111,9 @@ public interface api {
     @POST("editarAsiento.php")
     Call<Asiento_Numero> updateStateSeat(@Field("id_asiento") Integer id_asiento,
                                          @Field("estado") Integer estado);
+
+    @FormUrlEncoded
+    @POST("cantidadAsientosDisponibles.php")
+    Call<Disponibilidad> getAmountSeats(@Field("id_bus") Integer id_bus,
+                                        @Field("tipo_asiento") String tipo_asiento);
 }

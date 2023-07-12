@@ -65,7 +65,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtOrigin"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -83,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edtDestination"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -111,7 +111,7 @@
         android:textColor="#A6A6A6"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtOrigin" />
 
     <ImageView
         android:id="@+id/btnFilter"
@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/ic_baseline_filter_alt_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/edtSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -164,7 +164,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
         app:spanCount="1"
         tools:listitem="@layout/item_frequency" />
 
