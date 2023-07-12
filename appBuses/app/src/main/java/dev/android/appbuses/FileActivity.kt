@@ -76,23 +76,19 @@ class FileActivity : AppCompatActivity() {
         val total = bundle?.getFloat("total")
 
         binding.btnNext.setOnClickListener {
-            bundle?.let {
-                val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
+            if (image != null){
+                    bundle?.let {
+                        val frequency = it.getSerializable(Constants.KEY_FREQUENCY) as Frecuencia
 
-                image?.let { it1 -> uploadImage(it1, frequency) }
-//                val sale = payment?.let { it1 ->
-//                    Venta(8, frequency.id_viaje, frequency.id_parada, frequency.fecha_viaje,
-//                        it1,total, "12345", "")
-//                }
-//                if (sale != null) {
-//                    addSale(sale)
-//                }
+                        image?.let { it1 -> uploadImage(it1, frequency) }
+                        val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
+                            putExtras(bundle)
+                        }
+                        startActivity(intent)
+                    }
+                } else {
+                Toast.makeText(this@FileActivity, "Subir comprobante", Toast.LENGTH_SHORT).show()
             }
-
-            val intent = Intent(this, PaymentSuccessfulActivity::class.java).apply {
-                putExtras(bundle)
-            }
-            startActivity(intent)
         }
 
         val loadFile = registerForActivityResult(ActivityResultContracts.GetContent(), ActivityResultCallback {
@@ -205,7 +201,6 @@ class FileActivity : AppCompatActivity() {
                 }
                 override fun onResponse(call: Call<Compra_Detalle>, response: retrofit2.Response<Compra_Detalle>) {
                     Log.d("id_bus", "$idNumber, $idSeat")
-
                 }
             }
         )
@@ -236,6 +231,7 @@ class FileActivity : AppCompatActivity() {
                                 val listaExtraAsientos = bundle?.getStringArrayList("listaExtraAsientos")
                                 Toast.makeText(applicationContext, listaExtraAsientos.toString(), Toast.LENGTH_SHORT).show()
                                 Log.d("Size", listaExtra.toString())
+                                updateStateSeat(seatNumber, position)
                                 addSaleDetail(listaExtra!![position].toString(), seatNumber)
                             } else {
                                 Toast.makeText(applicationContext, "No hay asientos", Toast.LENGTH_SHORT).show()
@@ -306,6 +302,28 @@ class FileActivity : AppCompatActivity() {
 
                 override fun onResponse(call: Call<Venta>, response: retrofit2.Response<Venta>) {
                     Log.d("Añadido", "Comprobante editado")
+                }
+            }
+        )
+    }
+
+    private fun updateStateSeat(id_asiento: Int, position: Int) {
+        val retrofitBuilder = Retrofit.Builder()
+            .baseUrl("https://nilotic-quart.000webhostapp.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api::class.java)
+        val retrofit = retrofitBuilder.updateStateSeat(id_asiento, 1)
+        retrofit.enqueue(
+            object : Callback<Asiento_Numero> {
+                override fun onFailure(call: Call<Asiento_Numero>, t: Throwable) {
+                    Log.d("Agregar", "Error al agregar cliente")
+                }
+
+                override fun onResponse(call: Call<Asiento_Numero>, response: retrofit2.Response<Asiento_Numero>) {
+                    Log.d("Añadido", "Estado modificado: $id_asiento")
+//                    val listaExtra = bundle?.getStringArrayList("listaExtra")
+//                    addSaleDetail(listaExtra!![position].toString(), seatNumber)
                 }
             }
         )

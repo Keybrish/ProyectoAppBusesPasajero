@@ -103,4 +103,9 @@ public interface api {
     @POST("listarAsientosDisponibles.php")
     Call<Asiento_Numero> getSeat(@Field("id_bus_pertenece") Integer id_bus_pertenece,
                                  @Field("descripcion_asiento") String descripcion_asiento);
+
+    @FormUrlEncoded
+    @POST("editarAsiento.php")
+    Call<Asiento_Numero> updateStateSeat(@Field("id_asiento") Integer id_asiento,
+                                         @Field("estado") Integer estado);
 }
