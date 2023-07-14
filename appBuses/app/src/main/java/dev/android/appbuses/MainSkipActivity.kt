@@ -34,8 +34,9 @@ class MainSkipActivity : AppCompatActivity() {
     private val adapter: FrequencyAdapter by lazy{
         FrequencyAdapter()
     }
-    private lateinit var bund: Bundle
+    private var bund: Bundle? = null
     private var filtro: String? = null
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainSkipBinding.inflate(layoutInflater)
@@ -43,10 +44,16 @@ class MainSkipActivity : AppCompatActivity() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(binding.root)
 
+        bund = intent.extras
+        cargarDatos()
+
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+//        bund.getString("", "")
+//        bund = intent.extras!!
 
         val sharedPreferences = getSharedPreferences("PREFERENCE_FILE_KEY", Context.MODE_PRIVATE)
         email = sharedPreferences.getString("email", "").toString()
@@ -56,7 +63,7 @@ class MainSkipActivity : AppCompatActivity() {
             startActivityForResult(intent, REQUEST_CODE)
         }
 
-        filtro = bund.getString("filtro")
+        filtro = bund?.getString("filtro")
 
         binding.edtOrigin.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -66,7 +73,8 @@ class MainSkipActivity : AppCompatActivity() {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+            }
         })
 
         binding.edtDestination.addTextChangedListener(object : TextWatcher {
@@ -75,9 +83,11 @@ class MainSkipActivity : AppCompatActivity() {
                 if (edtOrigin.text.isNotEmpty()) {
                     cargarDatosFiltro("")
                 }
+
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+            }
         })
 
         binding.edtSearch.addTextChangedListener(object : TextWatcher {
@@ -119,7 +129,6 @@ class MainSkipActivity : AppCompatActivity() {
                         // Manejar el caso de respuesta no exitosa
                         Toast.makeText(this@MainSkipActivity, "No existen elementos", Toast.LENGTH_SHORT).show()
                     }
-
                 }
             }
         )
@@ -127,17 +136,13 @@ class MainSkipActivity : AppCompatActivity() {
         binding.rvFrequency.layoutManager = LinearLayoutManager(this)
         binding.rvFrequency.setHasFixedSize(true)
 
-        bund = intent.extras!!
-        val email = bund?.getString("email")
-
         adapter.setOnClickListener = {
             val bundle = Bundle().apply {
                 putSerializable(Constants.KEY_FREQUENCY, it)
             }
             val intent = Intent(this, BusDetailActivity()::class.java).apply {
                 putExtras(bundle)
-                putExtra("email", email)
-                putExtra("option", "login")
+                putExtra("option", "nologin")
             }
             startActivity(intent)
         }
@@ -193,14 +198,13 @@ class MainSkipActivity : AppCompatActivity() {
                 }
             )
 
-            bund = intent.extras!!
-            val email = bund?.getString("email")
-
             adapter.setOnClickListener = {
                 val bundle = Bundle().apply {
                     putSerializable(Constants.KEY_FREQUENCY, it)
                 }
                 val intent = Intent(this, BusDetailActivity()::class.java).apply {
+                    putExtras(bundle)
+                    putExtra("option", "nologin")
                 }
                 startActivity(intent)
             }
@@ -241,6 +245,15 @@ class MainSkipActivity : AppCompatActivity() {
 
                 override fun afterTextChanged(s: Editable?) {}
             })
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onRestart() {
+        super.onRestart()
+        filtro = bund?.getString("filtro")
+        if (filtro != null){
+//            Toast.makeText(this@MainActivity, filtro, Toast.LENGTH_SHORT).show()
         }
     }
 

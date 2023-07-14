@@ -93,7 +93,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+            }
         })
 
         binding.edtDestination.addTextChangedListener(object : TextWatcher {
@@ -104,7 +105,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+            }
         })
 
         binding.edtSearch.addTextChangedListener(object : TextWatcher {
@@ -277,7 +279,7 @@ class MainActivity : AppCompatActivity() {
         getUser(email)
         filtro = bund.getString("filtro")
         if (filtro != null){
-            Toast.makeText(this@MainActivity, filtro, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this@MainActivity, filtro, Toast.LENGTH_SHORT).show()
         }
     }
 
