@@ -1,0 +1,635 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dev.android.appbuses"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:26:5-79
+13-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:26:22-76
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:24:5-68
+14-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:24:22-65
+15    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+15-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:25:5-79
+15-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:25:22-76
+16    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+16-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:26:5-110
+16-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:26:22-107
+17    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+17-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:5-65
+17-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:22:22-62
+18    <uses-feature
+18-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:25:5-27:36
+19        android:name="android.hardware.camera"
+19-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:26:9-47
+20        android:required="false" />
+20-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:27:9-33
+21    <uses-feature
+21-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:28:5-30:36
+22        android:name="android.hardware.camera.front"
+22-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:29:9-53
+23        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+23-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:30:9-33
+24    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+25    <uses-feature
+25-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:33:5-35:36
+26        android:name="android.hardware.camera.autofocus"
+26-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:34:9-57
+27        android:required="false" />
+27-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:35:9-33
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:36:5-38:36
+29        android:name="android.hardware.camera.flash"
+29-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:37:9-53
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:38:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:39:5-41:36
+32        android:name="android.hardware.screen.landscape"
+32-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:40:9-57
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:41:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:42:5-44:36
+35        android:name="android.hardware.wifi"
+35-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:43:9-45
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:44:9-33
+37
+38    <uses-permission android:name="android.permission.VIBRATE" />
+38-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:10:5-66
+38-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:10:22-63
+39
+40    <application
+40-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:8:5-153:19
+41        android:allowBackup="true"
+41-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:9:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.8.0] C:\Users\keych\.gradle\caches\transforms-3\d320732828377195461ea2de63bec6b1\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+43        android:dataExtractionRules="@xml/data_extraction_rules"
+43-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:10:9-65
+44        android:debuggable="true"
+45        android:extractNativeLibs="false"
+46        android:fullBackupContent="@xml/backup_rules"
+46-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:11:9-54
+47        android:icon="@drawable/pasajero"
+47-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:12:9-42
+48        android:label="@string/app_name"
+48-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:13:9-41
+49        android:roundIcon="@drawable/pasajero"
+49-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:14:9-47
+50        android:supportsRtl="true"
+50-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:15:9-35
+51        android:testOnly="true"
+52        android:theme="@style/Theme.AppBuses" >
+52-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:16:9-46
+53        <activity
+53-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:18:9-24:20
+54            android:name="dev.android.appbuses.MainSkipActivity"
+54-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:19:13-45
+55            android:exported="false" >
+55-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:20:13-37
+56            <meta-data
+56-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+57                android:name="android.app.lib_name"
+57-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+58                android:value="" />
+58-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+59        </activity>
+60        <activity
+60-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:25:9-31:20
+61            android:name="dev.android.appbuses.FileActivity"
+61-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:26:13-41
+62            android:exported="false" >
+62-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:27:13-37
+63            <meta-data
+63-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+64                android:name="android.app.lib_name"
+64-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+65                android:value="" />
+65-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+66        </activity>
+67        <activity
+67-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:32:9-38:20
+68            android:name="dev.android.appbuses.SeatActivity"
+68-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:33:13-41
+69            android:exported="false" >
+69-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:34:13-37
+70            <meta-data
+70-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+71                android:name="android.app.lib_name"
+71-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+72                android:value="" />
+72-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+73        </activity>
+74        <activity
+74-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:39:9-45:20
+75            android:name="dev.android.appbuses.HistoryQRActivity"
+75-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:40:13-46
+76            android:exported="false" >
+76-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:41:13-37
+77            <meta-data
+77-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+78                android:name="android.app.lib_name"
+78-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+79                android:value="" />
+79-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+80        </activity>
+81        <activity
+81-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:46:9-52:20
+82            android:name="dev.android.appbuses.HistoryActivity"
+82-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:47:13-44
+83            android:exported="false" >
+83-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:48:13-37
+84            <meta-data
+84-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+85                android:name="android.app.lib_name"
+85-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+86                android:value="" />
+86-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+87        </activity>
+88        <activity
+88-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:53:9-59:20
+89            android:name="dev.android.appbuses.ChangePasswordActivity"
+89-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:54:13-51
+90            android:exported="false" >
+90-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:55:13-37
+91            <meta-data
+91-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+92                android:name="android.app.lib_name"
+92-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+93                android:value="" />
+93-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+94        </activity>
+95        <activity
+95-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:60:9-66:20
+96            android:name="dev.android.appbuses.ProfileInfoActivity"
+96-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:61:13-48
+97            android:exported="false" >
+97-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:62:13-37
+98            <meta-data
+98-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+99                android:name="android.app.lib_name"
+99-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+100                android:value="" />
+100-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+101        </activity>
+102        <activity
+102-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:67:9-73:20
+103            android:name="dev.android.appbuses.QRCodeActivity"
+103-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:68:13-43
+104            android:exported="false" >
+104-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:69:13-37
+105            <meta-data
+105-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+106                android:name="android.app.lib_name"
+106-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+107                android:value="" />
+107-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+108        </activity>
+109        <activity
+109-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:74:9-80:20
+110            android:name="dev.android.appbuses.PaymentSuccessfulActivity"
+110-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:75:13-54
+111            android:exported="false" >
+111-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:76:13-37
+112            <meta-data
+112-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+113                android:name="android.app.lib_name"
+113-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+114                android:value="" />
+114-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+115        </activity>
+116        <activity
+116-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:81:9-87:20
+117            android:name="dev.android.appbuses.PaymentActivity"
+117-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:82:13-44
+118            android:exported="false" >
+118-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:83:13-37
+119            <meta-data
+119-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+120                android:name="android.app.lib_name"
+120-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+121                android:value="" />
+121-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+122        </activity>
+123        <activity
+123-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:88:9-94:20
+124            android:name="dev.android.appbuses.ProfileActivity"
+124-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:89:13-44
+125            android:exported="false" >
+125-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:90:13-37
+126            <meta-data
+126-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+127                android:name="android.app.lib_name"
+127-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+128                android:value="" />
+128-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+129        </activity>
+130        <activity
+130-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:95:9-102:20
+131            android:name="dev.android.appbuses.BusDetailActivity"
+131-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:96:13-46
+132            android:exported="false"
+132-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:97:13-37
+133            android:theme="@style/PopUp" >
+133-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:98:13-41
+134            <meta-data
+134-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+135                android:name="android.app.lib_name"
+135-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+136                android:value="" />
+136-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+137        </activity>
+138        <activity
+138-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:103:9-110:20
+139            android:name="dev.android.appbuses.FilterMenuActivity"
+139-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:104:13-47
+140            android:exported="false"
+140-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:105:13-37
+141            android:theme="@style/PopUp" >
+141-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:106:13-41
+142            <meta-data
+142-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+143                android:name="android.app.lib_name"
+143-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+144                android:value="" />
+144-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+145        </activity>
+146        <activity
+146-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:111:9-117:20
+147            android:name="dev.android.appbuses.RegisterActivity"
+147-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:112:13-45
+148            android:exported="false" >
+148-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:113:13-37
+149            <meta-data
+149-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+150                android:name="android.app.lib_name"
+150-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+151                android:value="" />
+151-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+152        </activity>
+153        <activity
+153-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:118:9-130:20
+154            android:name="dev.android.appbuses.WelcomeActivity"
+154-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:119:13-44
+155            android:exported="true" >
+155-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:120:13-36
+156            <meta-data
+156-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+157                android:name="android.app.lib_name"
+157-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+158                android:value="" />
+158-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+159
+160            <intent-filter>
+160-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:125:13-129:29
+161                <action android:name="android.intent.action.MAIN" />
+161-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:17-69
+161-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:126:25-66
+162
+163                <category android:name="android.intent.category.LAUNCHER" />
+163-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:17-77
+163-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:128:27-74
+164            </intent-filter>
+165        </activity>
+166        <activity
+166-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:131:9-137:20
+167            android:name="dev.android.appbuses.LoginActivity"
+167-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:132:13-42
+168            android:exported="false" >
+168-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:133:13-37
+169            <meta-data
+169-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+170                android:name="android.app.lib_name"
+170-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+171                android:value="" />
+171-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+172        </activity>
+173        <activity
+173-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:138:9-144:20
+174            android:name="dev.android.appbuses.MainActivity"
+174-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:139:13-41
+175            android:exported="false" >
+175-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:140:13-37
+176            <meta-data
+176-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:21:13-23:36
+177                android:name="android.app.lib_name"
+177-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:22:17-52
+178                android:value="" />
+178-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:23:17-33
+179        </activity>
+180
+181        <meta-data
+181-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:146:9-148:57
+182            android:name="preloaded_fonts"
+182-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:147:13-43
+183            android:resource="@array/preloaded_fonts" />
+183-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:148:13-54
+184        <meta-data
+184-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:150:9-152:51
+185            android:name="com.google.firebase.storage.default_bucket"
+185-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:151:13-70
+186            android:value="your-storage-bucket" />
+186-->C:\Users\keych\OneDrive\Documents\GitHub\ProyectoAppBusesPasajero\appBuses\app\src\main\AndroidManifest.xml:152:13-48
+187
+188        <service
+188-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:8:9-14:19
+189            android:name="com.google.firebase.components.ComponentDiscoveryService"
+189-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:9:13-84
+190            android:directBootAware="true"
+190-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+191            android:exported="false" >
+191-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:10:13-37
+192            <meta-data
+192-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:11:13-13:85
+193                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+193-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:12:17-116
+194                android:value="com.google.firebase.components.ComponentRegistrar" />
+194-->[com.google.firebase:firebase-auth-ktx:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\c8717f0070d0a55906111ff19efb7a26\transformed\firebase-auth-ktx-22.0.0\AndroidManifest.xml:13:17-82
+195            <meta-data
+195-->[com.google.firebase:firebase-analytics-ktx:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\fe47942f30040dcb1b7738e9ce4ff233\transformed\firebase-analytics-ktx-21.3.0\AndroidManifest.xml:11:13-13:85
+196                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+196-->[com.google.firebase:firebase-analytics-ktx:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\fe47942f30040dcb1b7738e9ce4ff233\transformed\firebase-analytics-ktx-21.3.0\AndroidManifest.xml:12:17-126
+197                android:value="com.google.firebase.components.ComponentRegistrar" />
+197-->[com.google.firebase:firebase-analytics-ktx:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\fe47942f30040dcb1b7738e9ce4ff233\transformed\firebase-analytics-ktx-21.3.0\AndroidManifest.xml:13:17-82
+198            <meta-data
+198-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\ebcd9d44a77ca9d3673c9c35b190ae2e\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:14:13-16:85
+199                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+199-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\ebcd9d44a77ca9d3673c9c35b190ae2e\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:15:17-113
+200                android:value="com.google.firebase.components.ComponentRegistrar" />
+200-->[com.google.firebase:firebase-common-ktx:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\ebcd9d44a77ca9d3673c9c35b190ae2e\transformed\firebase-common-ktx-20.3.3\AndroidManifest.xml:16:17-82
+201            <meta-data
+201-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:69:13-71:85
+202                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+202-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:70:17-109
+203                android:value="com.google.firebase.components.ComponentRegistrar" />
+203-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:71:17-82
+204            <meta-data
+204-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\keych\.gradle\caches\transforms-3\421bc0cf24002c4fda3f7a57796e6e8d\transformed\firebase-storage-20.2.1\AndroidManifest.xml:32:13-34:85
+205                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+205-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\keych\.gradle\caches\transforms-3\421bc0cf24002c4fda3f7a57796e6e8d\transformed\firebase-storage-20.2.1\AndroidManifest.xml:33:17-107
+206                android:value="com.google.firebase.components.ComponentRegistrar" />
+206-->[com.google.firebase:firebase-storage:20.2.1] C:\Users\keych\.gradle\caches\transforms-3\421bc0cf24002c4fda3f7a57796e6e8d\transformed\firebase-storage-20.2.1\AndroidManifest.xml:34:17-82
+207            <meta-data
+207-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:31:13-33:85
+208                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+208-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:32:17-139
+209                android:value="com.google.firebase.components.ComponentRegistrar" />
+209-->[com.google.android.gms:play-services-measurement-api:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\21e09fe2d122831607f1ac63597860e0\transformed\play-services-measurement-api-21.3.0\AndroidManifest.xml:33:17-82
+210            <meta-data
+210-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\keych\.gradle\caches\transforms-3\b55b201aa9a7e579d4ea377970df7153\transformed\firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+211                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+211-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\keych\.gradle\caches\transforms-3\b55b201aa9a7e579d4ea377970df7153\transformed\firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+212                android:value="com.google.firebase.components.ComponentRegistrar" />
+212-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\keych\.gradle\caches\transforms-3\b55b201aa9a7e579d4ea377970df7153\transformed\firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+213        </service>
+214
+215        <activity
+215-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:29:9-46:20
+216            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+216-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:30:13-80
+217            android:excludeFromRecents="true"
+217-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:31:13-46
+218            android:exported="true"
+218-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:32:13-36
+219            android:launchMode="singleTask"
+219-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:33:13-44
+220            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+220-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:34:13-72
+221            <intent-filter>
+221-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:35:13-45:29
+222                <action android:name="android.intent.action.VIEW" />
+222-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:36:17-69
+222-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:36:25-66
+223
+224                <category android:name="android.intent.category.DEFAULT" />
+224-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:38:17-76
+224-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:38:27-73
+225                <category android:name="android.intent.category.BROWSABLE" />
+225-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:39:17-78
+225-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:39:27-75
+226
+227                <data
+227-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:41:17-44:51
+228                    android:host="firebase.auth"
+228-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:42:21-49
+229                    android:path="/"
+229-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:43:21-37
+230                    android:scheme="genericidp" />
+230-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:44:21-48
+231            </intent-filter>
+232        </activity>
+233        <activity
+233-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:47:9-64:20
+234            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+234-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:48:13-79
+235            android:excludeFromRecents="true"
+235-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:49:13-46
+236            android:exported="true"
+236-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:50:13-36
+237            android:launchMode="singleTask"
+237-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:51:13-44
+238            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+238-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:52:13-72
+239            <intent-filter>
+239-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:53:13-63:29
+240                <action android:name="android.intent.action.VIEW" />
+240-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:36:17-69
+240-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:36:25-66
+241
+242                <category android:name="android.intent.category.DEFAULT" />
+242-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:38:17-76
+242-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:38:27-73
+243                <category android:name="android.intent.category.BROWSABLE" />
+243-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:39:17-78
+243-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:39:27-75
+244
+245                <data
+245-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:41:17-44:51
+246                    android:host="firebase.auth"
+246-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:42:21-49
+247                    android:path="/"
+247-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:43:21-37
+248                    android:scheme="recaptcha" />
+248-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\keych\.gradle\caches\transforms-3\d8c9190049452f438e29572606f5446d\transformed\firebase-auth-22.0.0\AndroidManifest.xml:44:21-48
+249            </intent-filter>
+250        </activity>
+251
+252        <provider
+252-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+253            android:name="com.google.firebase.provider.FirebaseInitProvider"
+253-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+254            android:authorities="dev.android.appbuses.firebaseinitprovider"
+254-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+255            android:directBootAware="true"
+255-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+256            android:exported="false"
+256-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+257            android:initOrder="100" />
+257-->[com.google.firebase:firebase-common:20.3.3] C:\Users\keych\.gradle\caches\transforms-3\4d5fe4035af598ea08fb6776e32c45c0\transformed\firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+258
+259        <activity
+259-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\keych\.gradle\caches\transforms-3\9c4a2d89e22a7b1e6685826ab4643188\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+260            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+260-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\keych\.gradle\caches\transforms-3\9c4a2d89e22a7b1e6685826ab4643188\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+261            android:exported="false"
+261-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\keych\.gradle\caches\transforms-3\9c4a2d89e22a7b1e6685826ab4643188\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+262-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\keych\.gradle\caches\transforms-3\9c4a2d89e22a7b1e6685826ab4643188\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+263
+264        <receiver
+264-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:29:9-33:20
+265            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+265-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:30:13-85
+266            android:enabled="true"
+266-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:31:13-35
+267            android:exported="false" >
+267-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:32:13-37
+268        </receiver>
+269
+270        <service
+270-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:35:9-38:40
+271            android:name="com.google.android.gms.measurement.AppMeasurementService"
+271-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:36:13-84
+272            android:enabled="true"
+272-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:37:13-35
+273            android:exported="false" />
+273-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:38:13-37
+274        <service
+274-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:39:9-43:72
+275            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+275-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:40:13-87
+276            android:enabled="true"
+276-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:41:13-35
+277            android:exported="false"
+277-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:42:13-37
+278            android:permission="android.permission.BIND_JOB_SERVICE" />
+278-->[com.google.android.gms:play-services-measurement:21.3.0] C:\Users\keych\.gradle\caches\transforms-3\29a027716a9a1fcf62433a032807b991\transformed\play-services-measurement-21.3.0\AndroidManifest.xml:43:13-69
+279
+280        <meta-data
+280-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\keych\.gradle\caches\transforms-3\277df2ec142ed3bab5f6ebc3feac2e12\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+281            android:name="com.google.android.gms.version"
+281-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\keych\.gradle\caches\transforms-3\277df2ec142ed3bab5f6ebc3feac2e12\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+282            android:value="@integer/google_play_services_version" />
+282-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\keych\.gradle\caches\transforms-3\277df2ec142ed3bab5f6ebc3feac2e12\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+283
+284        <activity
+284-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:47:9-53:63
+285            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+285-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:48:13-74
+286            android:clearTaskOnLaunch="true"
+286-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:49:13-45
+287            android:screenOrientation="sensorLandscape"
+287-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:50:13-56
+288            android:stateNotNeeded="true"
+288-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:51:13-42
+289            android:theme="@style/zxing_CaptureTheme"
+289-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:52:13-54
+290            android:windowSoftInputMode="stateAlwaysHidden" />
+290-->[com.journeyapps:zxing-android-embedded:4.2.0] C:\Users\keych\.gradle\caches\transforms-3\ab8093196da99f6dcf3c0167eb8b7499\transformed\zxing-android-embedded-4.2.0\AndroidManifest.xml:53:13-60
+291
+292        <uses-library
+292-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+293            android:name="androidx.window.extensions"
+293-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+294            android:required="false" />
+294-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+295        <uses-library
+295-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+296            android:name="androidx.window.sidecar"
+296-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+297            android:required="false" />
+297-->[androidx.window:window:1.0.0] C:\Users\keych\.gradle\caches\transforms-3\f316822545f8552d57a34c3a543d1615\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+298
+299        <provider
+299-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\acd8cceced31e0a53848ea11c4306925\transformed\picasso-2.8\AndroidManifest.xml:8:9-11:40
+300            android:name="com.squareup.picasso.PicassoProvider"
+300-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\acd8cceced31e0a53848ea11c4306925\transformed\picasso-2.8\AndroidManifest.xml:9:13-64
+301            android:authorities="dev.android.appbuses.com.squareup.picasso"
+301-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\acd8cceced31e0a53848ea11c4306925\transformed\picasso-2.8\AndroidManifest.xml:10:13-72
+302            android:exported="false" />
+302-->[com.squareup.picasso:picasso:2.8] C:\Users\keych\.gradle\caches\transforms-3\acd8cceced31e0a53848ea11c4306925\transformed\picasso-2.8\AndroidManifest.xml:11:13-37
+303
+304        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+304-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
+304-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
+305        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+305-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
+305-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
+306        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+306-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
+306-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
+307        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+307-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
+307-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
+308        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+308-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
+308-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
+309        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+309-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
+309-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
+310        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+310-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
+310-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
+311        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+311-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
+311-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
+312        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+312-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
+312-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
+313
+314        <service
+314-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:23:9-25:40
+315            android:name="com.paypal.android.sdk.payments.PayPalService"
+315-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:24:13-73
+316            android:exported="false" />
+316-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\keych\.gradle\caches\transforms-3\91d292506287f1baed5459800034ffc9\transformed\paypal-android-sdk-2.16.0\AndroidManifest.xml:25:13-37
+317
+318        <provider
+318-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+319            android:name="androidx.startup.InitializationProvider"
+319-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+320            android:authorities="dev.android.appbuses.androidx-startup"
+320-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+321            android:exported="false" >
+321-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+322            <meta-data
+322-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+323                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+323-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+324                android:value="androidx.startup" />
+324-->[androidx.emoji2:emoji2:1.2.0] C:\Users\keych\.gradle\caches\transforms-3\c7def3f54ef6c1363218761ce1874746\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+325            <meta-data
+325-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\bf7eda95417b8113bc1e60b8abb99865\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+326                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+326-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\bf7eda95417b8113bc1e60b8abb99865\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+327                android:value="androidx.startup" />
+327-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\keych\.gradle\caches\transforms-3\bf7eda95417b8113bc1e60b8abb99865\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+328        </provider>
+329
+330        <activity
+330-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
+331            android:name="io.card.payment.CardIOActivity"
+331-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:21:13-58
+332            android:configChanges="keyboardHidden|orientation" />
+332-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:22:13-63
+333        <activity android:name="io.card.payment.DataEntryActivity" />
+333-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:9-70
+333-->[io.card:android-sdk:5.5.1] C:\Users\keych\.gradle\caches\transforms-3\b4ef6a5f3509f5810a992717ebc9dae7\transformed\android-sdk-5.5.1\AndroidManifest.xml:23:19-67
+334    </application>
+335
+336</manifest>
